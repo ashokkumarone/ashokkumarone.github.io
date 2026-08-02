@@ -16,35 +16,27 @@
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter',-apple-system,sans-serif; background: var(--black); color: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-
-    /* NAV */
     nav { position: fixed; top:0; left:0; right:0; z-index:100; height:56px; background:rgba(8,8,16,0.92); backdrop-filter:blur(24px); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; padding:0 56px; }
     .nav-logo { font-family:'Playfair Display',Georgia,serif; font-size:18px; font-weight:700; color:var(--white); text-decoration:none; }
     .nav-links { display:flex; gap:36px; list-style:none; }
     .nav-links a { font-size:12px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray); text-decoration:none; transition:color 0.2s; }
     .nav-links a:hover { color:var(--gold); }
-
-    /* HERO */
     .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:140px 24px 100px; position:relative; overflow:hidden; }
     .hero::before { content:''; position:absolute; top:20%; left:50%; transform:translate(-50%,-50%); width:700px; height:700px; background:radial-gradient(ellipse,rgba(201,168,76,0.08) 0%,transparent 70%); pointer-events:none; }
     .hero-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:28px; }
     .hero-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(52px,9vw,104px); font-weight:900; line-height:0.95; letter-spacing:-0.02em; color:var(--white); max-width:900px; margin-bottom:32px; }
     .hero-title em { font-style:italic; color:var(--gold); }
-    .hero-sub { font-size:17px; font-weight:300; color:var(--gray); max-width:480px; line-height:1.75; margin-bottom:52px; }
+    .hero-sub { font-size:17px; font-weight:300; color:var(--gray); max-width:520px; line-height:1.75; margin-bottom:52px; }
     .hero-cta { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
     .btn-gold { padding:14px 32px; background:var(--gold); color:var(--black); border-radius:980px; font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; border:none; cursor:pointer; transition:background 0.2s,transform 0.15s; text-decoration:none; display:inline-block; }
     .btn-gold:hover { background:var(--gold2); transform:translateY(-1px); }
     .btn-outline { padding:13px 32px; background:transparent; color:var(--gold); border-radius:980px; font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; border:1px solid rgba(201,168,76,0.4); cursor:pointer; transition:border-color 0.2s,transform 0.15s; text-decoration:none; display:inline-block; }
     .btn-outline:hover { border-color:var(--gold); transform:translateY(-1px); }
-
-    /* SECTIONS */
     .section { padding:100px 56px; }
     .section-inner { max-width:1100px; margin:0 auto; }
     .section-header { margin-bottom:64px; }
     .section-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(36px,4vw,56px); font-weight:700; line-height:1.05; letter-spacing:-0.02em; color:var(--white); }
     .section-sub { margin-top:16px; font-size:16px; font-weight:300; color:var(--gray); max-width:480px; line-height:1.7; }
-
-    /* ABOUT */
     #about { background:var(--black2); }
     .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
     .about-text p { font-size:16px; font-weight:300; line-height:1.85; color:#9a9aaa; margin-bottom:22px; }
@@ -56,16 +48,16 @@
     .skill-tags { display:flex; flex-wrap:wrap; gap:8px; }
     .skill-tag { padding:8px 16px; border:1px solid var(--border); font-size:13px; font-weight:400; color:var(--white); border-radius:980px; background:var(--black3); transition:border-color 0.2s,color 0.2s; }
     .skill-tag:hover { border-color:var(--gold); color:var(--gold); }
-
-    /* WORK */
     #work { background:var(--black); }
     .projects-grid { display:flex; flex-direction:column; gap:20px; }
     .project-card { background:var(--black3); border:1px solid var(--border); border-radius:16px; overflow:hidden; cursor:pointer; transition:border-color 0.2s,transform 0.2s; }
     .project-card:hover:not(.expanded) { border-color:rgba(201,168,76,0.3); transform:translateY(-2px); }
     .card-top { height:100px; display:flex; align-items:center; padding:0 32px; gap:20px; }
-    .card-top-yt { background:linear-gradient(135deg,#1a0505 0%,#2d0808 100%); }
-    .card-top-nf { background:linear-gradient(135deg,#0a0a0a 0%,#1a0505 100%); }
+    .card-top-ob { background:linear-gradient(135deg,#050a14 0%,#0a1628 100%); }
+    .card-top-is { background:linear-gradient(135deg,#150a1f 0%,#221230 100%); }
     .card-top-sp { background:linear-gradient(135deg,#050d08 0%,#0a1a0f 100%); }
+    .card-top-ott { background:linear-gradient(135deg,#0a0a0a 0%,#181818 100%); }
+    .card-top-tn { background:linear-gradient(135deg,#1a0f05 0%,#2a1808 100%); }
     .card-top-title { font-family:'Playfair Display',Georgia,serif; font-size:22px; font-weight:700; color:var(--white); letter-spacing:-0.01em; }
     .card-body { padding:24px 32px 28px; }
     .card-label { font-size:10px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
@@ -96,8 +88,9 @@
     .p-sub { font-size:11px; color:var(--gray); margin-top:3px; line-height:1.4; }
     .close-btn { display:block; margin:28px auto 0; padding:10px 28px; background:transparent; border:1px solid var(--border); font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray); cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:980px; }
     .close-btn:hover { border-color:var(--gold); color:var(--gold); }
-
-    /* EXPERIENCE */
+    .demo-links { display:flex; gap:12px; flex-wrap:wrap; margin-top:6px; padding-top:18px; }
+    .demo-link { display:inline-flex; align-items:center; gap:6px; padding:9px 20px; background:var(--gold-dim); color:var(--gold); border:1px solid rgba(201,168,76,0.35); border-radius:980px; font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; transition:background 0.2s,transform 0.15s; }
+    .demo-link:hover { background:rgba(201,168,76,0.22); transform:translateY(-1px); }
     #experience { background:var(--black2); }
     .exp-list { display:flex; flex-direction:column; }
     .exp-item { display:grid; grid-template-columns:220px 1fr; gap:48px; padding:44px 0; border-bottom:1px solid var(--border); }
@@ -106,16 +99,12 @@
     .exp-role { font-family:'Playfair Display',Georgia,serif; font-size:20px; font-weight:700; color:var(--white); }
     .exp-company { font-size:13px; font-weight:500; color:var(--gold); margin-top:5px; }
     .exp-desc { margin-top:14px; font-size:14px; font-weight:300; color:var(--gray); line-height:1.8; }
-
-    /* STATS BAR */
     .stats-bar { background:var(--black3); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:0 56px; }
     .stats-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); }
     .stat-item { padding:48px 32px; border-right:1px solid var(--border); display:flex; flex-direction:column; gap:8px; }
     .stat-item:last-child { border-right:none; }
     .stat-num { font-family:'Playfair Display',Georgia,serif; font-size:48px; font-weight:700; color:var(--gold); line-height:1; }
     .stat-desc { font-size:13px; color:var(--gray); font-weight:300; line-height:1.5; }
-
-    /* CONTACT */
     #contact { background:var(--black3); padding:100px 56px; text-align:center; position:relative; overflow:hidden; }
     #contact::before { content:''; position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:600px; height:400px; background:radial-gradient(ellipse,rgba(201,168,76,0.06) 0%,transparent 70%); pointer-events:none; }
     .contact-inner { max-width:640px; margin:0 auto; position:relative; }
@@ -128,18 +117,11 @@
     .c-btn:hover { transform:translateY(-2px); opacity:0.85; }
     .c-btn-li { background:#0a66c2; color:#fff; }
     .c-btn-gh { background:rgba(255,255,255,0.08); color:var(--white); border:1px solid var(--border); }
-    .c-btn-gmail { background:rgba(234,67,53,0.12); color:#EA4335; border:1px solid rgba(234,67,53,0.3); }
     .c-btn-outlook { background:rgba(0,114,198,0.15); color:#0072C6; border:1px solid rgba(0,114,198,0.3); }
-
-    /* FOOTER */
     footer { background:var(--black); border-top:1px solid var(--border); padding:24px 56px; display:flex; align-items:center; justify-content:space-between; }
     footer p { font-size:11px; color:var(--gray2); letter-spacing:0.04em; }
-
-    /* FADE */
     .fade-up { opacity:0; transform:translateY(24px); transition:opacity 0.7s ease,transform 0.7s ease; }
     .fade-up.visible { opacity:1; transform:translateY(0); }
-
-    /* RESPONSIVE */
     @media (max-width:960px) {
       nav { padding:0 24px; } .nav-links { display:none; }
       .section { padding:80px 24px; } .stats-bar { padding:0 24px; }
@@ -156,7 +138,6 @@
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="#" class="nav-logo">AK</a>
     <ul class="nav-links">
@@ -167,18 +148,16 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
-    <p class="hero-eyebrow">Product Strategist</p>
+    <p class="hero-eyebrow">Associate Product Manager · Product Analyst</p>
     <h1 class="hero-title">Built to<br /><em>think</em> in<br />systems.</h1>
-    <p class="hero-sub">OTT platforms, music products, market frameworks — I turn complex problems into strategies that scale.</p>
+    <p class="hero-sub">OTT platforms, banking operations, music products — I turn real-world problems into structured product strategy, then build working prototypes to prove it.</p>
     <div class="hero-cta">
       <button class="btn-gold" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">View My Work</button>
       <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section id="about" class="section">
     <div class="section-inner">
       <div class="section-header fade-up">
@@ -186,9 +165,9 @@
       </div>
       <div class="about-grid">
         <div class="about-text fade-up">
-          <p>I'm <strong>Ashok Kumar S</strong> — a CS graduate turned Product Strategist. My background spans banking operations at <strong>DBS Bank India</strong> and a self-built portfolio of product frameworks for platforms at the scale of YouTube, Netflix, and Spotify.</p>
-          <p>I'm drawn to the intersection of <strong>user behaviour, platform economics, and content strategy</strong> — where the right framework unlocks growth that analytics alone can't surface.</p>
-          <p>When I'm not building strategy decks, I'm studying narrative structure in the Mahabharatham and thinking about how great stories scale into systems.</p>
+          <p>I'm <strong>Ashok Kumar S</strong> — a CS graduate with hands-on banking experience at <strong>DBS Bank India</strong>, now building an independent portfolio of product case studies and working prototypes across OTT, banking operations, and music products.</p>
+          <p>I'm drawn to the intersection of <strong>user behaviour, platform economics, and content strategy</strong> — where the right framework unlocks growth that analytics alone can't surface. I don't stop at the strategy deck — I build the prototype too.</p>
+          <p>Targeting <strong>Associate Product Manager, Product Analyst, and Junior Product Manager</strong> roles.</p>
         </div>
         <div class="fade-up">
           <p class="about-quote">"I don't just analyse — I build the systems that drive growth."</p>
@@ -196,17 +175,17 @@
             <div class="skill-group">
               <p class="skill-group-label">Core</p>
               <div class="skill-tags">
-                <span class="skill-tag">Product Strategy</span>
-                <span class="skill-tag">Market Research</span>
-                <span class="skill-tag">Framework Design</span>
+                <span class="skill-tag">Product & Strategy Thinking</span>
+                <span class="skill-tag">Prioritization & Roadmapping</span>
+                <span class="skill-tag">Market & Competitive Research</span>
               </div>
             </div>
             <div class="skill-group">
               <p class="skill-group-label">Product</p>
               <div class="skill-tags">
-                <span class="skill-tag">PRD Writing</span>
-                <span class="skill-tag">KPI Design</span>
-                <span class="skill-tag">User Research</span>
+                <span class="skill-tag">Requirements Writing</span>
+                <span class="skill-tag">Wireframing & Prototyping</span>
+                <span class="skill-tag">Monetization Model Design</span>
               </div>
             </div>
             <div class="skill-group">
@@ -214,8 +193,7 @@
               <div class="skill-tags">
                 <span class="skill-tag">SQL</span>
                 <span class="skill-tag">Python</span>
-                <span class="skill-tag">Excel / Sheets</span>
-                <span class="skill-tag">Data Analysis</span>
+                <span class="skill-tag">Excel & Data Analysis</span>
               </div>
             </div>
           </div>
@@ -224,85 +202,83 @@
     </div>
   </section>
 
-  <!-- WORK -->
   <section id="work" class="section">
     <div class="section-inner">
       <div class="section-header fade-up">
         <h2 class="section-title">Strategies built<br />from first principles.</h2>
-        <p class="section-sub">Click any project to explore the full strategy.</p>
+        <p class="section-sub">Click any project to explore the full strategy. Live prototypes marked below.</p>
       </div>
 
       <div class="projects-grid fade-up">
 
-        <!-- YOUTUBE -->
-        <div class="project-card" id="card-yt" onclick="toggleCard('yt')">
-          <div class="card-top card-top-yt">
+        <div class="project-card" id="card-ob" onclick="toggleCard('ob')">
+          <div class="card-top card-top-ob">
             <div class="card-logo">
-              <svg width="48" height="34" viewBox="0 0 48 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M47.0 5.32C46.47 3.33 44.91 1.77 42.92 1.24C39.17 0.27 24.5 0.27 24.5 0.27C24.5 0.27 9.83 0.27 6.08 1.24C4.09 1.77 2.53 3.33 2.0 5.32C1.03 9.07 1.03 16.87 1.03 16.87C1.03 16.87 1.03 24.67 2.0 28.42C2.53 30.41 4.09 31.97 6.08 32.5C9.83 33.47 24.5 33.47 24.5 33.47C24.5 33.47 39.17 33.47 42.92 32.5C44.91 31.97 46.47 30.41 47.0 28.42C47.97 24.67 47.97 16.87 47.97 16.87C47.97 16.87 47.97 9.07 47.0 5.32Z" fill="#FF0000"/>
-                <path d="M19.77 23.87L31.73 16.87L19.77 9.87V23.87Z" fill="white"/>
+              <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 4L4 16H44L24 4Z" fill="#5b8fd9"/>
+                <rect x="8" y="18" width="6" height="20" fill="#5b8fd9"/>
+                <rect x="21" y="18" width="6" height="20" fill="#5b8fd9"/>
+                <rect x="34" y="18" width="6" height="20" fill="#5b8fd9"/>
+                <rect x="6" y="40" width="36" height="4" fill="#5b8fd9"/>
               </svg>
             </div>
-            <div class="card-top-title">YouTube Unified Platform</div>
+            <div class="card-top-title">OneBank</div>
           </div>
           <div class="card-body">
-            <p class="card-label">OTT · Platform Strategy</p>
-            <p class="card-desc">One app. Two experiences. A behavioural engagement framework + audio-video platform built to solve creator monetisation at scale.</p>
-            <span class="card-cta">Explore strategy <span class="card-arrow">→</span></span>
+            <p class="card-label">Banking Ops · Enterprise Portal</p>
+            <p class="card-desc">An internal operations portal for bank employees — built from real Personal Banker experience at DBS Bank, covering onboarding, deposits, loans, and branch performance.</p>
+            <span class="card-cta">See the modules <span class="card-arrow">→</span></span>
           </div>
-          <div class="card-detail" id="detail-yt">
+          <div class="card-detail" id="detail-ob">
             <div class="detail-inner">
-              <div class="feature-slide"><span class="f-num">01</span><div><div class="f-title">Audio Mode</div><div class="f-desc">Native background-play for music, podcasts, and long-form content. Switch between Video and Audio inside the same app — keeping users inside YouTube's ecosystem even with screen off.</div><span class="f-tag">Retention</span></div></div>
-              <div class="feature-slide"><span class="f-num">02</span><div><div class="f-title">Active Audience Framework</div><div class="f-desc">Subscribers classified as Active, Semi-Active, or Inactive based on watch duration, frequency, and interaction — eliminating vanity metrics and giving creators real audience visibility. 90-day inactivity triggers automated re-engagement.</div><span class="f-tag">Algorithm</span></div></div>
-              <div class="feature-slide"><span class="f-num">03</span><div><div class="f-title">Creator Fair Pay System</div><div class="f-desc">Revenue tied to engagement depth, not just ad impressions. Fairer metrics → realistic credibility for creators, higher CPM for advertisers, healthier creator ecosystem especially at sub-100K scale.</div><span class="f-tag">Monetisation</span></div></div>
-              <div class="feature-slide"><span class="f-num">04</span><div><div class="f-title">Lyric Timestamps + Vibe Reactions</div><div class="f-desc">Music-first social features inside Audio Mode: share specific lyric timestamps as emotional signals, react with soundbite reactions. Music as language — not just background noise.</div><span class="f-tag">Engagement</span></div></div>
-              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Projected Impact</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">+22%</div><div class="impact-label">Retention lift</div></div><div class="impact-stat"><div class="impact-num">+35%</div><div class="impact-label">Creator revenue</div></div><div class="impact-stat"><div class="impact-num">Cleaner</div><div class="impact-label">Algorithm signals</div></div><div class="impact-stat"><div class="impact-num">Higher</div><div class="impact-label">Advertiser CPM</div></div></div></div></div>
-              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('yt')">↑ Collapse</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- NETFLIX -->
-        <div class="project-card" id="card-nf" onclick="toggleCard('nf')">
-          <div class="card-top card-top-nf">
-            <div class="card-logo">
-              <svg width="40" height="50" viewBox="0 0 100 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 20V130H45V70L75 130H105V20H75V70L45 20H15Z" fill="#E50914"/>
-              </svg>
-            </div>
-            <div class="card-top-title">Netflix India Strategy</div>
-          </div>
-          <div class="card-body">
-            <p class="card-label">India Market · 12-Pillar Framework</p>
-            <p class="card-desc">A data-backed 12-pillar framework to scale Netflix deeper into India's mass market — pricing, piracy, regional content, and beyond.</p>
-            <span class="card-cta">All 12 pillars <span class="card-arrow">→</span></span>
-          </div>
-          <div class="card-detail" id="detail-nf">
-            <div class="detail-inner">
-              <div class="feature-slide"><span class="f-num">Context</span><div><div class="f-title">India OTT Market Gaps</div><div class="f-desc">Only 24% of 600M+ users pay for OTT. ₹8,700 Cr lost annually to piracy. Strong theatre dependency on weekends. Regional language accessibility gaps. This strategy addresses all four.</div><span class="f-tag">Market Context</span></div></div>
-              <div class="feature-slide"><span class="f-num">12</span><div><div class="f-title">The Complete Framework</div>
-                <div class="pillar-grid">
-                  <div class="pillar-item"><span class="p-num">01</span><div><div class="p-name">Daily Episode Release</div><div class="p-sub">Build consistent daily viewing habits</div></div></div>
-                  <div class="pillar-item"><span class="p-num">02</span><div><div class="p-name">In-House Polyglot Dubbing</div><div class="p-sub">AI-powered multi-language dubbing</div></div></div>
-                  <div class="pillar-item"><span class="p-num">03</span><div><div class="p-name">Festival Season Release</div><div class="p-sub">Align drops with Indian festivals</div></div></div>
-                  <div class="pillar-item"><span class="p-num">04</span><div><div class="p-name">Netflix-as-Producer Model</div><div class="p-sub">Co-produce regional originals</div></div></div>
-                  <div class="pillar-item"><span class="p-num">05</span><div><div class="p-name">Hero-Centric Promotions</div><div class="p-sub">Star-led marketing for mass reach</div></div></div>
-                  <div class="pillar-item"><span class="p-num">06</span><div><div class="p-name">Copyright AI Shield</div><div class="p-sub">Real-time piracy detection & takedown</div></div></div>
-                  <div class="pillar-item"><span class="p-num">07</span><div><div class="p-name">Regional Dubbed Rotation</div><div class="p-sub">Cross-language content discovery</div></div></div>
-                  <div class="pillar-item"><span class="p-num">08</span><div><div class="p-name">Theatre Hijack Strategy</div><div class="p-sub">Better home viewing experience</div></div></div>
-                  <div class="pillar-item"><span class="p-num">09</span><div><div class="p-name">Emerging Brand Bundling</div><div class="p-sub">D2C brand partnership bundles</div></div></div>
-                  <div class="pillar-item"><span class="p-num">10</span><div><div class="p-name">Taste-Before-Subscribe</div><div class="p-sub">Free preview before paywall</div></div></div>
-                  <div class="pillar-item"><span class="p-num">11</span><div><div class="p-name">India-Only Tier ₹49</div><div class="p-sub">Mobile-only affordable entry plan</div></div></div>
-                  <div class="pillar-item"><span class="p-num">12</span><div><div class="p-name">Couple Pack ₹499</div><div class="p-sub">Dual-profile bundle, reduce sharing</div></div></div>
-                </div>
+              <div class="feature-slide"><span class="f-num">01</span><div><div class="f-title">Accounts & e-KYC</div><div class="f-desc">New account applications with document tracking (Aadhaar, PAN, photo verification) across account types — Savings, Current, Salary, Senior Citizen, Student, NRI, Joint.</div><span class="f-tag">Onboarding</span></div></div>
+              <div class="feature-slide"><span class="f-num">02</span><div><div class="f-title">Deposits & Loan Management</div><div class="f-desc">Fixed and Recurring Deposit creation with interest/tenure calculations, plus loan applications and EMI schedules tracked through every approval stage.</div><span class="f-tag">Core Ops</span></div></div>
+              <div class="feature-slide"><span class="f-num">03</span><div><div class="f-title">Customer Service Hub</div><div class="f-desc">Service requests and follow-up tracking so customer issues don't fall through the cracks — designed around real gaps observed in day-to-day banker workflows.</div><span class="f-tag">Follow-Up</span></div></div>
+              <div class="feature-slide"><span class="f-num">04</span><div><div class="f-title">Operations Analytics & Branch Performance</div><div class="f-desc">Visual reporting on daily operational activity and branch-level performance trends — the same signals a real branch manager reviews weekly.</div><span class="f-tag">Analytics</span></div></div>
+              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Why It Matters</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">7</div><div class="impact-label">Core modules</div></div><div class="impact-stat"><div class="impact-num">Live</div><div class="impact-label">Working prototype</div></div><div class="impact-stat"><div class="impact-num">Real</div><div class="impact-label">Banker experience</div></div><div class="impact-stat"><div class="impact-num">React</div><div class="impact-label">+ TypeScript</div></div></div>
+              <div class="demo-links">
+                <a href="https://ashokkumarone.github.io/OneBank/" target="_blank" class="demo-link" onclick="event.stopPropagation()">Live Demo →</a>
+                <a href="https://github.com/ashokkumarone/OneBank" target="_blank" class="demo-link" onclick="event.stopPropagation()">GitHub ↗</a>
+              </div>
               </div></div>
-              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Expected Impact (3–5 Years)</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">2X+</div><div class="impact-label">Paid subscriber growth</div></div><div class="impact-stat"><div class="impact-num">40–50%</div><div class="impact-label">Revenue increase</div></div><div class="impact-stat"><div class="impact-num">60–70%</div><div class="impact-label">Piracy reduction</div></div><div class="impact-stat"><div class="impact-num">Tier 2–4</div><div class="impact-label">Deeper India reach</div></div></div></div></div>
-              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('nf')">↑ Collapse</button>
+              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('ob')">↑ Collapse</button>
             </div>
           </div>
         </div>
 
-        <!-- TUNING -->
+        <div class="project-card" id="card-is" onclick="toggleCard('is')">
+          <div class="card-top card-top-is">
+            <div class="card-logo">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="20" stroke="#c9a84c" stroke-width="2.5"/>
+                <path d="M19 16L32 24L19 32V16Z" fill="#c9a84c"/>
+              </svg>
+            </div>
+            <div class="card-top-title">Isaipadam</div>
+          </div>
+          <div class="card-body">
+            <p class="card-label">Unified Streaming · Working Prototype</p>
+            <p class="card-desc">A working prototype unifying video and audio streaming into one seamless app — with a live-audience engagement layer and a full product strategy case study behind it.</p>
+            <span class="card-cta">Explore the strategy <span class="card-arrow">→</span></span>
+          </div>
+          <div class="card-detail" id="detail-is">
+            <div class="detail-inner">
+              <div class="feature-slide"><span class="f-num">01</span><div><div class="f-title">Audio Mode</div><div class="f-desc">Native background-play for music, podcasts, and long-form content. Switch between Video and Audio inside the same app — keeping users engaged even with screen off.</div><span class="f-tag">Retention</span></div></div>
+              <div class="feature-slide"><span class="f-num">02</span><div><div class="f-title">Active Audience Framework</div><div class="f-desc">Subscribers classified as Active, Semi-Active, or Inactive based on watch duration, frequency, and interaction — eliminating vanity metrics and giving creators real audience visibility.</div><span class="f-tag">Algorithm</span></div></div>
+              <div class="feature-slide"><span class="f-num">03</span><div><div class="f-title">Creator Fair Pay System</div><div class="f-desc">Revenue tied to engagement depth, not just impressions — fairer metrics, higher advertiser CPM, and a healthier creator ecosystem especially at sub-100K scale.</div><span class="f-tag">Monetisation</span></div></div>
+              <div class="feature-slide"><span class="f-num">04</span><div><div class="f-title">Live Audience Features</div><div class="f-desc">Real-time polling, reactions, and simulated live chat built for live-stream scenarios — plus a curated content library with playlists, synced lyrics, and a premium-tier toggle.</div><span class="f-tag">Engagement</span></div></div>
+              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Projected Impact</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">+22%</div><div class="impact-label">Retention lift</div></div><div class="impact-stat"><div class="impact-num">+35%</div><div class="impact-label">Creator revenue</div></div><div class="impact-stat"><div class="impact-num">Cleaner</div><div class="impact-label">Algorithm signals</div></div><div class="impact-stat"><div class="impact-num">Higher</div><div class="impact-label">Advertiser CPM</div></div></div>
+              <div class="demo-links">
+                <a href="https://ashokkumarone.github.io/Isaipadam/" target="_blank" class="demo-link" onclick="event.stopPropagation()">Live Demo →</a>
+                <a href="https://github.com/ashokkumarone/Isaipadam" target="_blank" class="demo-link" onclick="event.stopPropagation()">GitHub ↗</a>
+                <a href="https://github.com/ashokkumarone/Isaipadam/blob/main/strategy/Isaipadam_Product_Strategy_Case_Study.pdf" target="_blank" class="demo-link" onclick="event.stopPropagation()">Strategy PDF ↗</a>
+              </div>
+              </div></div>
+              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('is')">↑ Collapse</button>
+            </div>
+          </div>
+        </div>
+
         <div class="project-card" id="card-sp" onclick="toggleCard('sp')">
           <div class="card-top card-top-sp">
             <div class="card-logo">
@@ -310,22 +286,103 @@
                 <path d="M24 6C14.06 6 6 14.06 6 24V36C6 38.21 7.79 40 10 40H14C16.21 40 18 38.21 18 36V30C18 27.79 16.21 26 14 26H10V24C10 16.27 16.27 10 24 10C31.73 10 38 16.27 38 24V26H34C31.79 26 30 27.79 30 30V36C30 38.21 31.79 40 34 40H38C40.21 40 42 38.21 42 36V24C42 14.06 33.94 6 24 6Z" fill="#c9a84c"/>
               </svg>
             </div>
-            <div class="card-top-title">Tuning — Speak in Lyrics</div>
+            <div class="card-top-title">Tuning</div>
           </div>
           <div class="card-body">
             <p class="card-label">Music · Social Product Concept</p>
-            <p class="card-desc">A music-first communication layer built on Spotify. Express emotions through song snippets, lyric timestamps, and vibe reactions.</p>
+            <p class="card-desc">A social layer for music streaming platforms — send songs as messages, react with emojis, and share exact lyric timestamps. Backed by a freemium model and SQL schema.</p>
             <span class="card-cta">App flow <span class="card-arrow">→</span></span>
           </div>
           <div class="card-detail" id="detail-sp">
             <div class="detail-inner">
-              <div class="feature-slide"><span class="f-num">01</span><div><div class="f-title">Spotify Home → Tap to open Tuning</div><div class="f-desc">Tuning lives inside Spotify as a communication layer. One tap from the home screen — no separate app, zero friction.</div><span class="f-tag">Screen 1</span></div></div>
-              <div class="feature-slide"><span class="f-num">02</span><div><div class="f-title">Conversations — Music as Messages</div><div class="f-desc">Your inbox shows threads anchored by the last song shared. Riya sent "Raataan Lambiyan." Karthik sent "Tera Yaar Hoon Main." Music replaces text as the primary communication signal.</div><span class="f-tag">Screen 2</span></div></div>
-              <div class="feature-slide"><span class="f-num">03</span><div><div class="f-title">Chat — React, Send a Song, Search</div><div class="f-desc">Share songs with lyric timestamps, react with vibe reactions, or search any track to send. "No keyboard. Just music." — the core Tuning principle.</div><span class="f-tag">Screen 3</span></div></div>
-              <div class="feature-slide"><span class="f-num">04</span><div><div class="f-title">Now Playing → Chat via Tuning</div><div class="f-desc">From any Now Playing screen, tap "Chat via Tuning" to instantly share that track. The song carries emotional context — no caption needed.</div><span class="f-tag">Screen 4 & 5</span></div></div>
-              <div class="feature-slide"><span class="f-num">05</span><div><div class="f-title">Send To — Share with One Tap</div><div class="f-desc">A contact picker shows friends and their last-shared song. Select and send — as natural as a WhatsApp message, but in music.</div><span class="f-tag">Screen 6</span></div></div>
-              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Projected Impact</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">+28%</div><div class="impact-label">DAU lift</div></div><div class="impact-stat"><div class="impact-num">+45%</div><div class="impact-label">Session length</div></div><div class="impact-stat"><div class="impact-num">4x</div><div class="impact-label">Social sharing</div></div><div class="impact-stat"><div class="impact-num">New</div><div class="impact-label">Revenue layer</div></div></div></div></div>
+              <div class="feature-slide"><span class="f-num">01</span><div><div class="f-title">Home → Search & Share</div><div class="f-desc">Search any song directly from the home feed and share it as a message — no separate app, zero friction.</div><span class="f-tag">Screen 1</span></div></div>
+              <div class="feature-slide"><span class="f-num">02</span><div><div class="f-title">Conversations — Music as Messages</div><div class="f-desc">Your inbox shows threads anchored by the last song shared — music replaces text as the primary communication signal.</div><span class="f-tag">Screen 2</span></div></div>
+              <div class="feature-slide"><span class="f-num">03</span><div><div class="f-title">Chat — React, Send a Song</div><div class="f-desc">Share songs with lyric timestamps, react with emojis, or search any track to send. "No keyboard. Just music." — the core Tuning principle.</div><span class="f-tag">Screen 3</span></div></div>
+              <div class="feature-slide"><span class="f-num">04</span><div><div class="f-title">PRD, Freemium Model & SQL Schema</div><div class="f-desc">A full product requirements doc with a relational SQL schema (Users, Songs, Tuning Logs) and a freemium model tracking KPIs like Free-to-Pro conversion rate and Daily Active Sharers.</div><span class="f-tag">Product Depth</span></div></div>
+              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Projected Impact</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">+28%</div><div class="impact-label">DAU lift</div></div><div class="impact-stat"><div class="impact-num">+45%</div><div class="impact-label">Session length</div></div><div class="impact-stat"><div class="impact-num">4x</div><div class="impact-label">Social sharing</div></div><div class="impact-stat"><div class="impact-num">New</div><div class="impact-label">Revenue layer</div></div></div>
+              <div class="demo-links">
+                <a href="https://ashokkumarone.github.io/Tuning-Music/" target="_blank" class="demo-link" onclick="event.stopPropagation()">Live Demo →</a>
+                <a href="https://github.com/ashokkumarone/Tuning-Music" target="_blank" class="demo-link" onclick="event.stopPropagation()">GitHub ↗</a>
+              </div>
+              </div></div>
               <button class="close-btn" onclick="event.stopPropagation(); toggleCard('sp')">↑ Collapse</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" id="card-ott" onclick="toggleCard('ott')">
+          <div class="card-top card-top-ott">
+            <div class="card-logo">
+              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="19" stroke="#e8c96a" stroke-width="2"/>
+                <path d="M19 16L32 24L19 32V16Z" fill="#e8c96a"/>
+              </svg>
+            </div>
+            <div class="card-top-title">OTT India Disruption Strategy 2026</div>
+          </div>
+          <div class="card-body">
+            <p class="card-label">Platform-Agnostic · 12-Pillar Framework</p>
+            <p class="card-desc">A data-backed 12-pillar framework addressing why OTT platforms in India underperform despite huge user bases — designed to re-weight for any platform's positioning.</p>
+            <span class="card-cta">All 12 pillars <span class="card-arrow">→</span></span>
+          </div>
+          <div class="card-detail" id="detail-ott">
+            <div class="detail-inner">
+              <div class="feature-slide"><span class="f-num">Context</span><div><div class="f-title">India OTT Market Gaps</div><div class="f-desc">600M+ OTT users, but only ~24% convert to paying subscribers. Rs.8,700 Cr lost annually to piracy. Strong theatre dependency. Revenue still growing at a 16% CAGR to 2029. This strategy addresses all three structural barriers.</div><span class="f-tag">Market Context</span></div></div>
+              <div class="feature-slide"><span class="f-num">12</span><div><div class="f-title">The Complete Framework</div>
+                <div class="pillar-grid">
+                  <div class="pillar-item"><span class="p-num">01</span><div><div class="p-name">Daily Episode Release</div><div class="p-sub">Build consistent daily viewing habits</div></div></div>
+                  <div class="pillar-item"><span class="p-num">02</span><div><div class="p-name">In-House Polyglot Dubbing</div><div class="p-sub">AI-powered multi-language dubbing</div></div></div>
+                  <div class="pillar-item"><span class="p-num">03</span><div><div class="p-name">Festival Season Release</div><div class="p-sub">Align drops with Indian festivals</div></div></div>
+                  <div class="pillar-item"><span class="p-num">04</span><div><div class="p-name">Platform-as-Producer Model</div><div class="p-sub">Co-produce regional originals</div></div></div>
+                  <div class="pillar-item"><span class="p-num">05</span><div><div class="p-name">Hero-Centric Regional Promotions</div><div class="p-sub">Star-led marketing for mass reach</div></div></div>
+                  <div class="pillar-item"><span class="p-num">06</span><div><div class="p-name">Copyright AI Shield</div><div class="p-sub">Real-time piracy detection & takedown</div></div></div>
+                  <div class="pillar-item"><span class="p-num">07</span><div><div class="p-name">Regional Dubbed Rotation</div><div class="p-sub">Cross-language content discovery</div></div></div>
+                  <div class="pillar-item"><span class="p-num">08</span><div><div class="p-name">Theatre Hijack Strategy</div><div class="p-sub">Better home viewing experience</div></div></div>
+                  <div class="pillar-item"><span class="p-num">09</span><div><div class="p-name">Emerging Brand Bundling</div><div class="p-sub">D2C brand partnership bundles</div></div></div>
+                  <div class="pillar-item"><span class="p-num">10</span><div><div class="p-name">Taste-Before-Subscribe</div><div class="p-sub">Free preview before paywall</div></div></div>
+                  <div class="pillar-item"><span class="p-num">11</span><div><div class="p-name">India-Only Tier Rs.49</div><div class="p-sub">Mobile-only affordable entry plan</div></div></div>
+                  <div class="pillar-item"><span class="p-num">12</span><div><div class="p-name">Couple Pack Rs.499</div><div class="p-sub">Dual-profile bundle, reduce sharing</div></div></div>
+                </div>
+              </div></div>
+              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Research-Backed</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">600M+</div><div class="impact-label">India OTT users</div></div><div class="impact-stat"><div class="impact-num">24%</div><div class="impact-label">Convert to paying</div></div><div class="impact-stat"><div class="impact-num">16%</div><div class="impact-label">Revenue CAGR to 2029</div></div><div class="impact-stat"><div class="impact-num">Rs.8,700 Cr</div><div class="impact-label">Piracy loss/year</div></div></div>
+              <div class="demo-links">
+                <a href="https://github.com/ashokkumarone/OTT-India-Disruption-Strategy" target="_blank" class="demo-link" onclick="event.stopPropagation()">GitHub ↗</a>
+              </div>
+              </div></div>
+              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('ott')">↑ Collapse</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" id="card-tn" onclick="toggleCard('tn')">
+          <div class="card-top card-top-tn">
+            <div class="card-logo">
+              <svg width="46" height="38" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="4" width="40" height="26" rx="2" stroke="#e0a458" stroke-width="2.5"/>
+                <path d="M18 34H30" stroke="#e0a458" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M24 30V34" stroke="#e0a458" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M19 12L29 17L19 22V12Z" fill="#e0a458"/>
+              </svg>
+            </div>
+            <div class="card-top-title">TN Channel</div>
+          </div>
+          <div class="card-body">
+            <p class="card-label">Regional TV · Hybrid Linear-OTT Model</p>
+            <p class="card-desc">A free, ad-supported hybrid TV model for Tamil Nadu — users pick content like OTT via WhatsApp, but it plays linearly, with zero broadband dependency.</p>
+            <span class="card-cta">The 4-movie grid <span class="card-arrow">→</span></span>
+          </div>
+          <div class="card-detail" id="detail-tn">
+            <div class="detail-inner">
+              <div class="feature-slide"><span class="f-num">Context</span><div><div class="f-title">The Market Gap</div><div class="f-desc">15M+ cable/DTH households in Tamil Nadu want control over content but can't afford or access OTT (Rs.199–499/month + broadband). TN Channel bridges linear TV's simplicity with OTT's sense of choice — completely free.</div><span class="f-tag">Market Context</span></div></div>
+              <div class="feature-slide"><span class="f-num">01</span><div><div class="f-title">4-Movie Daily Grid via WhatsApp</div><div class="f-desc">Users select from a 4-movie daily grid via WhatsApp or app. The system maps their Set-Top Box ID — at slot time, their TV automatically routes to the selected movie, playing linearly.</div><span class="f-tag">Core Concept</span></div></div>
+              <div class="feature-slide"><span class="f-num">02</span><div><div class="f-title">4x Ad Arbitrage</div><div class="f-desc">Four parallel feeds mean 4x the ad inventory of a traditional linear channel — a locked, no-pause viewing experience drives ad completion rates far above typical linear TV.</div><span class="f-tag">Monetisation</span></div></div>
+              <div class="feature-slide"><span class="f-num">03</span><div><div class="f-title">Works on Dumb Set-Top Boxes</div><div class="f-desc">No smart TV or software upgrade required — the backend does all the routing work over existing copper cable and DTH infrastructure already in 15M+ homes.</div><span class="f-tag">Distribution</span></div></div>
+              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Pilot Targets (Month 6)</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">25–30K</div><div class="impact-label">Daily active users</div></div><div class="impact-stat"><div class="impact-num">92%+</div><div class="impact-label">Ad completion rate</div></div><div class="impact-stat"><div class="impact-num">Rs.80L–1Cr</div><div class="impact-label">Monthly revenue</div></div><div class="impact-stat"><div class="impact-num">4x</div><div class="impact-label">Ad inventory</div></div></div>
+              <div class="demo-links">
+                <a href="https://github.com/ashokkumarone/TN-Channel-Strategy" target="_blank" class="demo-link" onclick="event.stopPropagation()">GitHub ↗</a>
+              </div>
+              </div></div>
+              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('tn')">↑ Collapse</button>
             </div>
           </div>
         </div>
@@ -334,7 +391,6 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section id="experience" class="section">
     <div class="section-inner">
       <div class="section-header fade-up">
@@ -345,16 +401,16 @@
           <div class="exp-date">2017 – 2021</div>
           <div>
             <div class="exp-role">B.E. Computer Science Engineering</div>
-            <div class="exp-company">Anna University, Tamil Nadu</div>
+            <div class="exp-company">Builder Engineering College, Tiruppur</div>
             <div class="exp-desc">Foundation in data structures, algorithms, databases, and system design — applied directly to product thinking and technical communication.</div>
           </div>
         </div>
         <div class="exp-item">
           <div class="exp-date">Nov 2022 – Jul 2023</div>
           <div>
-            <div class="exp-role">Personal Banker / Business Analyst</div>
-            <div class="exp-company">DBS Bank India</div>
-            <div class="exp-desc">Managed client portfolios, identified product gaps, and synthesised customer data into actionable insights. Gained first-hand domain knowledge in financial product strategy and customer experience design.</div>
+            <div class="exp-role">Assistant Officer – Personal Banker</div>
+            <div class="exp-company">DBS Bank India Ltd</div>
+            <div class="exp-desc">Managed 10–15 customer interactions daily, consistently opening 1+ new account per day across savings, FD, RD, and insurance. Advised clients through a consultative approach, driving cross-sell across deposits, loans, and insurance in a compliance-driven environment.</div>
           </div>
         </div>
         <div class="exp-item">
@@ -362,29 +418,27 @@
           <div>
             <div class="exp-role">Independent Product Strategist</div>
             <div class="exp-company">Self-directed Portfolio</div>
-            <div class="exp-desc">Built and published three end-to-end product strategy case studies — YouTube Unified Platform, Netflix India 12-Pillar Strategy, and Tuning (Spotify social layer) — each with PRDs, KPI frameworks, SQL schemas, and prototypes. IBM Excel certified (100%). 19K+ LinkedIn impressions.</div>
+            <div class="exp-desc">Built five end-to-end product case studies and working prototypes — OneBank, Isaipadam, Tuning, OTT India Disruption Strategy 2026, and TN Channel — spanning banking operations, unified video/audio streaming, music-social features, and OTT market strategy, each with PRDs, KPI frameworks, and prototypes. IBM Excel certified (100%).</div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- STATS BAR -->
   <div class="stats-bar">
     <div class="stats-inner">
-      <div class="stat-item"><div class="stat-num">3</div><div class="stat-desc">End-to-end product<br />case studies</div></div>
+      <div class="stat-item"><div class="stat-num">5</div><div class="stat-desc">Product case studies<br />& prototypes</div></div>
+      <div class="stat-item"><div class="stat-num">3</div><div class="stat-desc">Live, working<br />prototypes</div></div>
       <div class="stat-item"><div class="stat-num">8+</div><div class="stat-desc">Months banking<br />domain experience</div></div>
-      <div class="stat-item"><div class="stat-num">19K</div><div class="stat-desc">LinkedIn post<br />impressions</div></div>
       <div class="stat-item"><div class="stat-num">100%</div><div class="stat-desc">IBM Excel<br />Certificate grade</div></div>
     </div>
   </div>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="contact-inner">
       <p class="contact-eyebrow">Let's Talk</p>
       <h2 class="contact-title">Open to the<br /><em>right</em> opportunity.</h2>
-      <p class="contact-sub">Targeting BA, Product Analyst, and Growth Strategy roles — especially in OTT, music, and consumer tech.</p>
+      <p class="contact-sub">Targeting Associate Product Manager, Product Analyst, and Junior Product Manager roles — especially in OTT, banking, and consumer tech.</p>
       <div class="contact-links">
         <a href="https://linkedin.com/in/ashokkumarone" target="_blank" class="c-btn c-btn-li">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -394,13 +448,9 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
           GitHub
         </a>
-        <a href="mailto:ak888ashokkumar@gmail.com?subject=Let's%20Talk" class="c-btn c-btn-gmail">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
-          Gmail
-        </a>
         <a href="mailto:ashokkumarone@outlook.com?subject=Let's%20Talk" class="c-btn c-btn-outlook">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.02 6.46C2.02 5.66 2.66 5 3.46 5h17.08C21.34 5 22 5.66 22 6.46v11.08c0 .8-.66 1.46-1.46 1.46H3.46c-.8 0-1.44-.66-1.44-1.46V6.46zm17.08-1.5H3.46c-1.3 0-2.34 1.06-2.34 2.36v11.08c0 1.3 1.04 2.36 2.34 2.36h17.08c1.3 0 2.34-1.06 2.34-2.36V6.46c0-1.3-1.04-2.36-2.34-2.36zm-8.54 6.5l-6.32-4.66c-.24-.18-.32-.5-.16-.76.16-.26.5-.34.76-.16l7.26 5.34 7.26-5.34c.26-.18.6-.1.76.16.16.26.08.58-.16.76L10.56 11.46z"/></svg>
-          Outlook
+          Email
         </a>
       </div>
     </div>
