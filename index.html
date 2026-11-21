@@ -1,486 +1,1165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashok Kumar S — Product Strategist</title>
+  <title>Ashokkumar S — Associate Product Manager & Product Strategist</title>
+  <meta name="description" content="Portfolio of Ashokkumar S — Associate Product Manager, Product Strategist, and Ex-Personal Banker (DBS Bank). Featuring 5 flagship projects across FinTech CBS, Consumer Streaming, and Big-Tech Strategy." />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2308080c'/><text x='50' y='65' font-size='48' font-family='serif' font-weight='bold' fill='%23e5c07b' text-anchor='middle'>A</text></svg>" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --black:#080810; --black2:#0f0f1a; --black3:#14141f;
-      --border:rgba(255,255,255,0.07); --gold:#c9a84c; --gold2:#e8c96a;
-      --gold-dim:rgba(201,168,76,0.12); --white:#f0ede8; --gray:#7a7a8a; --gray2:#4a4a5a;
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter',-apple-system,sans-serif; background: var(--black); color: var(--white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    nav { position: fixed; top:0; left:0; right:0; z-index:100; height:56px; background:rgba(8,8,16,0.92); backdrop-filter:blur(24px); border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between; padding:0 56px; }
-    .nav-logo { font-family:'Playfair Display',Georgia,serif; font-size:18px; font-weight:700; color:var(--white); text-decoration:none; }
-    .nav-links { display:flex; gap:36px; list-style:none; }
-    .nav-links a { font-size:12px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray); text-decoration:none; transition:color 0.2s; }
-    .nav-links a:hover { color:var(--gold); }
-    .hero { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:140px 24px 100px; position:relative; overflow:hidden; }
-    .hero::before { content:''; position:absolute; top:20%; left:50%; transform:translate(-50%,-50%); width:700px; height:700px; background:radial-gradient(ellipse,rgba(201,168,76,0.08) 0%,transparent 70%); pointer-events:none; }
-    .hero-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:28px; }
-    .hero-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(52px,9vw,104px); font-weight:900; line-height:0.95; letter-spacing:-0.02em; color:var(--white); max-width:900px; margin-bottom:32px; }
-    .hero-title em { font-style:italic; color:var(--gold); }
-    .hero-sub { font-size:17px; font-weight:300; color:var(--gray); max-width:520px; line-height:1.75; margin-bottom:52px; }
-    .hero-cta { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-    .btn-gold { padding:14px 32px; background:var(--gold); color:var(--black); border-radius:980px; font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; border:none; cursor:pointer; transition:background 0.2s,transform 0.15s; text-decoration:none; display:inline-block; }
-    .btn-gold:hover { background:var(--gold2); transform:translateY(-1px); }
-    .btn-outline { padding:13px 32px; background:transparent; color:var(--gold); border-radius:980px; font-size:13px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; border:1px solid rgba(201,168,76,0.4); cursor:pointer; transition:border-color 0.2s,transform 0.15s; text-decoration:none; display:inline-block; }
-    .btn-outline:hover { border-color:var(--gold); transform:translateY(-1px); }
-    .section { padding:100px 56px; }
-    .section-inner { max-width:1100px; margin:0 auto; }
-    .section-header { margin-bottom:64px; }
-    .section-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(36px,4vw,56px); font-weight:700; line-height:1.05; letter-spacing:-0.02em; color:var(--white); }
-    .section-sub { margin-top:16px; font-size:16px; font-weight:300; color:var(--gray); max-width:480px; line-height:1.7; }
-    #about { background:var(--black2); }
-    .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
-    .about-text p { font-size:16px; font-weight:300; line-height:1.85; color:#9a9aaa; margin-bottom:22px; }
-    .about-text p strong { color:var(--white); font-weight:500; }
-    .about-quote { font-family:'Playfair Display',Georgia,serif; font-size:20px; font-style:italic; color:var(--gold); line-height:1.5; margin-bottom:40px; padding-left:20px; border-left:2px solid var(--gold); }
-    .skills-section { display:flex; flex-direction:column; gap:20px; }
-    .skill-group { display:flex; flex-direction:column; gap:8px; }
-    .skill-group-label { font-size:10px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); opacity:0.6; }
-    .skill-tags { display:flex; flex-wrap:wrap; gap:8px; }
-    .skill-tag { padding:8px 16px; border:1px solid var(--border); font-size:13px; font-weight:400; color:var(--white); border-radius:980px; background:var(--black3); transition:border-color 0.2s,color 0.2s; }
-    .skill-tag:hover { border-color:var(--gold); color:var(--gold); }
-    #work { background:var(--black); }
-    .projects-grid { display:flex; flex-direction:column; gap:20px; }
-    .project-card { background:var(--black3); border:1px solid var(--border); border-radius:16px; overflow:hidden; cursor:pointer; transition:border-color 0.2s,transform 0.2s; }
-    .project-card:hover:not(.expanded) { border-color:rgba(201,168,76,0.3); transform:translateY(-2px); }
-    .card-top { height:100px; display:flex; align-items:center; padding:0 32px; gap:20px; }
-    .card-top-ob { background:linear-gradient(135deg,#050a14 0%,#0a1628 100%); }
-    .card-top-is { background:linear-gradient(135deg,#150a1f 0%,#221230 100%); }
-    .card-top-sp { background:linear-gradient(135deg,#050d08 0%,#0a1a0f 100%); }
-    .card-top-ott { background:linear-gradient(135deg,#0a0a0a 0%,#181818 100%); }
-    .card-top-tn { background:linear-gradient(135deg,#1a0f05 0%,#2a1808 100%); }
-    .card-top-title { font-family:'Playfair Display',Georgia,serif; font-size:22px; font-weight:700; color:var(--white); letter-spacing:-0.01em; }
-    .card-body { padding:24px 32px 28px; }
-    .card-label { font-size:10px; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
-    .card-desc { font-size:14px; font-weight:300; color:var(--gray); line-height:1.7; margin-bottom:18px; }
-    .card-cta { font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); display:inline-flex; align-items:center; gap:8px; }
-    .card-arrow { transition:transform 0.3s; display:inline-block; }
-    .project-card.expanded .card-arrow { transform:rotate(90deg); }
-    .card-detail { max-height:0; overflow:hidden; transition:max-height 0.8s cubic-bezier(0.4,0,0.2,1); border-top:1px solid var(--border); }
-    .project-card.expanded .card-detail { max-height:4000px; }
-    .detail-inner { padding:32px 32px 40px; background:var(--black2); }
-    .feature-slide { padding:28px 0; border-bottom:1px solid var(--border); display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:start; opacity:0; transform:translateY(12px); transition:opacity 0.4s ease,transform 0.4s ease; }
-    .feature-slide.revealed { opacity:1; transform:translateY(0); }
-    .feature-slide:last-child { border-bottom:none; }
-    .f-num { font-size:11px; font-weight:600; color:var(--gold); opacity:0.5; padding-top:3px; }
-    .f-title { font-size:15px; font-weight:600; color:var(--white); margin-bottom:8px; letter-spacing:-0.01em; }
-    .f-desc { font-size:13px; font-weight:300; color:var(--gray); line-height:1.75; }
-    .f-tag { display:inline-block; margin-top:10px; font-size:10px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; padding:3px 10px; border-radius:980px; background:var(--gold-dim); color:var(--gold); }
-    .impact-row { display:flex; gap:12px; padding-top:14px; flex-wrap:wrap; }
-    .impact-stat { flex:1; min-width:90px; background:var(--black3); border:1px solid var(--border); padding:16px; text-align:center; border-radius:8px; }
-    .impact-num { font-family:'Playfair Display',Georgia,serif; font-size:22px; font-weight:700; color:var(--gold); line-height:1; }
-    .impact-label { font-size:11px; color:var(--gray); margin-top:5px; line-height:1.3; }
-    .pillar-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; margin-top:14px; border:1px solid var(--border); border-radius:8px; overflow:hidden; }
-    .pillar-item { padding:14px 16px; border-bottom:1px solid var(--border); border-right:1px solid var(--border); display:flex; gap:10px; align-items:start; }
-    .pillar-item:nth-child(even) { border-right:none; }
-    .pillar-item:nth-last-child(-n+2) { border-bottom:none; }
-    .p-num { font-size:10px; font-weight:700; color:var(--gold); min-width:18px; padding-top:2px; }
-    .p-name { font-size:13px; font-weight:500; color:var(--white); }
-    .p-sub { font-size:11px; color:var(--gray); margin-top:3px; line-height:1.4; }
-    .close-btn { display:block; margin:28px auto 0; padding:10px 28px; background:transparent; border:1px solid var(--border); font-size:11px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--gray); cursor:pointer; transition:border-color 0.2s,color 0.2s; border-radius:980px; }
-    .close-btn:hover { border-color:var(--gold); color:var(--gold); }
-    .demo-links { display:flex; gap:12px; flex-wrap:wrap; margin-top:6px; padding-top:18px; }
-    .demo-link { display:inline-flex; align-items:center; gap:6px; padding:9px 20px; background:var(--gold-dim); color:var(--gold); border:1px solid rgba(201,168,76,0.35); border-radius:980px; font-size:11px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; transition:background 0.2s,transform 0.15s; }
-    .demo-link:hover { background:rgba(201,168,76,0.22); transform:translateY(-1px); }
-    #experience { background:var(--black2); }
-    .exp-list { display:flex; flex-direction:column; }
-    .exp-item { display:grid; grid-template-columns:220px 1fr; gap:48px; padding:44px 0; border-bottom:1px solid var(--border); }
-    .exp-item:first-child { border-top:1px solid var(--border); }
-    .exp-date { font-size:12px; color:var(--gray); padding-top:4px; }
-    .exp-role { font-family:'Playfair Display',Georgia,serif; font-size:20px; font-weight:700; color:var(--white); }
-    .exp-company { font-size:13px; font-weight:500; color:var(--gold); margin-top:5px; }
-    .exp-desc { margin-top:14px; font-size:14px; font-weight:300; color:var(--gray); line-height:1.8; }
-    .stats-bar { background:var(--black3); border-top:1px solid var(--border); border-bottom:1px solid var(--border); padding:0 56px; }
-    .stats-inner { max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); }
-    .stat-item { padding:48px 32px; border-right:1px solid var(--border); display:flex; flex-direction:column; gap:8px; }
-    .stat-item:last-child { border-right:none; }
-    .stat-num { font-family:'Playfair Display',Georgia,serif; font-size:48px; font-weight:700; color:var(--gold); line-height:1; }
-    .stat-desc { font-size:13px; color:var(--gray); font-weight:300; line-height:1.5; }
-    #contact { background:var(--black3); padding:100px 56px; text-align:center; position:relative; overflow:hidden; }
-    #contact::before { content:''; position:absolute; bottom:0; left:50%; transform:translateX(-50%); width:600px; height:400px; background:radial-gradient(ellipse,rgba(201,168,76,0.06) 0%,transparent 70%); pointer-events:none; }
-    .contact-inner { max-width:640px; margin:0 auto; position:relative; }
-    .contact-eyebrow { font-size:11px; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:24px; }
-    .contact-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(40px,5vw,68px); font-weight:900; line-height:1; letter-spacing:-0.02em; color:var(--white); margin-bottom:20px; }
-    .contact-title em { font-style:italic; color:var(--gold); }
-    .contact-sub { font-size:16px; font-weight:300; color:var(--gray); line-height:1.7; margin-bottom:48px; }
-    .contact-links { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:24px; }
-    .c-btn { display:inline-flex; align-items:center; gap:8px; padding:12px 24px; font-size:12px; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; border-radius:980px; transition:transform 0.15s,opacity 0.2s; }
-    .c-btn:hover { transform:translateY(-2px); opacity:0.85; }
-    .c-btn-li { background:#0a66c2; color:#fff; }
-    .c-btn-gh { background:rgba(255,255,255,0.08); color:var(--white); border:1px solid var(--border); }
-    .c-btn-outlook { background:rgba(0,114,198,0.15); color:#0072C6; border:1px solid rgba(0,114,198,0.3); }
-    footer { background:var(--black); border-top:1px solid var(--border); padding:24px 56px; display:flex; align-items:center; justify-content:space-between; }
-    footer p { font-size:11px; color:var(--gray2); letter-spacing:0.04em; }
-    .fade-up { opacity:0; transform:translateY(24px); transition:opacity 0.7s ease,transform 0.7s ease; }
-    .fade-up.visible { opacity:1; transform:translateY(0); }
-    @media (max-width:960px) {
-      nav { padding:0 24px; } .nav-links { display:none; }
-      .section { padding:80px 24px; } .stats-bar { padding:0 24px; }
-      .stats-inner { grid-template-columns:repeat(2,1fr); }
-      .stat-item:nth-child(2) { border-right:none; }
-      .about-grid { grid-template-columns:1fr; gap:48px; }
-      .exp-item { grid-template-columns:1fr; gap:8px; }
-      .pillar-grid { grid-template-columns:1fr; }
-      .pillar-item { border-right:none !important; }
-      footer { flex-direction:column; gap:8px; text-align:center; padding:24px; }
-      #contact { padding:80px 24px; }
-    }
-  </style>
-</head>
-<body>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <nav>
-    <a href="#" class="nav-logo">AK</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero">
-    <p class="hero-eyebrow">Associate Product Manager · Product Analyst</p>
-    <h1 class="hero-title">Built to<br /><em>think</em> in<br />systems.</h1>
-    <p class="hero-sub">OTT platforms, banking operations, music products — I turn real-world problems into structured product strategy, then build working prototypes to prove it.</p>
-    <div class="hero-cta">
-      <button class="btn-gold" onclick="document.getElementById('work').scrollIntoView({behavior:'smooth'})">View My Work</button>
-      <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="section-inner">
-      <div class="section-header fade-up">
-        <h2 class="section-title">Strategist by instinct.<br />Analyst by discipline.</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text fade-up">
-          <p>I'm <strong>Ashok Kumar S</strong> — a CS graduate with hands-on banking experience at <strong>DBS Bank India</strong>, now building an independent portfolio of product case studies and working prototypes across OTT, banking operations, and music products.</p>
-          <p>I'm drawn to the intersection of <strong>user behaviour, platform economics, and content strategy</strong> — where the right framework unlocks growth that analytics alone can't surface. I don't stop at the strategy deck — I build the prototype too.</p>
-          <p>Targeting <strong>Associate Product Manager, Product Analyst, and Junior Product Manager</strong> roles.</p>
-        </div>
-        <div class="fade-up">
-          <p class="about-quote">"I don't just analyse — I build the systems that drive growth."</p>
-          <div class="skills-section">
-            <div class="skill-group">
-              <p class="skill-group-label">Core</p>
-              <div class="skill-tags">
-                <span class="skill-tag">Product & Strategy Thinking</span>
-                <span class="skill-tag">Prioritization & Roadmapping</span>
-                <span class="skill-tag">Market & Competitive Research</span>
-              </div>
-            </div>
-            <div class="skill-group">
-              <p class="skill-group-label">Product</p>
-              <div class="skill-tags">
-                <span class="skill-tag">Requirements Writing</span>
-                <span class="skill-tag">Wireframing & Prototyping</span>
-                <span class="skill-tag">Monetization Model Design</span>
-              </div>
-            </div>
-            <div class="skill-group">
-              <p class="skill-group-label">Technical</p>
-              <div class="skill-tags">
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Excel & Data Analysis</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="work" class="section">
-    <div class="section-inner">
-      <div class="section-header fade-up">
-        <h2 class="section-title">Strategies built<br />from first principles.</h2>
-        <p class="section-sub">Click any project to explore the full strategy. Live prototypes marked below.</p>
-      </div>
-
-      <div class="projects-grid fade-up">
-
-        <div class="project-card" id="card-ob" onclick="toggleCard('ob')">
-          <div class="card-top card-top-ob">
-            <div class="card-logo">
-              <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 4L4 16H44L24 4Z" fill="#5b8fd9"/>
-                <rect x="8" y="18" width="6" height="20" fill="#5b8fd9"/>
-                <rect x="21" y="18" width="6" height="20" fill="#5b8fd9"/>
-                <rect x="34" y="18" width="6" height="20" fill="#5b8fd9"/>
-                <rect x="6" y="40" width="36" height="4" fill="#5b8fd9"/>
-              </svg>
-            </div>
-            <div class="card-top-title">OneBank</div>
-          </div>
-          <div class="card-body">
-            <p class="card-label">Banking Ops · Enterprise Portal</p>
-            <p class="card-desc">An internal operations portal for bank employees — built from real Personal Banker experience at DBS Bank, covering onboarding, deposits, loans, and branch performance.</p>
-            <span class="card-cta">See the modules <span class="card-arrow">→</span></span>
-          </div>
-          <div class="card-detail" id="detail-ob">
-            <div class="detail-inner">
-              <div class="feature-slide"><span class="f-num">01</span><div><div class="f-title">Accounts & e-KYC</div><div class="f-desc">New account applications with document tracking (Aadhaar, PAN, photo verification) across account types — Savings, Current, Salary, Senior Citizen, Student, NRI, Joint.</div><span class="f-tag">Onboarding</span></div></div>
-              <div class="feature-slide"><span class="f-num">02</span><div><div class="f-title">Deposits & Loan Management</div><div class="f-desc">Fixed and Recurring Deposit creation with interest/tenure calculations, plus loan applications and EMI schedules tracked through every approval stage.</div><span class="f-tag">Core Ops</span></div></div>
-              <div class="feature-slide"><span class="f-num">03</span><div><div class="f-title">Customer Service Hub</div><div class="f-desc">Service requests and follow-up tracking so customer issues don't fall through the cracks — designed around real gaps observed in day-to-day banker workflows.</div><span class="f-tag">Follow-Up</span></div></div>
-              <div class="feature-slide"><span class="f-num">04</span><div><div class="f-title">Operations Analytics & Branch Performance</div><div class="f-desc">Visual reporting on daily operational activity and branch-level performance trends — the same signals a real branch manager reviews weekly.</div><span class="f-tag">Analytics</span></div></div>
-              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Why It Matters</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">7</div><div class="impact-label">Core modules</div></div><div class="impact-stat"><div class="impact-num">Live</div><div class="impact-label">Working prototype</div></div><div class="impact-stat"><div class="impact-num">Real</div><div class="impact-label">Banker experience</div></div><div class="impact-stat"><div class="impact-num">React</div><div class="impact-label">+ TypeScript</div></div></div>
-              <div class="demo-links">
-                <a href="https://ashokkumarone.github.io/OneBank/" target="_blank" class="demo-link" onclick="event.stopPropagation()">Live Demo →</a>
-                <a href="https://github.com/ashokkumarone/OneBank" target="_blank" class="demo-link" onclick="event.stopPropagation()">GitHub ↗</a>
-              </div>
-              </div></div>
-              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('ob')">↑ Collapse</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" id="card-is" onclick="toggleCard('is')">
-          <div class="card-top card-top-is">
-            <div class="card-logo">
-              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="20" stroke="#c9a84c" stroke-width="2.5"/>
-                <path d="M19 16L32 24L19 32V16Z" fill="#c9a84c"/>
-              </svg>
-            </div>
-            <div class="card-top-title">Isaipadam</div>
-          </div>
-          <div class="card-body">
-            <p class="card-label">Unified Streaming · Working Prototype</p>
-            <p class="card-desc">A working prototype unifying video and audio streaming into one seamless app — with a live-audience engagement layer and a full product strategy case study behind it.</p>
-            <span class="card-cta">Explore the strategy <span class="card-arrow">→</span></span>
-          </div>
-          <div class="card-detail" id="detail-is">
-            <div class="detail-inner">
-              <div class="feature-slide"><span class="f-num">01</span><div><div class="f-title">Audio Mode</div><div class="f-desc">Native background-play for music, podcasts, and long-form content. Switch between Video and Audio inside the same app — keeping users engaged even with screen off.</div><span class="f-tag">Retention</span></div></div>
-              <div class="feature-slide"><span class="f-num">02</span><div><div class="f-title">Active Audience Framework</div><div class="f-desc">Subscribers classified as Active, Semi-Active, or Inactive based on watch duration, frequency, and interaction — eliminating vanity metrics and giving creators real audience visibility.</div><span class="f-tag">Algorithm</span></div></div>
-              <div class="feature-slide"><span class="f-num">03</span><div><div class="f-title">Creator Fair Pay System</div><div class="f-desc">Revenue tied to engagement depth, not just impressions — fairer metrics, higher advertiser CPM, and a healthier creator ecosystem especially at sub-100K scale.</div><span class="f-tag">Monetisation</span></div></div>
-              <div class="feature-slide"><span class="f-num">04</span><div><div class="f-title">Live Audience Features</div><div class="f-desc">Real-time polling, reactions, and simulated live chat built for live-stream scenarios — plus a curated content library with playlists, synced lyrics, and a premium-tier toggle.</div><span class="f-tag">Engagement</span></div></div>
-              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Projected Impact</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">+22%</div><div class="impact-label">Retention lift</div></div><div class="impact-stat"><div class="impact-num">+35%</div><div class="impact-label">Creator revenue</div></div><div class="impact-stat"><div class="impact-num">Cleaner</div><div class="impact-label">Algorithm signals</div></div><div class="impact-stat"><div class="impact-num">Higher</div><div class="impact-label">Advertiser CPM</div></div></div>
-              <div class="demo-links">
-                <a href="https://ashokkumarone.github.io/Isaipadam/" target="_blank" class="demo-link" onclick="event.stopPropagation()">Live Demo →</a>
-                <a href="https://github.com/ashokkumarone/Isaipadam" target="_blank" class="demo-link" onclick="event.stopPropagation()">GitHub ↗</a>
-                <a href="https://github.com/ashokkumarone/Isaipadam/blob/main/strategy/Isaipadam_Product_Strategy_Case_Study.pdf" target="_blank" class="demo-link" onclick="event.stopPropagation()">Strategy PDF ↗</a>
-              </div>
-              </div></div>
-              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('is')">↑ Collapse</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" id="card-sp" onclick="toggleCard('sp')">
-          <div class="card-top card-top-sp">
-            <div class="card-logo">
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 6C14.06 6 6 14.06 6 24V36C6 38.21 7.79 40 10 40H14C16.21 40 18 38.21 18 36V30C18 27.79 16.21 26 14 26H10V24C10 16.27 16.27 10 24 10C31.73 10 38 16.27 38 24V26H34C31.79 26 30 27.79 30 30V36C30 38.21 31.79 40 34 40H38C40.21 40 42 38.21 42 36V24C42 14.06 33.94 6 24 6Z" fill="#c9a84c"/>
-              </svg>
-            </div>
-            <div class="card-top-title">Tuning</div>
-          </div>
-          <div class="card-body">
-            <p class="card-label">Music · Social Product Concept</p>
-            <p class="card-desc">A social layer for music streaming platforms — send songs as messages, react with emojis, and share exact lyric timestamps. Backed by a freemium model and SQL schema.</p>
-            <span class="card-cta">App flow <span class="card-arrow">→</span></span>
-          </div>
-          <div class="card-detail" id="detail-sp">
-            <div class="detail-inner">
-              <div class="feature-slide"><span class="f-num">01</span><div><div class="f-title">Home → Search & Share</div><div class="f-desc">Search any song directly from the home feed and share it as a message — no separate app, zero friction.</div><span class="f-tag">Screen 1</span></div></div>
-              <div class="feature-slide"><span class="f-num">02</span><div><div class="f-title">Conversations — Music as Messages</div><div class="f-desc">Your inbox shows threads anchored by the last song shared — music replaces text as the primary communication signal.</div><span class="f-tag">Screen 2</span></div></div>
-              <div class="feature-slide"><span class="f-num">03</span><div><div class="f-title">Chat — React, Send a Song</div><div class="f-desc">Share songs with lyric timestamps, react with emojis, or search any track to send. "No keyboard. Just music." — the core Tuning principle.</div><span class="f-tag">Screen 3</span></div></div>
-              <div class="feature-slide"><span class="f-num">04</span><div><div class="f-title">PRD, Freemium Model & SQL Schema</div><div class="f-desc">A full product requirements doc with a relational SQL schema (Users, Songs, Tuning Logs) and a freemium model tracking KPIs like Free-to-Pro conversion rate and Daily Active Sharers.</div><span class="f-tag">Product Depth</span></div></div>
-              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Projected Impact</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">+28%</div><div class="impact-label">DAU lift</div></div><div class="impact-stat"><div class="impact-num">+45%</div><div class="impact-label">Session length</div></div><div class="impact-stat"><div class="impact-num">4x</div><div class="impact-label">Social sharing</div></div><div class="impact-stat"><div class="impact-num">New</div><div class="impact-label">Revenue layer</div></div></div>
-              <div class="demo-links">
-                <a href="https://ashokkumarone.github.io/Tuning-Music/" target="_blank" class="demo-link" onclick="event.stopPropagation()">Live Demo →</a>
-                <a href="https://github.com/ashokkumarone/Tuning-Music" target="_blank" class="demo-link" onclick="event.stopPropagation()">GitHub ↗</a>
-              </div>
-              </div></div>
-              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('sp')">↑ Collapse</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" id="card-ott" onclick="toggleCard('ott')">
-          <div class="card-top card-top-ott">
-            <div class="card-logo">
-              <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="24" r="19" stroke="#e8c96a" stroke-width="2"/>
-                <path d="M19 16L32 24L19 32V16Z" fill="#e8c96a"/>
-              </svg>
-            </div>
-            <div class="card-top-title">OTT India Disruption Strategy 2026</div>
-          </div>
-          <div class="card-body">
-            <p class="card-label">Platform-Agnostic · 12-Pillar Framework</p>
-            <p class="card-desc">A data-backed 12-pillar framework addressing why OTT platforms in India underperform despite huge user bases — designed to re-weight for any platform's positioning.</p>
-            <span class="card-cta">All 12 pillars <span class="card-arrow">→</span></span>
-          </div>
-          <div class="card-detail" id="detail-ott">
-            <div class="detail-inner">
-              <div class="feature-slide"><span class="f-num">Context</span><div><div class="f-title">India OTT Market Gaps</div><div class="f-desc">600M+ OTT users, but only ~24% convert to paying subscribers. Rs.8,700 Cr lost annually to piracy. Strong theatre dependency. Revenue still growing at a 16% CAGR to 2029. This strategy addresses all three structural barriers.</div><span class="f-tag">Market Context</span></div></div>
-              <div class="feature-slide"><span class="f-num">12</span><div><div class="f-title">The Complete Framework</div>
-                <div class="pillar-grid">
-                  <div class="pillar-item"><span class="p-num">01</span><div><div class="p-name">Daily Episode Release</div><div class="p-sub">Build consistent daily viewing habits</div></div></div>
-                  <div class="pillar-item"><span class="p-num">02</span><div><div class="p-name">In-House Polyglot Dubbing</div><div class="p-sub">AI-powered multi-language dubbing</div></div></div>
-                  <div class="pillar-item"><span class="p-num">03</span><div><div class="p-name">Festival Season Release</div><div class="p-sub">Align drops with Indian festivals</div></div></div>
-                  <div class="pillar-item"><span class="p-num">04</span><div><div class="p-name">Platform-as-Producer Model</div><div class="p-sub">Co-produce regional originals</div></div></div>
-                  <div class="pillar-item"><span class="p-num">05</span><div><div class="p-name">Hero-Centric Regional Promotions</div><div class="p-sub">Star-led marketing for mass reach</div></div></div>
-                  <div class="pillar-item"><span class="p-num">06</span><div><div class="p-name">Copyright AI Shield</div><div class="p-sub">Real-time piracy detection & takedown</div></div></div>
-                  <div class="pillar-item"><span class="p-num">07</span><div><div class="p-name">Regional Dubbed Rotation</div><div class="p-sub">Cross-language content discovery</div></div></div>
-                  <div class="pillar-item"><span class="p-num">08</span><div><div class="p-name">Theatre Hijack Strategy</div><div class="p-sub">Better home viewing experience</div></div></div>
-                  <div class="pillar-item"><span class="p-num">09</span><div><div class="p-name">Emerging Brand Bundling</div><div class="p-sub">D2C brand partnership bundles</div></div></div>
-                  <div class="pillar-item"><span class="p-num">10</span><div><div class="p-name">Taste-Before-Subscribe</div><div class="p-sub">Free preview before paywall</div></div></div>
-                  <div class="pillar-item"><span class="p-num">11</span><div><div class="p-name">India-Only Tier Rs.49</div><div class="p-sub">Mobile-only affordable entry plan</div></div></div>
-                  <div class="pillar-item"><span class="p-num">12</span><div><div class="p-name">Couple Pack Rs.499</div><div class="p-sub">Dual-profile bundle, reduce sharing</div></div></div>
-                </div>
-              </div></div>
-              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Research-Backed</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">600M+</div><div class="impact-label">India OTT users</div></div><div class="impact-stat"><div class="impact-num">24%</div><div class="impact-label">Convert to paying</div></div><div class="impact-stat"><div class="impact-num">16%</div><div class="impact-label">Revenue CAGR to 2029</div></div><div class="impact-stat"><div class="impact-num">Rs.8,700 Cr</div><div class="impact-label">Piracy loss/year</div></div></div>
-              <div class="demo-links">
-                <a href="https://github.com/ashokkumarone/OTT-India-Disruption-Strategy" target="_blank" class="demo-link" onclick="event.stopPropagation()">GitHub ↗</a>
-              </div>
-              </div></div>
-              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('ott')">↑ Collapse</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card" id="card-tn" onclick="toggleCard('tn')">
-          <div class="card-top card-top-tn">
-            <div class="card-logo">
-              <svg width="46" height="38" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="4" y="4" width="40" height="26" rx="2" stroke="#e0a458" stroke-width="2.5"/>
-                <path d="M18 34H30" stroke="#e0a458" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M24 30V34" stroke="#e0a458" stroke-width="2.5" stroke-linecap="round"/>
-                <path d="M19 12L29 17L19 22V12Z" fill="#e0a458"/>
-              </svg>
-            </div>
-            <div class="card-top-title">TN Channel</div>
-          </div>
-          <div class="card-body">
-            <p class="card-label">Regional TV · Hybrid Linear-OTT Model</p>
-            <p class="card-desc">A free, ad-supported hybrid TV model for Tamil Nadu — users pick content like OTT via WhatsApp, but it plays linearly, with zero broadband dependency.</p>
-            <span class="card-cta">The 4-movie grid <span class="card-arrow">→</span></span>
-          </div>
-          <div class="card-detail" id="detail-tn">
-            <div class="detail-inner">
-              <div class="feature-slide"><span class="f-num">Context</span><div><div class="f-title">The Market Gap</div><div class="f-desc">15M+ cable/DTH households in Tamil Nadu want control over content but can't afford or access OTT (Rs.199–499/month + broadband). TN Channel bridges linear TV's simplicity with OTT's sense of choice — completely free.</div><span class="f-tag">Market Context</span></div></div>
-              <div class="feature-slide"><span class="f-num">01</span><div><div class="f-title">4-Movie Daily Grid via WhatsApp</div><div class="f-desc">Users select from a 4-movie daily grid via WhatsApp or app. The system maps their Set-Top Box ID — at slot time, their TV automatically routes to the selected movie, playing linearly.</div><span class="f-tag">Core Concept</span></div></div>
-              <div class="feature-slide"><span class="f-num">02</span><div><div class="f-title">4x Ad Arbitrage</div><div class="f-desc">Four parallel feeds mean 4x the ad inventory of a traditional linear channel — a locked, no-pause viewing experience drives ad completion rates far above typical linear TV.</div><span class="f-tag">Monetisation</span></div></div>
-              <div class="feature-slide"><span class="f-num">03</span><div><div class="f-title">Works on Dumb Set-Top Boxes</div><div class="f-desc">No smart TV or software upgrade required — the backend does all the routing work over existing copper cable and DTH infrastructure already in 15M+ homes.</div><span class="f-tag">Distribution</span></div></div>
-              <div class="feature-slide"><span class="f-num">↗</span><div><div class="f-title">Pilot Targets (Month 6)</div><div class="impact-row"><div class="impact-stat"><div class="impact-num">25–30K</div><div class="impact-label">Daily active users</div></div><div class="impact-stat"><div class="impact-num">92%+</div><div class="impact-label">Ad completion rate</div></div><div class="impact-stat"><div class="impact-num">Rs.80L–1Cr</div><div class="impact-label">Monthly revenue</div></div><div class="impact-stat"><div class="impact-num">4x</div><div class="impact-label">Ad inventory</div></div></div>
-              <div class="demo-links">
-                <a href="https://github.com/ashokkumarone/TN-Channel-Strategy" target="_blank" class="demo-link" onclick="event.stopPropagation()">GitHub ↗</a>
-              </div>
-              </div></div>
-              <button class="close-btn" onclick="event.stopPropagation(); toggleCard('tn')">↑ Collapse</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="section">
-    <div class="section-inner">
-      <div class="section-header fade-up">
-        <h2 class="section-title">Where I've worked<br />and what I built.</h2>
-      </div>
-      <div class="exp-list fade-up">
-        <div class="exp-item">
-          <div class="exp-date">2017 – 2021</div>
-          <div>
-            <div class="exp-role">B.E. Computer Science Engineering</div>
-            <div class="exp-company">Builder Engineering College, Tiruppur</div>
-            <div class="exp-desc">Foundation in data structures, algorithms, databases, and system design — applied directly to product thinking and technical communication.</div>
-          </div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-date">Nov 2022 – Jul 2023</div>
-          <div>
-            <div class="exp-role">Assistant Officer – Personal Banker</div>
-            <div class="exp-company">DBS Bank India Ltd</div>
-            <div class="exp-desc">Managed 10–15 customer interactions daily, consistently opening 1+ new account per day across savings, FD, RD, and insurance. Advised clients through a consultative approach, driving cross-sell across deposits, loans, and insurance in a compliance-driven environment.</div>
-          </div>
-        </div>
-        <div class="exp-item">
-          <div class="exp-date">2023 – Present</div>
-          <div>
-            <div class="exp-role">Independent Product Strategist</div>
-            <div class="exp-company">Self-directed Portfolio</div>
-            <div class="exp-desc">Built five end-to-end product case studies and working prototypes — OneBank, Isaipadam, Tuning, OTT India Disruption Strategy 2026, and TN Channel — spanning banking operations, unified video/audio streaming, music-social features, and OTT market strategy, each with PRDs, KPI frameworks, and prototypes. IBM Excel certified (100%).</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="stats-bar">
-    <div class="stats-inner">
-      <div class="stat-item"><div class="stat-num">5</div><div class="stat-desc">Product case studies<br />& prototypes</div></div>
-      <div class="stat-item"><div class="stat-num">3</div><div class="stat-desc">Live, working<br />prototypes</div></div>
-      <div class="stat-item"><div class="stat-num">8+</div><div class="stat-desc">Months banking<br />domain experience</div></div>
-      <div class="stat-item"><div class="stat-num">100%</div><div class="stat-desc">IBM Excel<br />Certificate grade</div></div>
-    </div>
-  </div>
-
-  <section id="contact">
-    <div class="contact-inner">
-      <p class="contact-eyebrow">Let's Talk</p>
-      <h2 class="contact-title">Open to the<br /><em>right</em> opportunity.</h2>
-      <p class="contact-sub">Targeting Associate Product Manager, Product Analyst, and Junior Product Manager roles — especially in OTT, banking, and consumer tech.</p>
-      <div class="contact-links">
-        <a href="https://linkedin.com/in/ashokkumarone" target="_blank" class="c-btn c-btn-li">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-        <a href="https://github.com/ashokkumarone" target="_blank" class="c-btn c-btn-gh">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          GitHub
-        </a>
-        <a href="mailto:ashokkumarone@outlook.com?subject=Let's%20Talk" class="c-btn c-btn-outlook">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M2.02 6.46C2.02 5.66 2.66 5 3.46 5h17.08C21.34 5 22 5.66 22 6.46v11.08c0 .8-.66 1.46-1.46 1.46H3.46c-.8 0-1.44-.66-1.44-1.46V6.46zm17.08-1.5H3.46c-1.3 0-2.34 1.06-2.34 2.36v11.08c0 1.3 1.04 2.36 2.34 2.36h17.08c1.3 0 2.34-1.06 2.34-2.36V6.46c0-1.3-1.04-2.36-2.34-2.36zm-8.54 6.5l-6.32-4.66c-.24-.18-.32-.5-.16-.76.16-.26.5-.34.76-.16l7.26 5.34 7.26-5.34c.26-.18.6-.1.76.16.16.26.08.58-.16.76L10.56 11.46z"/></svg>
-          Email
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2026 Ashok Kumar S</p>
-    <p>Built with intention. Deployed on GitHub Pages.</p>
-  </footer>
-
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-    function toggleCard(id) {
-      const card = document.getElementById('card-' + id);
-      const isExpanded = card.classList.contains('expanded');
-      document.querySelectorAll('.project-card').forEach(c => c.classList.remove('expanded'));
-      if (!isExpanded) {
-        card.classList.add('expanded');
-        const slides = card.querySelectorAll('.feature-slide');
-        slides.forEach(s => s.classList.remove('revealed'));
-        setTimeout(() => {
-          slides.forEach((s, i) => setTimeout(() => s.classList.add('revealed'), i * 120));
-        }, 100);
-        setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'start' }), 80);
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: {
+              950: '#060609',
+              900: '#0a0a0f',
+              850: '#0e0e16',
+              800: '#14141f',
+              700: '#1c1c2b',
+              600: '#28283d'
+            },
+            gold: {
+              light: '#f5d78e',
+              DEFAULT: '#e5c07b',
+              dark: '#c9a84c',
+              dim: 'rgba(229, 192, 123, 0.08)',
+              glow: 'rgba(229, 192, 123, 0.22)'
+            },
+            titanium: {
+              100: '#f8fafc',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b'
+            }
+          },
+          fontFamily: {
+            serif: ['"DM Serif Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
       }
     }
   </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    /* Custom Luxury Glass & Glows */
+    .glass-card {
+      background: rgba(14, 14, 22, 0.7);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+    }
+    .glass-card:hover {
+      border-color: rgba(229, 192, 123, 0.28);
+      box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.7), 0 0 30px -5px rgba(229, 192, 123, 0.08);
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #ffffff 20%, #f5d78e 65%, #c9a84c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-gradient-bg {
+      background: linear-gradient(135deg, #f5d78e 0%, #e5c07b 50%, #c9a84c 100%);
+    }
+    .border-gold-glow {
+      border: 1px solid rgba(229, 192, 123, 0.35);
+      box-shadow: 0 0 20px -3px rgba(229, 192, 123, 0.15);
+    }
+    /* Ambient backdrop aura */
+    .ambient-glow {
+      position: absolute;
+      width: 750px;
+      height: 750px;
+      background: radial-gradient(circle, rgba(229, 192, 123, 0.06) 0%, rgba(20, 20, 35, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #08080c; }
+    ::-webkit-scrollbar-thumb { background: #1c1c2b; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #c9a84c; }
+  </style>
+</head>
+
+<body class="bg-obsidian-950 text-titanium-200 font-sans antialiased selection:bg-gold selection:text-obsidian-950 overflow-x-hidden relative">
+
+  <!-- Ambient Glow Backgrounds -->
+  <div class="ambient-glow -top-40 -left-40"></div>
+  <div class="ambient-glow top-[35%] -right-40"></div>
+  <div class="ambient-glow top-[75%] left-1/3"></div>
+
+  <!-- Executive Sticky Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-obsidian-950/85 backdrop-blur-xl border-b border-white/[0.06] transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <span class="w-9 h-9 rounded-lg bg-obsidian-850 border border-gold/30 flex items-center justify-center font-serif text-lg font-bold text-gold group-hover:border-gold group-hover:scale-105 transition-all">
+          AK
+        </span>
+        <div class="flex flex-col">
+          <span class="font-bold text-sm tracking-tight text-white group-hover:text-gold transition-colors">Ashokkumar S</span>
+          <span class="text-[10px] tracking-wider uppercase text-titanium-400 font-mono">Product Strategist</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <div class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-titanium-400">
+        <a href="#work" class="hover:text-gold transition-colors">Flagship Work</a>
+        <a href="#banking" class="hover:text-gold transition-colors">DBS Bank Authority</a>
+        <a href="#philosophy" class="hover:text-gold transition-colors">Product Philosophy</a>
+        <a href="#about" class="hover:text-gold transition-colors">Background</a>
+        <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a href="https://linkedin.com/in/ashokkumarone" target="_blank" rel="noopener noreferrer" 
+           class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wide bg-obsidian-800 border border-white/10 text-titanium-200 hover:border-gold/40 hover:text-gold transition-all">
+          <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+          <span>LinkedIn</span>
+        </a>
+        <a href="#contact" 
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-gold text-obsidian-950 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 transition-all">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="relative pt-36 pb-20 md:pt-44 md:pb-28 px-6 overflow-hidden">
+    <div class="max-w-5xl mx-auto relative z-10 text-center">
+      
+      <!-- Executive Status Badge -->
+      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-obsidian-850 border border-gold/20 text-gold text-xs font-mono tracking-wide mb-8 shadow-sm">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>OPEN TO ASSOCIATE PRODUCT MANAGER & PRODUCT ANALYST ROLES</span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-normal leading-[1.08] tracking-tight text-white mb-8">
+        Architecting products from <br class="hidden sm:inline" />
+        <span class="font-serif italic text-gold font-normal">first principles</span> to working systems.
+      </h1>
+
+      <!-- Executive Subtitle -->
+      <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-titanium-400 font-light leading-relaxed mb-10">
+        I combine ground-level <strong class="text-white font-medium">Personal Banker experience at DBS Bank</strong> with rigorous product discovery, quantitative modeling, and functioning prototypes across <strong class="text-titanium-200 font-medium">FinTech CBS, Consumer Streaming, and Big-Tech Platforms</strong>.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
+        <a href="#work" 
+           class="px-8 py-4 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider bg-gold text-obsidian-950 hover:bg-gold-light hover:shadow-xl hover:shadow-gold/25 transition-all flex items-center gap-2 group">
+          <span>Explore 5 Flagship Projects</span>
+          <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform"></i>
+        </a>
+        <a href="#banking" 
+           class="px-8 py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wide bg-obsidian-850 border border-white/10 text-titanium-200 hover:border-gold/40 hover:text-gold transition-all flex items-center gap-2">
+          <span>DBS Bank Case & Insights</span>
+          <i data-lucide="shield-check" class="w-4 h-4 text-gold"></i>
+        </a>
+      </div>
+
+      <!-- Verified Executive Proof Points Bar -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-white/[0.08]">
+        <div class="p-4 rounded-xl bg-obsidian-900/60 border border-white/[0.05] text-center">
+          <div class="font-serif text-2xl sm:text-3xl text-gold font-normal">5 Flagship</div>
+          <div class="text-[11px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Cases & Prototypes</div>
+        </div>
+        <div class="p-4 rounded-xl bg-obsidian-900/60 border border-white/[0.05] text-center">
+          <div class="font-serif text-2xl sm:text-3xl text-gold font-normal">3 Live</div>
+          <div class="text-[11px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Production Apps</div>
+        </div>
+        <div class="p-4 rounded-xl bg-obsidian-900/60 border border-white/[0.05] text-center">
+          <div class="font-serif text-2xl sm:text-3xl text-gold font-normal">Ex-DBS</div>
+          <div class="text-[11px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Retail Banking Authority</div>
+        </div>
+        <div class="p-4 rounded-xl bg-obsidian-900/60 border border-white/[0.05] text-center">
+          <div class="font-serif text-2xl sm:text-3xl text-gold font-normal">100%</div>
+          <div class="text-[11px] uppercase tracking-wider text-titanium-400 font-mono mt-1">IBM Excel Certified</div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Section Divider -->
+  <div class="max-w-6xl mx-auto px-6"><div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
+
+  <!-- Flagship Projects Section -->
+  <section id="work" class="py-24 px-6 relative z-10">
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Section Header with Category Tabs -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-2 font-semibold">Portfolio Showcase</span>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-white font-normal tracking-tight">
+            Flagship Product Case Studies & Prototypes
+          </h2>
+          <p class="text-titanium-400 text-sm sm:text-base mt-2 max-w-xl">
+            Each project addresses a verified structural industry failure with strategic PRD documentation, quantitative metrics, and functioning production code.
+          </p>
+        </div>
+
+        <!-- Interactive Category Switcher -->
+        <div class="inline-flex p-1.5 rounded-xl bg-obsidian-850 border border-white/10 text-xs font-semibold self-start md:self-auto">
+          <button onclick="filterProjects('all')" id="tab-all" class="tab-btn px-4 py-2 rounded-lg bg-gold text-obsidian-950 font-bold transition-all">All (5)</button>
+          <button onclick="filterProjects('fintech')" id="tab-fintech" class="tab-btn px-4 py-2 rounded-lg text-titanium-400 hover:text-white transition-all">FinTech CBS</button>
+          <button onclick="filterProjects('streaming')" id="tab-streaming" class="tab-btn px-4 py-2 rounded-lg text-titanium-400 hover:text-white transition-all">Streaming</button>
+          <button onclick="filterProjects('strategy')" id="tab-strategy" class="tab-btn px-4 py-2 rounded-lg text-titanium-400 hover:text-white transition-all">Strategy & PRDs</button>
+        </div>
+      </div>
+
+      <!-- Projects Container -->
+      <div class="space-y-12" id="projects-container">
+
+        <!-- ============================================== -->
+        <!-- PROJECT 1: ONEBANK -->
+        <!-- ============================================== -->
+        <div class="project-item fintech glass-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10 transition-all duration-300" data-category="fintech">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-md bg-gold-dim border border-gold/20">01 / FINTECH CBS</span>
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live React 19 Application
+              </span>
+            </div>
+            <div class="flex items-center gap-3">
+              <a href="https://ashokkumarone.github.io/OneBank/" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
+                <span>Launch App</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-white/20">|</span>
+              <a href="https://github.com/ashokkumarone/OneBank" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-xs font-mono text-titanium-400 hover:text-white transition-colors">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                <span>Repository</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-3">
+                  OneBank — Enterprise Core Banking Solution & Request Tracker
+                </h3>
+                <p class="text-sm font-medium text-gold/90 mb-6">
+                  Solving Retail Banking's Chronic "Come Back Tomorrow" Failure Loop
+                </p>
+
+                <!-- Problem Statement -->
+                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                  <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
+                    <i data-lucide="alert-circle" class="w-3.5 h-3.5 text-amber-400"></i> The Ground-Floor Problem (DBS Context)
+                  </h4>
+                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+                    In branch banking operations, customer service requests frequently fail because desk handovers occur across fragmented paper slips and siloed software. When an assigned officer is off-duty, customers are told "come back tomorrow," triggering severe SLA breaches, customer churn, and audit penalties.
+                  </p>
+                </div>
+
+                <!-- Product Innovation -->
+                <div class="mb-6 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                  <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-1 flex items-center gap-2">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold"></i> Flagship Innovation: Unified Request Tracker
+                  </h4>
+                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+                    Designed an immutable, branch-wide <strong>Request Tracker</strong> with strict SLA aging, instant ownership reassignment, and audit trails. Table-stakes operations (7-step e-KYC onboarding, Deposits, Loan origination, CBS Search) are unified into a single coherent interface with zero external dependencies.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tech Stack & Architecture Pills -->
+              <div class="pt-4 border-t border-white/[0.06]">
+                <div class="text-[11px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Technical Architecture</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">React 19</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">TypeScript</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">Tailwind CSS</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">Recharts Analytics</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">DBS Domain Logic</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Impact & Feature Card -->
+            <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
+              <div>
+                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Core Deliverables & Highlights</h4>
+                <ul class="space-y-3.5 text-xs sm:text-sm text-titanium-300">
+                  <li class="flex items-start gap-3">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">Flagship Request Tracker:</strong> Complete lifecycle tracking from intake to verification, dispatch, and closure with audit timestamps.
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">7-Step e-KYC Onboarding:</strong> Aadhaar, PAN, Video verification, risk tiering, and instant customer ID generation.
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">Deposits & Loan Processing:</strong> Real-time FD/RD compounding calculations, loan stage pipeline, and EMI simulation.
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">Universal CBS Account Search:</strong> Sub-second customer lookup across 7 account categories with KYC validation states.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-8 pt-6 border-t border-white/[0.08]">
+                <a href="https://ashokkumarone.github.io/OneBank/" target="_blank" rel="noopener noreferrer" 
+                   class="w-full py-3 rounded-lg bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2">
+                  <span>Open Live OneBank App</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- PROJECT 2: GOOGLE PRODUCT STRATEGY CASES -->
+        <!-- ============================================== -->
+        <div class="project-item strategy glass-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10 transition-all duration-300" data-category="strategy">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-md bg-gold-dim border border-gold/20">02 / BIG-TECH PRD SUITE</span>
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Portal & Interactive UX Flow
+              </span>
+            </div>
+            <div class="flex items-center gap-3">
+              <a href="https://ashokkumarone.github.io/Google-Product-Strategy-Cases/" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
+                <span>Read Case Studies</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-white/20">|</span>
+              <a href="https://github.com/ashokkumarone/Google-Product-Strategy-Cases" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-xs font-mono text-titanium-400 hover:text-white transition-colors">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                <span>Repository</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-3">
+                  Google Product Strategy Cases — 4 PRDs & YouTube Shorts Flow
+                </h3>
+                <p class="text-sm font-medium text-gold/90 mb-6">
+                  Unlocking High-Growth Engagement Across GPay, Search, Shorts & Meet
+                </p>
+
+                <!-- Problem Statement -->
+                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                  <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
+                    <i data-lucide="help-circle" class="w-3.5 h-3.5 text-blue-400"></i> The Strategic Context
+                  </h4>
+                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+                    Large-scale consumer platforms (Google ecosystem) face engagement plateaus when transactional utilities fail to capture social network effects. How do we drive organic retention in UPI payments, university micro-communities, short-form video discovery, and synchronous co-viewing?
+                  </p>
+                </div>
+
+                <!-- 4 Cases Breakdown -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                  <div class="p-3 rounded-lg bg-obsidian-900/60 border border-white/[0.06]">
+                    <div class="text-xs font-bold text-white mb-1 flex items-center gap-1.5">
+                      <span class="text-gold font-mono">1.</span> GPay Gifting
+                    </div>
+                    <p class="text-[11px] text-titanium-400 leading-normal">
+                      P2P gamified gifting envelopes with instant merchant redemption & social surprise triggers.
+                    </p>
+                  </div>
+                  <div class="p-3 rounded-lg bg-obsidian-900/60 border border-white/[0.06]">
+                    <div class="text-xs font-bold text-white mb-1 flex items-center gap-1.5">
+                      <span class="text-gold font-mono">2.</span> Search Campus Guild
+                    </div>
+                    <p class="text-[11px] text-titanium-400 leading-normal">
+                      Hyper-local, verified university micro-communities embedded directly in Google Search results.
+                    </p>
+                  </div>
+                  <div class="p-3 rounded-lg bg-obsidian-900/60 border border-white/[0.06]">
+                    <div class="text-xs font-bold text-white mb-1 flex items-center gap-1.5">
+                      <span class="text-gold font-mono">3.</span> Shorts Smart Bar
+                    </div>
+                    <p class="text-[11px] text-titanium-400 leading-normal">
+                      Contextual timestamp anchors & live audio scrubbers with 7-screen interactive UX prototype.
+                    </p>
+                  </div>
+                  <div class="p-3 rounded-lg bg-obsidian-900/60 border border-white/[0.06]">
+                    <div class="text-xs font-bold text-white mb-1 flex items-center gap-1.5">
+                      <span class="text-gold font-mono">4.</span> Meet Couple Pack
+                    </div>
+                    <p class="text-[11px] text-titanium-400 leading-normal">
+                      Low-latency shared media canvas and synchronized watch parties for long-distance relationships.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tech Stack & Architecture Pills -->
+              <div class="pt-4 border-t border-white/[0.06]">
+                <div class="text-[11px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Deliverables & Formats</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">4 Full PRDs</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">7-Screen Shorts UX Flow</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">10-Page Strategy PDF</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">KPI & Metrics Trees</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Impact & Feature Card -->
+            <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
+              <div>
+                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">PM Rigor & Deliverables</h4>
+                <div class="space-y-4">
+                  <div class="p-3.5 rounded-lg bg-obsidian-800/60 border border-white/[0.05]">
+                    <div class="text-xs font-bold text-white mb-1">Interactive 7-Screen Shorts UX Flow</div>
+                    <p class="text-xs text-titanium-400 leading-relaxed">
+                      Hands-on mobile simulator demonstrating the exact swipe-up gesture, contextual comment anchor tags, and zero-loss audio scrubbing mechanism.
+                    </p>
+                  </div>
+                  <div class="p-3.5 rounded-lg bg-obsidian-800/60 border border-white/[0.05]">
+                    <div class="text-xs font-bold text-white mb-1">Complete Strategy Whitepaper PDF</div>
+                    <p class="text-xs text-titanium-400 leading-relaxed">
+                      10-page executive document with user personas, prioritized requirements, edge case matrices, and North Star metrics for all 4 features.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row gap-3">
+                <a href="https://ashokkumarone.github.io/Google-Product-Strategy-Cases/" target="_blank" rel="noopener noreferrer" 
+                   class="flex-1 py-3 rounded-lg bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2">
+                  <span>Open Strategy Portal</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="https://github.com/ashokkumarone/Google-Product-Strategy-Cases/blob/main/strategy/Google_Product_Strategy_Cases.pdf" target="_blank" rel="noopener noreferrer" 
+                   class="px-4 py-3 rounded-lg bg-obsidian-800 border border-white/10 text-titanium-200 font-semibold text-xs hover:border-gold/30 hover:text-gold transition-all flex items-center justify-center gap-2">
+                  <i data-lucide="file-text" class="w-4 h-4 text-gold"></i>
+                  <span>PDF (10 pgs)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- PROJECT 3: OTT INDIA DISRUPTION STRATEGY 2026 -->
+        <!-- ============================================== -->
+        <div class="project-item strategy glass-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10 transition-all duration-300" data-category="strategy">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-md bg-gold-dim border border-gold/20">03 / MEDIA ECONOMICS & STRATEGY</span>
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Portal & 12-Pillar Whitepaper
+              </span>
+            </div>
+            <div class="flex items-center gap-3">
+              <a href="https://ashokkumarone.github.io/OTT-India-Disruption-Strategy/" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
+                <span>View Strategy Portal</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-white/20">|</span>
+              <a href="https://github.com/ashokkumarone/OTT-India-Disruption-Strategy" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-xs font-mono text-titanium-400 hover:text-white transition-colors">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                <span>Repository</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-3">
+                  OTT India Disruption Strategy 2026 — 12-Pillar Framework
+                </h3>
+                <p class="text-sm font-medium text-gold/90 mb-6">
+                  Platform-Agnostic Monetization & Piracy Defense for Indian Streaming
+                </p>
+
+                <!-- Market Reality -->
+                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                  <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
+                    <i data-lucide="trending-down" class="w-3.5 h-3.5 text-red-400"></i> The Indian OTT Bottleneck
+                  </h4>
+                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+                    India boasts <strong class="text-white">600M+ OTT users</strong>, yet only <strong class="text-white">~24% convert to paying subscribers</strong>. Simultaneously, <strong class="text-white">₹8,700 Crore is lost annually to digital piracy</strong> (EY-IAMAI), and massive theatrical release dependencies crush subscriber retention post-blockbusters.
+                  </p>
+                </div>
+
+                <!-- 12 Pillars Overview -->
+                <div class="mb-6 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                  <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-2 flex items-center gap-2">
+                    <i data-lucide="layers" class="w-3.5 h-3.5 text-gold"></i> The 4-Tier Strategic Framework
+                  </h4>
+                  <div class="grid grid-cols-2 gap-2 text-[11px] text-titanium-300">
+                    <div class="p-2 rounded bg-obsidian-850">
+                      <span class="text-gold font-mono font-bold block">Habit & Release</span>
+                      Daily Drops, Festival Windows, Theatre Hijack
+                    </div>
+                    <div class="p-2 rounded bg-obsidian-850">
+                      <span class="text-gold font-mono font-bold block">Localization</span>
+                      Polyglot AI Dubbing, Regional Co-production
+                    </div>
+                    <div class="p-2 rounded bg-obsidian-850">
+                      <span class="text-gold font-mono font-bold block">IP Defense</span>
+                      Copyright AI Shield, Watermarked Forensics
+                    </div>
+                    <div class="p-2 rounded bg-obsidian-850">
+                      <span class="text-gold font-mono font-bold block">Monetization</span>
+                      India-Only ₹49 Micro-Tier, ₹499 Couple Pack
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tech Stack & Architecture Pills -->
+              <div class="pt-4 border-t border-white/[0.06]">
+                <div class="text-[11px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Data Sources & Benchmarking</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">JustWatch Q2 2025 Data</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">EY-IAMAI Piracy Report</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">JioHotstar / Prime / Netflix Playbooks</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Impact & Feature Card -->
+            <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
+              <div>
+                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Macro Market Metrics</h4>
+                <div class="grid grid-cols-2 gap-3 mb-6">
+                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
+                    <div class="font-serif text-2xl text-gold font-normal">600M+</div>
+                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Addressable Viewers</div>
+                  </div>
+                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
+                    <div class="font-serif text-2xl text-gold font-normal">₹8,700 Cr</div>
+                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Annual Piracy Loss</div>
+                  </div>
+                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
+                    <div class="font-serif text-2xl text-gold font-normal">24%</div>
+                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Paid Conversion</div>
+                  </div>
+                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
+                    <div class="font-serif text-2xl text-gold font-normal">16%</div>
+                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">CAGR Growth to 2029</div>
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-lg bg-obsidian-800/60 border border-white/[0.05]">
+                  <div class="text-xs font-bold text-white mb-1">Platform Execution Playbook</div>
+                  <p class="text-xs text-titanium-400 leading-relaxed">
+                    Custom strategic weighting for JioHotstar (cricket-to-entertainment retention), Amazon Prime (marketplace bundling), and Netflix (regional price elasticity).
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row gap-3">
+                <a href="https://ashokkumarone.github.io/OTT-India-Disruption-Strategy/" target="_blank" rel="noopener noreferrer" 
+                   class="flex-1 py-3 rounded-lg bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2">
+                  <span>Open Strategy Portal</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="https://github.com/ashokkumarone/OTT-India-Disruption-Strategy/blob/main/strategy/OTT_India_Disruption_Strategy_Whitepaper.pdf" target="_blank" rel="noopener noreferrer" 
+                   class="px-4 py-3 rounded-lg bg-obsidian-800 border border-white/10 text-titanium-200 font-semibold text-xs hover:border-gold/30 hover:text-gold transition-all flex items-center justify-center gap-2">
+                  <i data-lucide="file-text" class="w-4 h-4 text-gold"></i>
+                  <span>PDF (6 pgs)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- PROJECT 4: FLUX -->
+        <!-- ============================================== -->
+        <div class="project-item streaming glass-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10 transition-all duration-300" data-category="streaming">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-md bg-gold-dim border border-gold/20">04 / CONSUMER STREAMING</span>
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live React Application
+              </span>
+            </div>
+            <div class="flex items-center gap-3">
+              <a href="https://ashokkumarone.github.io/Flux/" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
+                <span>Launch App</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-white/20">|</span>
+              <a href="https://github.com/ashokkumarone/Flux" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-xs font-mono text-titanium-400 hover:text-white transition-colors">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                <span>Repository</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-3">
+                  Flux — Unified Video & Audio Streaming Platform
+                </h3>
+                <p class="text-sm font-medium text-gold/90 mb-6">
+                  Zero-Latency Mode Switching with Fair Creator Economics
+                </p>
+
+                <!-- Problem Statement -->
+                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                  <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
+                    <i data-lucide="zap-off" class="w-3.5 h-3.5 text-amber-400"></i> The Context Fragmentation
+                  </h4>
+                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+                    Users consume music, podcasts, and video on separate platforms. When commuting or multitasking with the screen off, video players force unnecessary screen usage, draining up to 75% more mobile battery and mobile data bandwidth.
+                  </p>
+                </div>
+
+                <!-- Product Innovation -->
+                <div class="mb-6 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                  <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-1 flex items-center gap-2">
+                    <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-gold"></i> Flagship UX: Instant Video ⇄ Audio Toggle
+                  </h4>
+                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+                    Flux unifies both modes in a single playback pipeline. Users switch from video to background audio mode instantly without losing timestamp position, paired with an <strong>Active Audience Algorithm</strong> that compensates creators based on retention depth rather than surface impressions.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tech Stack & Architecture Pills -->
+              <div class="pt-4 border-t border-white/[0.06]">
+                <div class="text-[11px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Stack & Media Pipeline</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">React</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">TypeScript</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">HTML5 Audio Engine</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">State Persistence</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Impact & Feature Card -->
+            <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
+              <div>
+                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Impact Modeling & Features</h4>
+                <ul class="space-y-3.5 text-xs sm:text-sm text-titanium-300">
+                  <li class="flex items-start gap-3">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">+22% Daily Retention Lift:</strong> Screen-off background playback eliminates session drops during commutes.
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">Active Audience Framework:</strong> Categorizes viewers into Active, Semi-Active, and Inactive based on interaction velocity.
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div>
+                      <strong class="text-white">+35% Creator Monetization:</strong> Depth-weighted CPM algorithm that rewards high-retention long-form creators.
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="mt-8 pt-6 border-t border-white/[0.08]">
+                <a href="https://ashokkumarone.github.io/Flux/" target="_blank" rel="noopener noreferrer" 
+                   class="w-full py-3 rounded-lg bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2">
+                  <span>Open Live Flux Prototype</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============================================== -->
+        <!-- PROJECT 5: TUNING MUSIC -->
+        <!-- ============================================== -->
+        <div class="project-item streaming glass-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10 transition-all duration-300" data-category="streaming">
+          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-md bg-gold-dim border border-gold/20">05 / SOCIAL AUDIO</span>
+              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live React Application
+              </span>
+            </div>
+            <div class="flex items-center gap-3">
+              <a href="https://ashokkumarone.github.io/Tuning-Music/" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
+                <span>Launch App</span>
+                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              </a>
+              <span class="text-white/20">|</span>
+              <a href="https://github.com/ashokkumarone/Tuning-Music" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 text-xs font-mono text-titanium-400 hover:text-white transition-colors">
+                <i data-lucide="github" class="w-3.5 h-3.5"></i>
+                <span>Repository</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                <h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-3">
+                  Tuning Music — Social Layer for Music Streaming
+                </h3>
+                <p class="text-sm font-medium text-gold/90 mb-6">
+                  "No Keyboard. Just Music." — Conversational Audio & Lyric Timestamps
+                </p>
+
+                <!-- Problem Statement -->
+                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                  <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
+                    <i data-lucide="message-square-off" class="w-3.5 h-3.5 text-amber-400"></i> The Social Silo in Music
+                  </h4>
+                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+                    Streaming music is hyper-personalized yet emotionally isolated. When users want to share a specific 15-second guitar solo or lyric drop, sharing links to messaging apps forces recipients through external paywalls and broken timestamps.
+                  </p>
+                </div>
+
+                <!-- Product Innovation -->
+                <div class="mb-6 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                  <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-1 flex items-center gap-2">
+                    <i data-lucide="music" class="w-3.5 h-3.5 text-gold"></i> Song-Anchored Conversations
+                  </h4>
+                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+                    Tuning replaces plain text with timestamped lyric snippets and emoji reactions. Built on a clean relational SQL schema (<code class="text-gold font-mono text-xs">Users</code>, <code class="text-gold font-mono text-xs">Songs</code>, <code class="text-gold font-mono text-xs">TuningLogs</code>) and a tiered freemium monetization model.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tech Stack & Architecture Pills -->
+              <div class="pt-4 border-t border-white/[0.06]">
+                <div class="text-[11px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Technical Deliverables</div>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">React</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">TypeScript</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">Relational SQL Schema</span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">PRD & Freemium Model</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Impact & Feature Card -->
+            <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
+              <div>
+                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Projected Growth Metrics</h4>
+                <div class="grid grid-cols-2 gap-3 mb-6">
+                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
+                    <div class="font-serif text-2xl text-gold font-normal">+28%</div>
+                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Projected DAU Lift</div>
+                  </div>
+                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
+                    <div class="font-serif text-2xl text-gold font-normal">+45%</div>
+                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Session Length</div>
+                  </div>
+                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
+                    <div class="font-serif text-2xl text-gold font-normal">4x</div>
+                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Social Sharing Velocity</div>
+                  </div>
+                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
+                    <div class="font-serif text-2xl text-gold font-normal">New</div>
+                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Freemium Tier</div>
+                  </div>
+                </div>
+
+                <div class="p-3.5 rounded-lg bg-obsidian-800/60 border border-white/[0.05]">
+                  <div class="text-xs font-bold text-white mb-1">Interactive Feature Suite</div>
+                  <p class="text-xs text-titanium-400 leading-relaxed">
+                    Search-and-share modal, synchronized lyrics viewer, song-based inbox threads, and dynamic emoji reaction bar.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-8 pt-6 border-t border-white/[0.08]">
+                <a href="https://ashokkumarone.github.io/Tuning-Music/" target="_blank" rel="noopener noreferrer" 
+                   class="w-full py-3 rounded-lg bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2">
+                  <span>Open Live Tuning Prototype</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Divider -->
+  <div class="max-w-6xl mx-auto px-6"><div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
+
+  <!-- DBS Bank Authority & FinTech Domain Section -->
+  <section id="banking" class="py-24 px-6 relative z-10 bg-obsidian-900/40">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-2 font-semibold">Rare Domain Authority</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight">
+          Why Ground-Level Banking Experience Makes a Better PM
+        </h2>
+        <p class="text-titanium-400 text-sm sm:text-base mt-3">
+          Most FinTech product managers operate on secondhand assumptions. Having managed live customer onboarding and risk compliance at DBS Bank India, my product decisions are grounded in operational reality.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        
+        <div class="glass-card p-6 rounded-xl border border-white/[0.07]">
+          <div class="w-10 h-10 rounded-lg bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5">
+            <i data-lucide="user-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg text-white font-normal mb-2">Real KYC & Compliance Frictions</h3>
+          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+            Personally handled 10–15 daily retail customer interactions and account opening funnels. Understand exactly where customers drop off during document validation and risk scoring.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-xl border border-white/[0.07]">
+          <div class="w-10 h-10 rounded-lg bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5">
+            <i data-lucide="git-pull-request" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg text-white font-normal mb-2">Operational Bottleneck Empathy</h3>
+          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+            Saw how branch bankers lose customer follow-ups when shifting desks — directly inspiring the <em>Request Tracker</em> feature in OneBank that prevents SLA drops.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-xl border border-white/[0.07]">
+          <div class="w-10 h-10 rounded-lg bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5">
+            <i data-lucide="trending-up" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-serif text-lg text-white font-normal mb-2">Consultative Cross-Sell Instinct</h3>
+          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+            Consistently exceeded branch targets by mapping customer savings habits to high-yield Fixed Deposits and insurance products — translating directly into monetization design.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- DBS Experience Card -->
+      <div class="glass-card p-6 sm:p-8 rounded-xl border border-gold/20 bg-gradient-to-r from-obsidian-850 via-obsidian-900 to-obsidian-850 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3 mb-1">
+            <span class="text-xs font-mono font-bold text-gold uppercase tracking-wider">Assistant Officer – Personal Banker</span>
+            <span class="text-titanium-500 text-xs">|</span>
+            <span class="text-titanium-400 text-xs font-mono">Nov 2022 – Jul 2023</span>
+          </div>
+          <h4 class="font-serif text-xl text-white font-normal">DBS Bank India Ltd</h4>
+          <p class="text-xs sm:text-sm text-titanium-300 mt-2 max-w-2xl leading-relaxed">
+            Managed branch operations, customer advisory, savings/deposit origination, and KYC compliance in a high-accountability banking environment.
+          </p>
+        </div>
+        <a href="#work" class="px-5 py-2.5 rounded-lg bg-gold-dim border border-gold/30 text-gold text-xs font-semibold uppercase tracking-wider hover:bg-gold hover:text-obsidian-950 transition-all shrink-0">
+          See OneBank Solution →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Divider -->
+  <div class="max-w-6xl mx-auto px-6"><div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
+
+  <!-- Product Philosophy Section -->
+  <section id="philosophy" class="py-24 px-6 relative z-10">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-2 font-semibold">The Playbook</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight">
+          How I Approach Product Strategy
+        </h2>
+        <p class="text-titanium-400 text-sm sm:text-base mt-3">
+          Product management is not about opinions; it is about building tight feedback loops between qualitative customer friction and quantitative business economics.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-xl bg-obsidian-900/60 border border-white/[0.06] relative">
+          <div class="font-mono text-xs font-bold text-gold mb-3">01 / FIRST PRINCIPLES DISCOVERY</div>
+          <h3 class="font-serif text-lg text-white font-normal mb-2">Find the Unspoken Friction</h3>
+          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+            Before touching software, identify the structural bottleneck: Why do 76% of Indian OTT users pirate? Why do banking follow-ups get dropped? Target root causes, not surface symptoms.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-obsidian-900/60 border border-white/[0.06] relative">
+          <div class="font-mono text-xs font-bold text-gold mb-3">02 / QUANTITATIVE RIGOR</div>
+          <h3 class="font-serif text-lg text-white font-normal mb-2">Data-Backed Unit Economics</h3>
+          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+            Every feature must prove its economic viability: 100% IBM Excel certified modeling, SQL relational schemas, CAC/LTV payback, and retention funnel analytics.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-obsidian-900/60 border border-white/[0.06] relative">
+          <div class="font-mono text-xs font-bold text-gold mb-3">03 / TANGIBLE PROTOTYPING</div>
+          <h3 class="font-serif text-lg text-white font-normal mb-2">Decks Don't Ship. Code Does.</h3>
+          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+            I don't stop at PRDs or static slides. I write clean React, TypeScript, and Tailwind code to build working interactive proofs-of-concept that validate usability before engineering sprint allocation.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Divider -->
+  <div class="max-w-6xl mx-auto px-6"><div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
+
+  <!-- Background, Skills & Education Section -->
+  <section id="about" class="py-24 px-6 relative z-10 bg-obsidian-900/30">
+    <div class="max-w-5xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Background Story & Education -->
+        <div class="lg:col-span-6">
+          <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-2 font-semibold">Background & Education</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight mb-6">
+            Engineering Rigor Meets Business Empathy
+          </h2>
+          
+          <div class="space-y-4 text-xs sm:text-sm text-titanium-400 leading-relaxed">
+            <p>
+              I hold a <strong class="text-white">Bachelor of Engineering in Computer Science</strong> from Builder Engineering College. My engineering background gives me deep technical empathy — understanding API contracts, state management, latency constraints, and database relationships when communicating with engineering teams.
+            </p>
+            <p>
+              Transitioning into retail banking at <strong class="text-white">DBS Bank India</strong> honed my business acumen: reading consumer behavior, financial compliance, and operational efficiency under high daily targets.
+            </p>
+            <p>
+              Over the last two years, I have channeled both skill sets into building an independent, comprehensive portfolio of 5 flagship product solutions with 3 live production apps.
+            </p>
+          </div>
+
+          <!-- Education Card -->
+          <div class="mt-8 p-5 rounded-xl bg-obsidian-850 border border-white/[0.08] flex items-start gap-4">
+            <div class="w-10 h-10 rounded-lg bg-obsidian-800 border border-white/10 flex items-center justify-center text-gold shrink-0">
+              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-xs font-mono text-titanium-400">2017 – 2021</div>
+              <h4 class="font-serif text-base text-white font-normal">B.E. Computer Science Engineering</h4>
+              <p class="text-xs text-titanium-400 mt-1">Builder Engineering College, Tiruppur</p>
+              <p class="text-[11px] text-titanium-500 mt-1">Core coursework in Data Structures, Algorithms, Relational Databases & System Architecture.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Technical & PM Skills Matrix -->
+        <div class="lg:col-span-6">
+          <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-2 font-semibold">Capabilities</span>
+          <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight mb-6">
+            Skills & Toolkit
+          </h2>
+
+          <div class="space-y-6">
+            <!-- Product Strategy -->
+            <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
+              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2.5 flex items-center gap-2">
+                <i data-lucide="compass" class="w-4 h-4 text-gold"></i> Product Strategy & Execution
+              </div>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">PRD Authoring</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">User Journey Mapping</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Prioritization (RICE/MoSCoW)</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Competitive Sizing (TAM/SAM)</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Monetization Modeling</span>
+              </div>
+            </div>
+
+            <!-- Data & Analytics -->
+            <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
+              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2.5 flex items-center gap-2">
+                <i data-lucide="bar-chart-3" class="w-4 h-4 text-gold"></i> Data & Analytical Modeling
+              </div>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-gold border border-gold/20 font-semibold">IBM Excel Certified (100%)</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">SQL & Relational Schemas</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Python</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Cohort & Funnel Analysis</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Unit Economics</span>
+              </div>
+            </div>
+
+            <!-- Technical & Prototyping -->
+            <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
+              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2.5 flex items-center gap-2">
+                <i data-lucide="code" class="w-4 h-4 text-gold"></i> Prototyping & Front-End Engineering
+              </div>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">React 19 & TypeScript</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">REST API Design</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Git & GitHub Pages</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Rapid Interactive Mockups</span>
+              </div>
+            </div>
+
+            <!-- Domain Knowledge -->
+            <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
+              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2.5 flex items-center gap-2">
+                <i data-lucide="shield" class="w-4 h-4 text-gold"></i> Domain Expertise
+              </div>
+              <div class="flex flex-wrap gap-2 text-xs">
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Retail Banking Operations</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">e-KYC & Regulatory Compliance</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">OTT Streaming Economics</span>
+                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Anti-Piracy IP Strategies</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Divider -->
+  <div class="max-w-6xl mx-auto px-6"><div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
+
+  <!-- Contact & Footer Section -->
+  <footer id="contact" class="py-24 px-6 relative z-10 overflow-hidden">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-3 font-semibold">Initiate Conversation</span>
+      <h2 class="font-serif text-3xl sm:text-5xl md:text-6xl text-white font-normal tracking-tight mb-6">
+        Let's build something <br />
+        <span class="italic text-gold">exceptional</span> together.
+      </h2>
+      <p class="max-w-xl mx-auto text-sm sm:text-base text-titanium-400 font-light leading-relaxed mb-10">
+        I am actively seeking <strong class="text-white font-medium">Associate Product Manager, Product Analyst, and Junior PM</strong> roles across FinTech, Consumer Tech, and Media/Streaming platforms. Open to remote or on-site opportunities.
+      </p>
+
+      <!-- Contact Buttons Strip -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
+        
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/ashokkumarone" target="_blank" rel="noopener noreferrer" 
+           class="px-6 py-3.5 rounded-full bg-[#0a66c2] text-white font-semibold text-xs uppercase tracking-wider hover:bg-[#084e96] transition-all flex items-center gap-2.5 shadow-md">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+          <span>Connect on LinkedIn</span>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/ashokkumarone" target="_blank" rel="noopener noreferrer" 
+           class="px-6 py-3.5 rounded-full bg-obsidian-850 border border-white/10 text-titanium-200 font-semibold text-xs uppercase tracking-wider hover:border-gold/40 hover:text-gold transition-all flex items-center gap-2.5">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          <span>GitHub Profile</span>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:ashokkumarone@outlook.com?subject=Product%20Opportunity%20-%20Ashokkumar%20S" 
+           class="px-6 py-3.5 rounded-full bg-obsidian-850 border border-white/10 text-titanium-200 font-semibold text-xs uppercase tracking-wider hover:border-gold/40 hover:text-gold transition-all flex items-center gap-2.5">
+          <i data-lucide="mail" class="w-4 h-4 text-gold"></i>
+          <span>ashokkumarone@outlook.com</span>
+        </a>
+
+      </div>
+
+      <!-- Quick Links & Copyright -->
+      <div class="pt-10 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between text-xs text-titanium-500 font-mono gap-4">
+        <div>
+          © 2026 Ashokkumar S. Built with purpose & deployed on GitHub Pages.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#work" class="hover:text-gold transition-colors">Projects</a>
+          <a href="#banking" class="hover:text-gold transition-colors">DBS Authority</a>
+          <a href="#about" class="hover:text-gold transition-colors">Background</a>
+          <a href="#" class="hover:text-gold transition-colors">Back to Top ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Project Filter Functionality
+    function filterProjects(category) {
+      // Update tab active states
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('bg-gold', 'text-obsidian-950', 'font-bold');
+        btn.classList.add('text-titanium-400');
+      });
+      const activeTab = document.getElementById('tab-' + category);
+      if (activeTab) {
+        activeTab.classList.add('bg-gold', 'text-obsidian-950', 'font-bold');
+        activeTab.classList.remove('text-titanium-400');
+      }
+
+      // Filter project cards
+      const projects = document.querySelectorAll('.project-item');
+      projects.forEach(project => {
+        if (category === 'all' || project.dataset.category === category) {
+          project.style.display = 'block';
+          setTimeout(() => {
+            project.style.opacity = '1';
+            project.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          project.style.opacity = '0';
+          project.style.transform = 'translateY(12px)';
+          setTimeout(() => {
+            project.style.display = 'none';
+          }, 200);
+        }
+      });
+    }
+  </script>
+
 </body>
 </html>
