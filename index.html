@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ashokkumar S — Product Strategist & Associate Product Manager</title>
-  <meta name="description" content="Apple-style portfolio of Ashokkumar S — Associate Product Manager & Product Strategist. Ex-Personal Banker at DBS Bank India. Featuring 5 flagship product solutions." />
+  <meta name="description" content="Portfolio of Ashokkumar S — Associate Product Manager & Product Strategist. Ex-Personal Banker at DBS Bank India. Featuring 5 flagship product solutions." />
   
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23111111'/><text x='50' y='68' font-size='55' font-family='-apple-system, sans-serif' font-weight='800' fill='%23ffffff' text-anchor='middle'>A</text></svg>" />
@@ -54,37 +54,29 @@
       scroll-behavior: smooth;
     }
 
-    /* Apple Frosted Navbar over White */
-    .apple-nav {
-      background: rgba(255, 255, 255, 0.82);
-      backdrop-filter: saturate(180%) blur(20px);
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    /* Gradient Typography */
+    /* Headline Gradient */
     .apple-headline {
-      background: linear-gradient(180deg, #1d1d1f 0%, #434347 100%);
+      background: linear-gradient(180deg, #1d1d1f 0%, #4a4a4f 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* iPhone Sticky Container & Frame (Rock-solid, Zero Blink) */
+    /* Realistic Apple iPhone Frame */
     .iphone-case {
-      width: 310px;
-      height: 620px;
+      width: 320px;
+      height: 640px;
       background: #000000;
-      border-radius: 48px;
-      border: 4px solid #2d2d30;
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.35), 0 0 40px rgba(0, 113, 227, 0.12);
+      border-radius: 50px;
+      border: 4px solid #2a2a2d;
+      box-shadow: 0 25px 70px -15px rgba(0, 0, 0, 0.25), 0 0 40px rgba(0, 113, 227, 0.08);
       position: relative;
       overflow: hidden;
-      transform: translateZ(0); /* Hardware accelerated */
+      transform: translateZ(0);
     }
     @media (min-width: 1024px) {
       .iphone-case {
-        width: 335px;
-        height: 660px;
+        width: 350px;
+        height: 680px;
       }
     }
     .dynamic-island {
@@ -99,11 +91,22 @@
       z-index: 40;
     }
 
+    /* Live App iFrame inside iPhone */
+    .phone-live-iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      position: absolute;
+      inset: 0;
+      transition: opacity 0.4s ease;
+      background: #000000;
+    }
+
     /* Frameless Apple Cards on White */
     .apple-card-light {
       background: #f5f5f7;
       border: 1px solid rgba(0, 0, 0, 0.05);
-      border-radius: 24px;
+      border-radius: 22px;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .apple-card-light:hover {
@@ -112,79 +115,70 @@
       box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.08);
     }
 
-    /* Vibrant Visible Google Watermark on White */
+    /* Vibrant Visible Watermarks on White */
     .watermark-google-light {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 620px;
-      height: 620px;
+      width: 580px;
+      height: 580px;
       pointer-events: none;
-      opacity: 0.14;
+      opacity: 0.12;
       z-index: 0;
-      filter: blur(10px);
+      filter: blur(8px);
     }
-
-    /* Netflix Cinematic Intro Section (Dark Widescreen) */
-    .netflix-cinematic-stage {
-      background: radial-gradient(circle at center 40%, #1a0405 0%, #080001 60%, #000000 100%);
-      position: relative;
-      color: #ffffff;
-      overflow: hidden;
-    }
-    .netflix-glow-ribbon {
+    .watermark-netflix-light {
       position: absolute;
-      top: 30%;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(229, 9, 20, 0.32) 0%, rgba(229, 9, 20, 0.05) 55%, transparent 75%);
+      width: 480px;
+      height: 480px;
       pointer-events: none;
+      opacity: 0.12;
       z-index: 0;
-      filter: blur(50px);
-    }
-    .watermark-netflix-cinema {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 500px;
-      height: 500px;
-      pointer-events: none;
-      opacity: 0.28;
-      z-index: 0;
-      filter: drop-shadow(0 0 60px rgba(229, 9, 20, 0.6));
+      filter: blur(6px);
     }
 
-    /* Smooth Screen Crossfade inside iPhone (Zero Blink) */
-    .phone-screen {
-      position: absolute;
-      inset: 0;
-      padding: 44px 16px 20px;
+    /* Mind-map Pillar Pill */
+    .mindmap-pillar {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #1d1d1f;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: opacity 0.4s ease, transform 0.4s ease;
-      background: #000000;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
     }
+    .mindmap-pillar:hover {
+      border-color: rgba(229, 9, 20, 0.4);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(229, 9, 20, 0.08);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #ffffff; }
+    ::-webkit-scrollbar-thumb { background: #d2d2d7; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #86868b; }
   </style>
 </head>
 
 <body class="selection:bg-apple-blue selection:text-white">
 
   <!-- ========================================================= -->
-  <!-- APPLE TOP NAVIGATION (CLEAN: LOGO ON LEFT, ICONS ON RIGHT) -->
+  <!-- HERO (NO TOP BAR, NO NAME FLOATING, CLEAN SOCIAL ICONS AT TOP RIGHT) -->
   <!-- ========================================================= -->
-  <nav class="apple-nav fixed top-0 left-0 right-0 z-50 h-12 flex items-center justify-between px-6 sm:px-12">
-    <!-- Brand / Identity -->
-    <a href="#hero" class="text-sm font-bold tracking-tight text-apple-black hover:opacity-80 transition-opacity">
-      Ashokkumar S
-    </a>
-
-    <!-- Social & Contact Logos ONLY (No Connect Button, Clean SVG Icons) -->
-    <div class="flex items-center gap-5">
+  <section id="hero" class="min-h-screen flex flex-col justify-center px-6 pt-16 pb-20 max-w-5xl mx-auto w-full text-center relative">
+    
+    <!-- Clean Minimalist Social Icons (Unobtrusive, top-right, no bar, no background) -->
+    <div class="absolute top-8 right-6 flex items-center gap-5">
       <a href="https://linkedin.com/in/ashokkumarone" target="_blank" rel="noopener noreferrer" 
          class="text-apple-gray hover:text-[#0a66c2] transition-colors p-1" title="LinkedIn">
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -200,12 +194,6 @@
         <i data-lucide="mail" class="w-4 h-4"></i>
       </a>
     </div>
-  </nav>
-
-  <!-- ========================================================= -->
-  <!-- SECTION 1: APPLE MINIMAL WHITE HERO (NO BOX, NO IBM DOTS) -->
-  <!-- ========================================================= -->
-  <section id="hero" class="min-h-screen flex flex-col justify-center px-6 pt-24 pb-16 max-w-5xl mx-auto w-full text-center">
     
     <p class="text-xs font-mono uppercase tracking-[0.25em] text-apple-gray mb-6 font-semibold">
       Associate Product Manager · Product Strategist
@@ -220,11 +208,11 @@
       Ex-Personal Banker at <strong class="text-apple-black font-semibold">DBS Bank India</strong> turned product strategist. Uncovering structural friction across FinTech, Consumer Streaming, and Big-Tech platforms — from PRDs to functioning production code.
     </p>
 
-    <!-- Proof Points (Clean text, No 100% IBM, No dots) -->
+    <!-- Proof Points (Clean text, No numbers, No dots) -->
     <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-mono uppercase tracking-wider text-apple-gray">
-      <span class="text-apple-black font-semibold">5 Flagship Solutions</span>
+      <span class="text-apple-black font-semibold">Flagship Product Solutions</span>
       <span class="text-black/15">/</span>
-      <span class="text-apple-black font-semibold">3 Live Production Apps</span>
+      <span class="text-apple-black font-semibold">Live Production Applications</span>
       <span class="text-black/15">/</span>
       <span class="text-apple-black font-semibold">Ex-DBS Bank Authority</span>
     </div>
@@ -232,7 +220,7 @@
   </section>
 
   <!-- ========================================================= -->
-  <!-- SECTION 2: APPLE STICKY PHONE STAGE (ZERO BLINK, LIVE LINK) -->
+  <!-- SECTION 2: APPLE STICKY PHONE STAGE (REAL LIVE APPS IN IFRAME) -->
   <!-- ========================================================= -->
   <section id="streaming-stage" class="relative min-h-[220vh] bg-apple-canvas border-y border-black/[0.06]">
     
@@ -263,7 +251,7 @@
                 <strong class="text-apple-black font-medium">The Innovation:</strong> Tuning turns song timestamps and lyrics into the messaging layer itself. Users share pinned lyric moments, react with contextual emojis, and chat without ever pausing playback.
               </p>
               <p>
-                <strong class="text-apple-black font-medium">Product Rigor:</strong> Normalized relational SQL schema (<code class="text-emerald-700 font-mono text-xs">Users</code>, <code class="text-emerald-700 font-mono text-xs">Songs</code>, <code class="text-emerald-700 font-mono text-xs">TuningLogs</code>) + freemium conversion model projecting <strong class="text-apple-black">+28% DAU lift</strong> and <strong class="text-apple-black">+45% session length</strong>.
+                <strong class="text-apple-black font-medium">Product Rigor:</strong> Normalized relational SQL schema (<code class="text-emerald-700 font-mono text-xs">Users</code>, <code class="text-emerald-700 font-mono text-xs">Songs</code>, <code class="text-emerald-700 font-mono text-xs">TuningLogs</code>) + freemium conversion model projecting <strong class="text-apple-black">Daily Active User lift</strong> and <strong class="text-apple-black">longer session lengths</strong>.
               </p>
             </div>
 
@@ -301,7 +289,7 @@
                 <strong class="text-apple-black font-medium">The Innovation:</strong> A unified playback engine that switches between video and background audio instantly without losing millisecond playback state.
               </p>
               <p>
-                <strong class="text-apple-black font-medium">Algorithmic Monetization:</strong> Features the "Active Audience Framework" and depth-weighted Creator Fair Pay algorithm, replacing impression vanity metrics to project a <strong class="text-apple-black">+22% 30-day retention lift</strong> and <strong class="text-apple-black">+35% creator earnings</strong>.
+                <strong class="text-apple-black font-medium">Algorithmic Monetization:</strong> Features the "Active Audience Framework" and depth-weighted Creator Fair Pay algorithm, replacing impression vanity metrics with watch-time depth to reward quality creators.
               </p>
             </div>
 
@@ -319,137 +307,19 @@
             </div>
           </div>
 
-          <!-- Subtle Progress Bar -->
-          <div class="mt-8 flex items-center gap-3">
-            <span id="label-tuning" class="text-xs font-bold text-apple-black transition-colors">Tuning Music</span>
-            <div class="w-20 h-1 bg-black/15 rounded-full overflow-hidden">
-              <div id="scroll-pill-bar" class="h-full bg-apple-black w-1/2 transition-all duration-300"></div>
-            </div>
-            <span id="label-flux" class="text-xs font-bold text-apple-gray transition-colors">Flux</span>
-          </div>
-
         </div>
 
-        <!-- RIGHT SIDE: ROCK-SOLID IPHONE (ZERO BLINK, SCREEN CROSSFADE, CLICKABLE LIVE LINK) -->
+        <!-- RIGHT SIDE: REALISTIC IPHONE (LIVE APPS INSIDE IFRAME, ZERO BLINK) -->
         <div class="lg:col-span-5 flex justify-center lg:justify-end">
           <div class="iphone-case">
             <div class="dynamic-island"></div>
 
-            <div class="relative w-full h-full select-none">
-              
-              <!-- PHONE UI: TUNING MUSIC (LAYER 1) -->
-              <div id="phone-ui-tuning" class="phone-screen opacity-100 z-20">
-                <div class="flex items-center justify-between text-xs text-apple-gray pt-2 border-b border-white/10 pb-2">
-                  <span class="font-bold text-white tracking-wider text-[11px]">TUNING MUSIC</span>
-                  <!-- Clickable Live Link Badge inside Phone -->
-                  <a href="https://ashokkumarone.github.io/Tuning-Music/" target="_blank" rel="noopener noreferrer" 
-                     class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-mono hover:bg-emerald-500/40 transition-colors flex items-center gap-1">
-                    <span>LIVE APP</span>
-                    <i data-lucide="external-link" class="w-2.5 h-2.5"></i>
-                  </a>
-                </div>
+            <div class="relative w-full h-full bg-black overflow-hidden">
+              <!-- Live Tuning Music App inside Phone -->
+              <iframe id="iframe-tuning" src="https://ashokkumarone.github.io/Tuning-Music/" class="phone-live-iframe" style="opacity: 1; z-index: 20;" title="Tuning Music Live App"></iframe>
 
-                <div class="my-auto text-center py-4">
-                  <div class="w-32 h-32 mx-auto rounded-2xl bg-gradient-to-tr from-emerald-950 via-zinc-900 to-emerald-900 border border-white/10 flex items-center justify-center shadow-xl mb-3 relative overflow-hidden">
-                    <i data-lucide="music-2" class="w-12 h-12 text-emerald-400"></i>
-                    <div class="absolute bottom-1.5 left-2 right-2 px-2 py-0.5 bg-black/70 backdrop-blur rounded text-[8px] font-mono text-apple-lightgray">
-                      02:14 / 03:45
-                    </div>
-                  </div>
-                  <h4 class="font-bold text-sm text-white">Midnight Resonance</h4>
-                  <p class="text-[11px] text-apple-gray">Spotify Social Layer</p>
-                </div>
-
-                <div class="space-y-1.5 mb-2 bg-white/[0.05] p-2.5 rounded-xl border border-white/[0.08]">
-                  <div class="text-[9px] font-mono text-emerald-400 flex items-center justify-between">
-                    <span>TIMESTAMPED LYRICS</span>
-                    <span>@priya.r</span>
-                  </div>
-                  <p class="text-xs text-white italic">"Lost in the sound where shadows fade..."</p>
-                  <div class="flex items-center gap-1.5 text-xs pt-0.5">
-                    <span class="px-1.5 py-0.5 rounded-full bg-white/10 text-[9px]">🔥 24</span>
-                    <span class="px-1.5 py-0.5 rounded-full bg-white/10 text-[9px]">❤️ 18</span>
-                    <span class="px-1.5 py-0.5 rounded-full bg-white/10 text-[9px]">🎸 01:42</span>
-                  </div>
-                </div>
-
-                <div class="pt-2 border-t border-white/10">
-                  <div class="h-1 bg-white/20 rounded-full overflow-hidden mb-2.5">
-                    <div class="w-3/5 h-full bg-emerald-400"></div>
-                  </div>
-                  <div class="flex items-center justify-between text-xs text-apple-gray px-3">
-                    <i data-lucide="shuffle" class="w-3.5 h-3.5"></i>
-                    <i data-lucide="skip-back" class="w-3.5 h-3.5 text-white"></i>
-                    <div class="w-8 h-8 rounded-full bg-emerald-400 text-black flex items-center justify-center font-bold">
-                      <i data-lucide="pause" class="w-3.5 h-3.5 fill-current"></i>
-                    </div>
-                    <i data-lucide="skip-forward" class="w-3.5 h-3.5 text-white"></i>
-                    <i data-lucide="repeat" class="w-3.5 h-3.5"></i>
-                  </div>
-                </div>
-              </div>
-
-              <!-- PHONE UI: FLUX STREAMING (LAYER 2, SMOOTH CROSSFADE) -->
-              <div id="phone-ui-flux" class="phone-screen opacity-0 z-10">
-                <div class="flex items-center justify-between text-xs text-apple-gray pt-2 border-b border-white/10 pb-2">
-                  <span class="font-bold text-white tracking-wider text-[11px]">FLUX STREAMING</span>
-                  <!-- Clickable Live Link Badge inside Phone -->
-                  <a href="https://ashokkumarone.github.io/Flux/" target="_blank" rel="noopener noreferrer" 
-                     class="px-2 py-0.5 rounded-full bg-apple-blue/20 text-apple-blue text-[10px] font-mono hover:bg-apple-blue/40 transition-colors flex items-center gap-1">
-                    <span>LIVE APP</span>
-                    <i data-lucide="external-link" class="w-2.5 h-2.5"></i>
-                  </a>
-                </div>
-
-                <div class="my-2 p-1 rounded-full bg-zinc-900 border border-white/10 flex text-center text-[9px] font-bold">
-                  <div class="flex-1 py-1 rounded-full text-apple-gray">VIDEO</div>
-                  <div class="flex-1 py-1 rounded-full bg-apple-blue text-white shadow">AUDIO (ON)</div>
-                </div>
-
-                <div class="my-auto text-center py-2">
-                  <div class="w-full h-32 rounded-2xl bg-gradient-to-tr from-blue-950 via-zinc-900 to-indigo-950 border border-white/10 flex flex-col items-center justify-center shadow-xl mb-2 relative overflow-hidden">
-                    <div class="w-10 h-10 rounded-full bg-apple-blue/20 text-apple-blue flex items-center justify-center mb-1.5">
-                      <i data-lucide="headphones" class="w-5 h-5"></i>
-                    </div>
-                    <span class="text-[10px] font-bold text-white">Background Audio Active</span>
-                    <div class="absolute top-2 right-2 px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 text-[8px] font-mono rounded">
-                      -75% DATA
-                    </div>
-                  </div>
-                  <h4 class="font-bold text-xs text-white">Keynote 2026: Systems Design</h4>
-                  <p class="text-[10px] text-apple-gray">Instant Playback State</p>
-                </div>
-
-                <div class="bg-white/[0.05] p-2.5 rounded-xl border border-white/[0.08] mb-2">
-                  <div class="flex items-center justify-between text-[9px] font-mono text-apple-blue mb-1">
-                    <span>ACTIVE AUDIENCE FRAMEWORK</span>
-                    <span>68% DEPTH</span>
-                  </div>
-                  <div class="h-1 bg-white/10 rounded-full overflow-hidden flex">
-                    <div class="w-[68%] bg-apple-blue"></div>
-                    <div class="w-[20%] bg-amber-400"></div>
-                    <div class="w-[12%] bg-zinc-600"></div>
-                  </div>
-                  <div class="flex justify-between text-[8px] text-apple-gray mt-1 font-mono">
-                    <span>Active (68%)</span>
-                    <span>Semi</span>
-                    <span>Inactive</span>
-                  </div>
-                </div>
-
-                <div class="pt-2 border-t border-white/10">
-                  <div class="flex items-center justify-between text-xs text-apple-gray px-3">
-                    <i data-lucide="cast" class="w-3.5 h-3.5"></i>
-                    <i data-lucide="skip-back" class="w-3.5 h-3.5 text-white"></i>
-                    <div class="w-8 h-8 rounded-full bg-apple-blue text-white flex items-center justify-center font-bold">
-                      <i data-lucide="pause" class="w-3.5 h-3.5 fill-current"></i>
-                    </div>
-                    <i data-lucide="skip-forward" class="w-3.5 h-3.5 text-white"></i>
-                    <i data-lucide="share-2" class="w-3.5 h-3.5"></i>
-                  </div>
-                </div>
-              </div>
-
+              <!-- Live Flux Streaming App inside Phone -->
+              <iframe id="iframe-flux" src="https://ashokkumarone.github.io/Flux/" class="phone-live-iframe" style="opacity: 0; z-index: 10;" title="Flux Streaming Live App"></iframe>
             </div>
           </div>
         </div>
@@ -460,7 +330,7 @@
   </section>
 
   <!-- ========================================================= -->
-  <!-- SECTION 3: GOOGLE PRODUCT STRATEGY (VIVID GOOGLE LOGO ON WHITE) -->
+  <!-- SECTION 3: GOOGLE PRODUCT STRATEGY (VIVID WATERMARK, NO NUMBERS) -->
   <!-- ========================================================= -->
   <section id="google-strategy" class="min-h-screen flex flex-col justify-center px-6 py-24 max-w-6xl mx-auto w-full relative overflow-hidden">
     
@@ -481,76 +351,64 @@
           Google Product Strategy Cases
         </h2>
         <p class="text-sm sm:text-base text-apple-gray leading-relaxed">
-          4 Comprehensive PRDs injecting micro-social retention loops into high-volume Google utilities. Includes a 7-screen interactive Shorts prototype.
+          4 Comprehensive PRDs injecting micro-social retention loops into high-volume Google utilities. Includes an interactive Shorts prototype.
         </p>
       </div>
 
-      <!-- 4 Clean Frameless Splits on White (NOT heavy boxes) -->
+      <!-- 4 Clean Frameless Splits on White (NO NUMBERS) -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
         
         <div class="apple-card-light p-6 flex flex-col justify-between">
           <div>
-            <div class="w-8 h-8 rounded-full bg-blue-500/10 text-blue-600 flex items-center justify-center text-xs font-mono font-bold mb-4">
-              01
-            </div>
             <h3 class="text-lg font-bold text-apple-black mb-2">GPay Gifting</h3>
             <p class="text-xs text-apple-gray leading-relaxed">
               Transforms transactional UPI payments into conversational, gamified gifting envelopes with merchant-sponsored cashback surprises.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-black/[0.05] text-[10px] font-mono text-apple-gray">
-            Focus: P2P Retention & Monetization
+            P2P Retention & Monetization
           </div>
         </div>
 
         <div class="apple-card-light p-6 flex flex-col justify-between">
           <div>
-            <div class="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-600 flex items-center justify-center text-xs font-mono font-bold mb-4">
-              02
-            </div>
             <h3 class="text-lg font-bold text-apple-black mb-2">Search Campus Guild</h3>
             <p class="text-xs text-apple-gray leading-relaxed">
               Hyper-local, verified university micro-communities embedded directly in Google Search results to capture student discussions.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-black/[0.05] text-[10px] font-mono text-apple-gray">
-            Focus: Hyper-Local Community
+            Hyper-Local Community
           </div>
         </div>
 
         <div class="apple-card-light p-6 flex flex-col justify-between border-blue-500/30">
           <div>
-            <div class="w-8 h-8 rounded-full bg-red-500/10 text-red-600 flex items-center justify-center text-xs font-mono font-bold mb-4">
-              03
-            </div>
             <h3 class="text-lg font-bold text-apple-black mb-2">Shorts Smart Bar</h3>
             <p class="text-xs text-apple-gray leading-relaxed">
-              Contextual audio scrubbers and timestamp-anchored comment threads to solve the 2nd-half completion drop-off in 60s shorts.
+              Contextual audio scrubbers and timestamp-anchored comment threads to solve the completion drop-off in 60s shorts.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-black/[0.05] text-[10px] font-mono text-blue-600 font-semibold">
-            Interactive 7-Screen UX Flow
+            Interactive UX Flow
           </div>
         </div>
 
         <div class="apple-card-light p-6 flex flex-col justify-between">
           <div>
-            <div class="w-8 h-8 rounded-full bg-amber-500/10 text-amber-600 flex items-center justify-center text-xs font-mono font-bold mb-4">
-              04
-            </div>
             <h3 class="text-lg font-bold text-apple-black mb-2">Meet Couple Pack</h3>
             <p class="text-xs text-apple-gray leading-relaxed">
               Low-latency shared media canvas and synchronized watch parties tailored for long-distance relationships.
             </p>
           </div>
           <div class="mt-6 pt-4 border-t border-black/[0.05] text-[10px] font-mono text-apple-gray">
-            Focus: Synchronous Co-Viewing
+            Synchronous Co-Viewing
           </div>
         </div>
 
       </div>
 
-      <!-- Action Row (No PDF) -->
+      <!-- Action Row -->
       <div class="flex flex-wrap items-center justify-center gap-4">
         <a href="https://ashokkumarone.github.io/Google-Product-Strategy-Cases/" target="_blank" rel="noopener noreferrer" 
            class="px-6 py-3 rounded-full bg-apple-black text-white font-semibold text-xs uppercase tracking-wider hover:opacity-90 transition-all flex items-center gap-2 shadow-sm">
@@ -568,99 +426,118 @@
   </section>
 
   <!-- ========================================================= -->
-  <!-- SECTION 4: OTT INDIA DISRUPTION (CINEMATIC NETFLIX INTRO) -->
+  <!-- SECTION 4: OTT INDIA DISRUPTION (CLEAN WHITE, 12 PILLARS MINDMAP) -->
   <!-- ========================================================= -->
-  <section id="ott-strategy" class="netflix-cinematic-stage min-h-screen flex flex-col justify-center px-6 py-28 max-w-full w-full">
+  <section id="ott-strategy" class="min-h-screen flex flex-col justify-center px-6 py-24 max-w-6xl mx-auto w-full relative overflow-hidden bg-white border-t border-black/[0.06]">
     
-    <div class="netflix-glow-ribbon"></div>
-
-    <!-- Visible Iconic Netflix "N" Watermark (Movie Playback Atmosphere) -->
-    <svg class="watermark-netflix-cinema" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Visible Netflix Watermark on White Canvas -->
+    <svg class="watermark-netflix-light" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M5.398 0v24h3.766V9.458l5.88 14.542h3.558V0h-3.766v14.542L8.956 0z" fill="#E50914"/>
     </svg>
 
-    <div class="relative z-10 max-w-5xl mx-auto w-full">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <p class="text-xs font-mono uppercase tracking-[0.25em] text-red-500 font-semibold mb-2">
+    <div class="relative z-10 w-full">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <p class="text-xs font-mono uppercase tracking-[0.25em] text-red-600 font-semibold mb-2">
           Media Economics & Anti-Piracy Framework
         </p>
-        <h2 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white mb-4">
+        <h2 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-apple-black mb-4">
           OTT India Disruption Strategy 2026
         </h2>
-        <p class="text-sm sm:text-base text-zinc-400 leading-relaxed">
-          Overcoming India's 24% Paid-Conversion Ceiling & ₹8,700 Cr Piracy Leakage via a 12-Pillar Platform-Agnostic Operational Framework.
+        <p class="text-sm sm:text-base text-apple-gray leading-relaxed">
+          Overcoming India's 24% Paid-Conversion Ceiling & ₹8,700 Cr Piracy Leakage via a 12-Pillar Operational Framework.
         </p>
       </div>
 
-      <!-- Macro Market Reality Numbers -->
+      <!-- Macro Market Reality Numbers (No numbers 1 2 3) -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-4xl mx-auto">
-        <div class="bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-center">
-          <div class="text-3xl font-black text-white">600M+</div>
-          <div class="text-[11px] font-mono text-zinc-400 uppercase tracking-wider mt-1">Addressable Users</div>
+        <div class="apple-card-light p-5 text-center">
+          <div class="text-3xl font-black text-apple-black">600M+</div>
+          <div class="text-[11px] font-mono text-apple-gray uppercase tracking-wider mt-1">Addressable Users</div>
         </div>
-        <div class="bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-center">
-          <div class="text-3xl font-black text-red-500">₹8,700 Cr</div>
-          <div class="text-[11px] font-mono text-zinc-400 uppercase tracking-wider mt-1">Annual Piracy Leak</div>
+        <div class="apple-card-light p-5 text-center">
+          <div class="text-3xl font-black text-red-600">₹8,700 Cr</div>
+          <div class="text-[11px] font-mono text-apple-gray uppercase tracking-wider mt-1">Annual Piracy Leak</div>
         </div>
-        <div class="bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-center">
-          <div class="text-3xl font-black text-white">24%</div>
-          <div class="text-[11px] font-mono text-zinc-400 uppercase tracking-wider mt-1">Paid Conversion</div>
+        <div class="apple-card-light p-5 text-center">
+          <div class="text-3xl font-black text-apple-black">24%</div>
+          <div class="text-[11px] font-mono text-apple-gray uppercase tracking-wider mt-1">Paid Conversion</div>
         </div>
-        <div class="bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-5 text-center">
-          <div class="text-3xl font-black text-blue-400">16%</div>
-          <div class="text-[11px] font-mono text-zinc-400 uppercase tracking-wider mt-1">Revenue CAGR to 2029</div>
-        </div>
-      </div>
-
-      <!-- 4 Strategic Pillars & Playbooks -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-10">
-        <div class="bg-black/50 backdrop-blur-md border border-white/10 rounded-2xl p-6">
-          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-red-600"></span>
-            Habit Formation & Cadence
-          </h4>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Daily episode release cycles and festival drop windows to break binge-and-churn dependency on theatrical acquisitions.
-          </p>
-        </div>
-        <div class="bg-black/50 backdrop-blur-md border border-white/10 rounded-2xl p-6">
-          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-blue-500"></span>
-            Radical Localization & AI Dubbing
-          </h4>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            In-house polyglot AI dubbing across regional Indian dialects to unlock non-metro subscriber expansion.
-          </p>
-        </div>
-        <div class="bg-black/50 backdrop-blur-md border border-white/10 rounded-2xl p-6">
-          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-red-600"></span>
-            Copyright AI Shield & IP Defense
-          </h4>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Real-time forensic watermarking and automated piracy link detection to plug ₹8,700 Cr in lost streaming revenue.
-          </p>
-        </div>
-        <div class="bg-black/50 backdrop-blur-md border border-white/10 rounded-2xl p-6">
-          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
-            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-            Micro-Sachet Pricing & Couple Packs
-          </h4>
-          <p class="text-xs text-zinc-400 leading-relaxed">
-            Unit economic modeling for an "India-Only ₹49 Mobile Tier" and ₹499 Couple Pack to capture price-sensitive subscribers.
-          </p>
+        <div class="apple-card-light p-5 text-center">
+          <div class="text-3xl font-black text-blue-600">16%</div>
+          <div class="text-[11px] font-mono text-apple-gray uppercase tracking-wider mt-1">Revenue CAGR</div>
         </div>
       </div>
 
-      <!-- Action Links (No PDF) -->
+      <!-- THE 12 STRATEGIC PILLARS: MIND-MAP CLUSTERS (HEADINGS ONLY) -->
+      <div class="max-w-4xl mx-auto mb-10">
+        <div class="text-center mb-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-apple-gray font-semibold">
+            The 12 Operational Strategic Pillars
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          
+          <!-- Cluster A: Habit & Release -->
+          <div class="p-5 rounded-2xl bg-white border border-black/[0.07] shadow-sm">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-red-600 mb-3 font-mono">
+              Habit Formation & Release Cadence
+            </h4>
+            <div class="space-y-2">
+              <div class="mindmap-pillar"><i data-lucide="calendar" class="w-4 h-4 text-red-500"></i> Daily Episode Release</div>
+              <div class="mindmap-pillar"><i data-lucide="sparkles" class="w-4 h-4 text-red-500"></i> Festival Season Window</div>
+              <div class="mindmap-pillar"><i data-lucide="film" class="w-4 h-4 text-red-500"></i> Theatre Hijack Strategy</div>
+            </div>
+          </div>
+
+          <!-- Cluster B: Localization -->
+          <div class="p-5 rounded-2xl bg-white border border-black/[0.07] shadow-sm">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-3 font-mono">
+              Radical Regional Localization
+            </h4>
+            <div class="space-y-2">
+              <div class="mindmap-pillar"><i data-lucide="languages" class="w-4 h-4 text-blue-500"></i> In-House Polyglot AI Dubbing</div>
+              <div class="mindmap-pillar"><i data-lucide="clapperboard" class="w-4 h-4 text-blue-500"></i> Platform-as-Producer Model</div>
+              <div class="mindmap-pillar"><i data-lucide="refresh-cw" class="w-4 h-4 text-blue-500"></i> Regional Dubbed Rotation</div>
+            </div>
+          </div>
+
+          <!-- Cluster C: IP Defense -->
+          <div class="p-5 rounded-2xl bg-white border border-black/[0.07] shadow-sm">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-red-600 mb-3 font-mono">
+              IP Defense & Anti-Piracy Shield
+            </h4>
+            <div class="space-y-2">
+              <div class="mindmap-pillar"><i data-lucide="shield-alert" class="w-4 h-4 text-red-500"></i> Copyright AI Shield</div>
+              <div class="mindmap-pillar"><i data-lucide="eye" class="w-4 h-4 text-red-500"></i> Taste-Before-Subscribe</div>
+              <div class="mindmap-pillar"><i data-lucide="award" class="w-4 h-4 text-red-500"></i> Hero-Centric Regional Promotions</div>
+            </div>
+          </div>
+
+          <!-- Cluster D: Sachet Monetization -->
+          <div class="p-5 rounded-2xl bg-white border border-black/[0.07] shadow-sm">
+            <h4 class="text-xs font-bold uppercase tracking-wider text-emerald-600 mb-3 font-mono">
+              Sachet Pricing & Packaging
+            </h4>
+            <div class="space-y-2">
+              <div class="mindmap-pillar"><i data-lucide="tag" class="w-4 h-4 text-emerald-600"></i> India-Only ₹49 Micro-Tier</div>
+              <div class="mindmap-pillar"><i data-lucide="users" class="w-4 h-4 text-emerald-600"></i> Couple Pack ₹499</div>
+              <div class="mindmap-pillar"><i data-lucide="package" class="w-4 h-4 text-emerald-600"></i> Emerging Brand Bundling</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Action Links -->
       <div class="flex flex-wrap items-center justify-center gap-4">
         <a href="https://ashokkumarone.github.io/OTT-India-Disruption-Strategy/" target="_blank" rel="noopener noreferrer" 
-           class="px-6 py-3 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-wider hover:bg-zinc-200 transition-all flex items-center gap-2 shadow-lg">
+           class="px-6 py-3 rounded-full bg-apple-black text-white font-semibold text-xs uppercase tracking-wider hover:opacity-90 transition-all flex items-center gap-2 shadow-sm">
           <span>Open Strategy Portal</span>
           <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
         </a>
         <a href="https://github.com/ashokkumarone/OTT-India-Disruption-Strategy" target="_blank" rel="noopener noreferrer" 
-           class="px-5 py-3 rounded-full bg-white/[0.08] border border-white/15 text-white font-semibold text-xs font-mono hover:bg-white/[0.15] transition-all flex items-center gap-2">
+           class="px-5 py-3 rounded-full bg-black/[0.05] border border-black/10 text-apple-black font-semibold text-xs font-mono hover:bg-black/[0.08] transition-all flex items-center gap-2">
           <i data-lucide="github" class="w-4 h-4"></i>
           <span>GitHub</span>
         </a>
@@ -687,7 +564,7 @@
         Enterprise Core Banking Solution & Request Tracker
       </p>
 
-      <!-- Editorial Narrative (No Clunky Box, Pure Clean Space) -->
+      <!-- Editorial Narrative (Clean Space, No Clunky Box) -->
       <div class="space-y-4 text-xs sm:text-sm text-apple-gray leading-relaxed text-left max-w-2xl mx-auto mb-10">
         <p>
           <strong class="text-apple-black font-semibold">The Ground Bottleneck (DBS Context):</strong> In retail branch banking operations, customer service requests frequently fail because desk handovers occur across fragmented paper slips and siloed software. When an assigned officer is off-duty, customers are told <em>"come back tomorrow,"</em> triggering severe SLA breaches, customer churn, and audit penalties.
@@ -700,7 +577,7 @@
         </p>
       </div>
 
-      <!-- Action Row for OneBank (No PDF) -->
+      <!-- Action Row for OneBank -->
       <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
         <a href="https://ashokkumarone.github.io/OneBank/" target="_blank" rel="noopener noreferrer" 
            class="px-6 py-3 rounded-full bg-apple-black text-white font-semibold text-xs uppercase tracking-wider hover:opacity-90 transition-all flex items-center gap-2 shadow-sm">
@@ -727,9 +604,9 @@
             <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
           </a>
 
-          <!-- Email Logo Icon ONLY (No email ID text, hyperlinked to mailto:) -->
+          <!-- Email Logo Icon ONLY -->
           <a href="mailto:ashokkumarone@outlook.com" 
-             class="text-apple-gray hover:text-blue-600 transition-colors p-2" title="Email">
+             class="text-apple-gray hover:text-blue-600 transition-colors p-2" title="Email Ashokkumar">
             <i data-lucide="mail" class="w-5 h-5"></i>
           </a>
         </div>
@@ -744,21 +621,18 @@
   </section>
 
   <!-- ========================================================= -->
-  <!-- APPLE STICKY SCROLL JAVASCRIPT (ZERO BLINK CROSSFADE) -->
+  <!-- APPLE STICKY SCROLL JAVASCRIPT (ZERO BLINK IFRAME CROSSFADE) -->
   <!-- ========================================================= -->
   <script>
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Zero-Blink Scroll-Driven State Crossfade
+    // Scroll-driven iFrame Screen Crossfade (Pure Opacity, No Blink)
     const stage = document.getElementById('streaming-stage');
     const storyTuning = document.getElementById('story-tuning');
     const storyFlux = document.getElementById('story-flux');
-    const phoneTuning = document.getElementById('phone-ui-tuning');
-    const phoneFlux = document.getElementById('phone-ui-flux');
-    const scrollPill = document.getElementById('scroll-pill-bar');
-    const labelTuning = document.getElementById('label-tuning');
-    const labelFlux = document.getElementById('label-flux');
+    const iframeTuning = document.getElementById('iframe-tuning');
+    const iframeFlux = document.getElementById('iframe-flux');
 
     let currentApp = 'tuning';
 
@@ -775,46 +649,30 @@
         if (currentApp !== 'tuning') {
           currentApp = 'tuning';
           
-          // Pure Opacity Crossfade (ZERO DOM remount, ZERO blink)
           storyTuning.style.opacity = '1';
           storyTuning.style.pointerEvents = 'auto';
           storyFlux.style.opacity = '0';
           storyFlux.style.pointerEvents = 'none';
 
-          phoneTuning.style.opacity = '1';
-          phoneTuning.style.zIndex = '20';
-          phoneFlux.style.opacity = '0';
-          phoneFlux.style.zIndex = '10';
-
-          // Progress pill
-          labelTuning.classList.add('text-apple-black');
-          labelTuning.classList.remove('text-apple-gray');
-          labelFlux.classList.remove('text-apple-black');
-          labelFlux.classList.add('text-apple-gray');
-          scrollPill.style.width = '50%';
+          iframeTuning.style.opacity = '1';
+          iframeTuning.style.zIndex = '20';
+          iframeFlux.style.opacity = '0';
+          iframeFlux.style.zIndex = '10';
         }
       } else {
         // State 2: Flux
         if (currentApp !== 'flux') {
           currentApp = 'flux';
 
-          // Pure Opacity Crossfade (ZERO DOM remount, ZERO blink)
           storyTuning.style.opacity = '0';
           storyTuning.style.pointerEvents = 'none';
           storyFlux.style.opacity = '1';
           storyFlux.style.pointerEvents = 'auto';
 
-          phoneTuning.style.opacity = '0';
-          phoneTuning.style.zIndex = '10';
-          phoneFlux.style.opacity = '1';
-          phoneFlux.style.zIndex = '20';
-
-          // Progress pill
-          labelFlux.classList.add('text-apple-black');
-          labelFlux.classList.remove('text-apple-gray');
-          labelTuning.classList.remove('text-apple-black');
-          labelTuning.classList.add('text-apple-gray');
-          scrollPill.style.width = '100%';
+          iframeTuning.style.opacity = '0';
+          iframeTuning.style.zIndex = '10';
+          iframeFlux.style.opacity = '1';
+          iframeFlux.style.zIndex = '20';
         }
       }
     }, { passive: true });
