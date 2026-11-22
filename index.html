@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ashokkumar S — Associate Product Manager & Product Strategist</title>
-  <meta name="description" content="Portfolio of Ashokkumar S — Associate Product Manager, Product Strategist, and Ex-Personal Banker (DBS Bank). Featuring 5 flagship projects across FinTech CBS, Consumer Streaming, and Big-Tech Strategy." />
+  <title>Ashokkumar S — Product Strategist & Associate Product Manager</title>
+  <meta name="description" content="Apple-style portfolio of Ashokkumar S — Associate Product Manager & Product Strategist. Ex-Personal Banker at DBS Bank India. Featuring 5 flagship product solutions." />
   
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2307070a'/><text x='50' y='66' font-size='52' font-family='serif' font-weight='bold' fill='%23e5c07b' text-anchor='middle'>A</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23000000'/><text x='50' y='68' font-size='55' font-family='-apple-system, sans-serif' font-weight='800' fill='%23ffffff' text-anchor='middle'>A</text></svg>" />
 
-  <!-- Google Fonts: Cinzel (Pin 1 Roman Serif) + DM Serif Display + Plus Jakarta Sans (Pin 2 Neo-Grotesque) + JetBrains Mono -->
+  <!-- Google Fonts: SF Pro Display feel via Plus Jakarta Sans + Inter + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -21,39 +21,20 @@
       theme: {
         extend: {
           colors: {
-            obsidian: {
-              950: '#060608',
-              900: '#0a0a0e',
-              850: '#101016',
-              800: '#161620',
-              700: '#1e1e2c',
-              600: '#2a2a3c'
-            },
-            amberflare: {
-              300: '#fed7aa',
-              400: '#fb923c',
-              500: '#f97316',
-              600: '#ea580c'
-            },
-            gold: {
-              light: '#f7dfa5',
-              DEFAULT: '#e5c07b',
-              dark: '#c9a84c',
-              dim: 'rgba(229, 192, 123, 0.08)',
-              glow: 'rgba(229, 192, 123, 0.28)'
-            },
-            titanium: {
-              100: '#f8fafc',
-              200: '#e2e8f0',
-              300: '#cbd5e1',
-              400: '#94a3b8',
-              500: '#64748b'
+            apple: {
+              black: '#000000',
+              dark: '#08080a',
+              card: '#121216',
+              gray: '#86868b',
+              lightgray: '#d2d2d7',
+              border: 'rgba(255, 255, 255, 0.08)',
+              blue: '#2997ff',
+              red: '#ff375f',
+              green: '#30d158'
             }
           },
           fontFamily: {
-            cinzel: ['"Cinzel"', 'Georgia', 'serif'],
-            serif: ['"DM Serif Display"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
+            apple: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace']
           }
         }
@@ -65,1137 +46,787 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Pin 1: Volumetric Sunflare & Golden Atmospheric Back-Glow */
-    .hero-sunflare {
-      position: absolute;
-      top: 15%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 850px;
-      height: 550px;
-      background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.16) 0%, rgba(229, 192, 123, 0.08) 40%, rgba(7, 7, 10, 0) 75%);
-      pointer-events: none;
-      z-index: 0;
-      filter: blur(40px);
-    }
-    .ambient-glow-secondary {
-      position: absolute;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(229, 192, 123, 0.05) 0%, rgba(10, 10, 14, 0) 70%);
-      pointer-events: none;
-      z-index: 0;
+    /* Apple-style Custom Styles */
+    body {
+      background-color: #000000;
+      color: #f5f5f7;
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
-    /* Pin 1: Floating Capsule Navbar */
-    .capsule-nav {
-      background: rgba(14, 14, 20, 0.75);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), 0 0 20px -2px rgba(229, 192, 123, 0.08);
+    /* Apple Frosted Navbar */
+    .apple-nav {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
-    /* Pin 2: Floating 3D Browser Viewport Cards */
-    .viewport-card {
-      background: rgba(13, 13, 19, 0.82);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.85), 0 0 35px -8px rgba(229, 192, 123, 0.06);
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Gradient Headline */
+    .apple-gradient-text {
+      background: linear-gradient(180deg, #ffffff 0%, #a1a1a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .viewport-card:hover {
-      border-color: rgba(229, 192, 123, 0.32);
-      transform: translateY(-4px);
-      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 0 0 45px -5px rgba(229, 192, 123, 0.14);
+    .apple-gradient-blue {
+      background: linear-gradient(180deg, #5ac8fa 0%, #0071e3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-
-    /* Window Control Dots */
-    .dot { width: 10px; height: 10px; border-radius: 9999px; display: inline-block; }
-    .dot-close { background: #ef4444; opacity: 0.8; }
-    .dot-min { background: #eab308; opacity: 0.8; }
-    .dot-max { background: #22c55e; opacity: 0.8; }
-
-    /* Pin 2: Kinetic Continuous Marquee Ticker */
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      animation: marquee 32s linear infinite;
-    }
-    .marquee-track:hover {
-      animation-play-state: paused;
-    }
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* Custom Luxury Text Gradient */
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #ffffff 15%, #f7dfa5 60%, #c9a84c 100%);
+    .apple-gradient-purple {
+      background: linear-gradient(180deg, #bf5af2 0%, #5e5ce6 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #060608; }
-    ::-webkit-scrollbar-thumb { background: #1c1c28; border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: #c9a84c; }
+    /* iPhone Realistic Frame (Right-Side Half Phone) */
+    .iphone-case {
+      width: 320px;
+      height: 640px;
+      background: #1c1c1e;
+      border-radius: 50px;
+      border: 4px solid #3a3a3c;
+      box-shadow: 0 25px 70px -10px rgba(0, 0, 0, 0.9), 0 0 40px -5px rgba(41, 151, 255, 0.15);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @media (min-width: 1024px) {
+      .iphone-case {
+        width: 350px;
+        height: 690px;
+      }
+    }
+    .dynamic-island {
+      width: 100px;
+      height: 24px;
+      background: #000000;
+      border-radius: 20px;
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 40;
+    }
+
+    /* Apple Frameless Glass Section */
+    .frameless-glass {
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.3s ease;
+    }
+    .frameless-glass:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    /* Apple Switch Pill */
+    .pill-switch-btn.active {
+      background: #ffffff;
+      color: #000000;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(255, 255, 255, 0.25);
+    }
+
+    /* Background Watermarks */
+    .watermark-google {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 650px;
+      height: 650px;
+      pointer-events: none;
+      opacity: 0.04;
+      z-index: 0;
+    }
+    .watermark-netflix {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      pointer-events: none;
+      opacity: 0.05;
+      z-index: 0;
+    }
+
+    /* Section Snap container */
+    .page-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      padding: 90px 24px 60px;
+    }
   </style>
 </head>
 
-<body class="bg-obsidian-950 text-titanium-200 font-sans antialiased selection:bg-gold selection:text-obsidian-950 overflow-x-hidden relative">
+<body class="selection:bg-apple-blue selection:text-white">
 
-  <!-- Ambient Light Fields -->
-  <div class="hero-sunflare"></div>
-  <div class="ambient-glow-secondary top-[40%] -right-40"></div>
-  <div class="ambient-glow-secondary top-[75%] -left-40"></div>
+  <!-- ========================================================= -->
+  <!-- APPLE FROSTED TOP NAVIGATION -->
+  <!-- ========================================================= -->
+  <nav class="apple-nav fixed top-0 left-0 right-0 z-50 h-14 flex items-center justify-between px-6 sm:px-12">
+    <a href="#page-1" class="text-sm font-semibold tracking-tight text-white hover:opacity-80 transition-opacity flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-apple-blue"></span>
+      <span>Ashokkumar S</span>
+    </a>
 
-  <!-- ==================================================== -->
-  <!-- PIN 1 STYLE: FLOATING CAPSULE NAVIGATION -->
-  <!-- ==================================================== -->
-  <div class="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
-    <nav class="capsule-nav pointer-events-auto rounded-full px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4 sm:gap-8 max-w-4xl w-full">
-      
-      <!-- Identity Monogram -->
-      <a href="#" class="flex items-center gap-3 group">
-        <span class="w-8 h-8 rounded-full bg-obsidian-850 border border-gold/40 flex items-center justify-center font-cinzel text-xs font-bold text-gold group-hover:border-gold group-hover:scale-105 transition-all shadow-sm">
-          AK
-        </span>
-        <div class="flex flex-col">
-          <span class="font-bold text-xs tracking-tight text-white group-hover:text-gold transition-colors font-sans">Ashokkumar S</span>
-          <span class="text-[9px] tracking-widest uppercase text-titanium-400 font-mono">Product Strategist</span>
-        </div>
+    <!-- Page Jump Dots / Links -->
+    <div class="hidden sm:flex items-center gap-8 text-xs font-medium text-apple-gray">
+      <a href="#page-1" class="hover:text-white transition-colors">01. Overview</a>
+      <a href="#page-2" class="hover:text-white transition-colors">02. Streaming & Social</a>
+      <a href="#page-3" class="hover:text-white transition-colors">03. Google Strategy</a>
+      <a href="#page-4" class="hover:text-white transition-colors">04. OTT Disruption</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="https://linkedin.com/in/ashokkumarone" target="_blank" rel="noopener noreferrer" 
+         class="text-xs text-apple-gray hover:text-white transition-colors flex items-center gap-1 font-mono">
+        <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+        <span class="hidden sm:inline">LinkedIn</span>
       </a>
+      <a href="mailto:ashokkumarone@outlook.com" 
+         class="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white text-black hover:bg-apple-lightgray transition-colors">
+        Contact
+      </a>
+    </div>
+  </nav>
 
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center gap-6 text-[11px] font-semibold uppercase tracking-wider text-titanium-400 font-sans">
-        <a href="#work" class="hover:text-gold transition-colors">Flagship Work</a>
-        <a href="#dbs" class="hover:text-gold transition-colors">DBS Authority</a>
-        <a href="#philosophy" class="hover:text-gold transition-colors">Philosophy</a>
-        <a href="#about" class="hover:text-gold transition-colors">Background</a>
+  <!-- ========================================================= -->
+  <!-- PAGE 1: APPLE MINIMAL HERO & ONEBANK SPOTLIGHT -->
+  <!-- ========================================================= -->
+  <section id="page-1" class="page-section max-w-6xl mx-auto w-full">
+    
+    <div class="text-center max-w-4xl mx-auto pt-8">
+      
+      <!-- Apple Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.06] border border-white/10 text-xs text-apple-lightgray font-medium mb-8">
+        <span class="w-2 h-2 rounded-full bg-apple-green animate-pulse"></span>
+        <span>Associate Product Manager & Product Strategist</span>
       </div>
 
-      <!-- Action Capsule CTA -->
-      <div class="flex items-center gap-2">
-        <a href="https://linkedin.com/in/ashokkumarone" target="_blank" rel="noopener noreferrer" 
-           class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-mono text-titanium-300 hover:text-white bg-obsidian-850 border border-white/10 hover:border-gold/30 transition-all">
-          <i data-lucide="linkedin" class="w-3 h-3 text-gold"></i>
-          <span>LinkedIn</span>
-        </a>
-        <a href="#contact" 
-           class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-gold text-obsidian-950 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 transition-all">
-          <span>Let's Talk</span>
-          <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
-        </a>
-      </div>
-
-    </nav>
-  </div>
-
-  <!-- ==================================================== -->
-  <!-- HERO SECTION: CINEMATIC DARK LUXURY & SUNFLARE -->
-  <!-- ==================================================== -->
-  <header class="relative pt-36 pb-20 md:pt-48 md:pb-28 px-6 text-center z-10 overflow-hidden">
-    <div class="max-w-5xl mx-auto relative z-10">
-
-      <!-- Status Capsule Pill (Pin 2 Style) -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-obsidian-850/90 border border-gold/30 text-gold text-[11px] font-mono tracking-wider mb-8 shadow-sm">
-        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>OPEN TO ASSOCIATE PRODUCT MANAGER & PRODUCT ANALYST ROLES</span>
-      </div>
-
-      <!-- Headline: Pin 1 Classical Roman Serif Grandeur -->
-      <h1 class="font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-[68px] font-bold leading-[1.12] tracking-wider text-white mb-8">
-        BUILDING SYSTEMS, <br class="hidden sm:inline" />
-        <span class="gold-gradient-text italic font-serif font-normal">CRAFTING STRATEGY</span>
+      <!-- Main Apple Keynote Headline -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-[82px] font-black tracking-tight leading-[1.04] mb-6">
+        <span class="apple-gradient-text">Think in systems.</span><br />
+        <span class="text-white">Ship in reality.</span>
       </h1>
 
-      <!-- Executive Positioning Narrative -->
-      <p class="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-titanium-400 font-light leading-relaxed mb-10">
-        I combine ground-level <strong class="text-white font-medium">Personal Banker experience at DBS Bank India</strong> with quantitative product discovery, unit economic modeling, and functioning prototypes across <strong class="text-titanium-200 font-medium">FinTech CBS, Consumer Streaming, and Big-Tech Growth Frameworks</strong>.
+      <!-- Subtitle Narrative -->
+      <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-apple-gray font-normal leading-relaxed mb-10">
+        Ex-Personal Banker at <strong class="text-white font-medium">DBS Bank India</strong> turned product strategist. Uncovering structural friction across FinTech, Consumer Streaming, and Big-Tech platforms — from PRDs to functioning code.
       </p>
 
-      <!-- Capsule Action Buttons -->
+      <!-- Proof Points Row -->
+      <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-mono uppercase tracking-wider text-apple-gray mb-14">
+        <span class="flex items-center gap-2"><i data-lucide="layers" class="w-3.5 h-3.5 text-apple-blue"></i> 5 Flagship Solutions</span>
+        <span class="flex items-center gap-2"><i data-lucide="play-circle" class="w-3.5 h-3.5 text-apple-blue"></i> 3 Live React Apps</span>
+        <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-apple-blue"></i> Ex-DBS Bank Authority</span>
+        <span class="flex items-center gap-2"><i data-lucide="award" class="w-3.5 h-3.5 text-apple-blue"></i> 100% IBM Excel Certified</span>
+      </div>
+
+      <!-- ONEBANK SPOTLIGHT (Apple Feature Card) -->
+      <div class="frameless-glass rounded-3xl p-6 sm:p-8 text-left max-w-3xl mx-auto relative overflow-hidden group">
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+          <div class="flex items-center gap-2.5">
+            <span class="px-2.5 py-1 rounded-full bg-apple-blue/10 border border-apple-blue/30 text-apple-blue text-[11px] font-mono font-semibold uppercase">
+              FinTech CBS Flagship
+            </span>
+            <span class="text-xs text-apple-green flex items-center gap-1 font-mono">
+              <span class="w-1.5 h-1.5 rounded-full bg-apple-green"></span> Live React 19 App
+            </span>
+          </div>
+          <div class="flex items-center gap-3 text-xs font-semibold">
+            <a href="https://ashokkumarone.github.io/OneBank/" target="_blank" rel="noopener noreferrer" 
+               class="text-white hover:text-apple-blue transition-colors flex items-center gap-1">
+              <span>Launch OneBank</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </a>
+            <span class="text-white/20">|</span>
+            <a href="https://github.com/ashokkumarone/OneBank" target="_blank" rel="noopener noreferrer" 
+               class="text-apple-gray hover:text-white transition-colors flex items-center gap-1 font-mono">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <h3 class="text-xl sm:text-2xl font-bold text-white mb-2">
+          OneBank — Enterprise Core Banking Solution & Request Tracker
+        </h3>
+        <p class="text-xs sm:text-sm text-apple-gray leading-relaxed mb-4">
+          Born out of real-world desk handover friction observed as a Personal Banker at DBS Bank. Solves retail banking's chronic "come back tomorrow" failure loop via an SLA-driven <strong>Request Tracker</strong> (0% customer follow-up leakage), paired with 7-step digital e-KYC onboarding and universal CBS search.
+        </p>
+
+        <div class="flex flex-wrap gap-2 text-[11px] font-mono text-apple-lightgray">
+          <span class="px-2.5 py-0.5 rounded bg-white/[0.05]">React 19</span>
+          <span class="px-2.5 py-0.5 rounded bg-white/[0.05]">TypeScript</span>
+          <span class="px-2.5 py-0.5 rounded bg-white/[0.05]">Tailwind</span>
+          <span class="px-2.5 py-0.5 rounded bg-white/[0.05]">Recharts Analytics</span>
+          <span class="px-2.5 py-0.5 rounded bg-white/[0.05]">DBS Bank Logic</span>
+        </div>
+      </div>
+
+      <!-- Scroll Cue -->
+      <div class="mt-12">
+        <a href="#page-2" class="inline-flex flex-col items-center gap-1 text-xs text-apple-gray hover:text-white transition-colors">
+          <span>Scroll to explore apps</span>
+          <i data-lucide="chevron-down" class="w-4 h-4 animate-bounce"></i>
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- PAGE 2: APPLE SMARTPHONE STAGE (TUNING MUSIC <-> FLUX) -->
+  <!-- ========================================================= -->
+  <section id="page-2" class="page-section max-w-6xl mx-auto w-full">
+    
+    <!-- Apple Switch Pill Controller -->
+    <div class="flex justify-center mb-10">
+      <div class="inline-flex p-1 rounded-full bg-white/[0.06] border border-white/10 text-xs font-semibold">
+        <button onclick="switchPhoneApp('tuning')" id="pill-tuning" class="pill-switch-btn active px-6 py-2 rounded-full transition-all">
+          01. Tuning Music
+        </button>
+        <button onclick="switchPhoneApp('flux')" id="pill-flux" class="pill-switch-btn px-6 py-2 rounded-full text-apple-gray hover:text-white transition-all">
+          02. Flux Streaming
+        </button>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- LEFT SIDE: DYNAMIC PROJECT STORY -->
+      <div class="lg:col-span-7 flex flex-col justify-center pr-0 lg:pr-8">
+        
+        <!-- ======================= -->
+        <!-- TUNING TEXT STATE -->
+        <!-- ======================= -->
+        <div id="story-tuning" class="transition-opacity duration-300">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-emerald-400 mb-3">
+            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            <span>Social Music Streaming Layer</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-4">
+            Tuning Music
+          </h2>
+          <p class="text-lg sm:text-xl font-medium text-apple-lightgray mb-6">
+            "No keyboard. Just music." — Turning songs into conversational currency.
+          </p>
+
+          <div class="space-y-4 text-xs sm:text-sm text-apple-gray leading-relaxed mb-8">
+            <p>
+              <strong class="text-white font-medium">The Friction:</strong> Streaming music is emotionally resonant yet completely anti-social. Sharing a track link on WhatsApp dumps recipients into an external app, losing the exact 15-second lyric moment that sparked the feeling.
+            </p>
+            <p>
+              <strong class="text-white font-medium">The Innovation:</strong> Tuning turns song timestamps and lyrics into the messaging layer itself. Users share pinned lyric moments, react with contextual emojis, and chat without ever pausing playback.
+            </p>
+            <p>
+              <strong class="text-white font-medium">Product & Data Rigor:</strong> Normalized relational SQL schema (<code class="text-emerald-400">Users</code>, <code class="text-emerald-400">Songs</code>, <code class="text-emerald-400">TuningLogs</code>) + freemium conversion model projecting <strong class="text-white">+28% DAU lift</strong> and <strong class="text-white">+45% session length</strong>.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="https://ashokkumarone.github.io/Tuning-Music/" target="_blank" rel="noopener noreferrer" 
+               class="px-6 py-3 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-wider hover:bg-apple-lightgray transition-all flex items-center gap-2 shadow-lg">
+              <span>Launch Live Prototype</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://github.com/ashokkumarone/Tuning-Music" target="_blank" rel="noopener noreferrer" 
+               class="px-6 py-3 rounded-full bg-white/[0.06] border border-white/10 text-white font-semibold text-xs font-mono hover:bg-white/[0.1] transition-all flex items-center gap-2">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>GitHub Repo</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- ======================= -->
+        <!-- FLUX TEXT STATE -->
+        <!-- ======================= -->
+        <div id="story-flux" class="hidden transition-opacity duration-300">
+          <div class="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-apple-blue mb-3">
+            <span class="w-2 h-2 rounded-full bg-apple-blue"></span>
+            <span>Unified Consumer Streaming Platform</span>
+          </div>
+          <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-white mb-4">
+            Flux
+          </h2>
+          <p class="text-lg sm:text-xl font-medium text-apple-lightgray mb-6">
+            Zero-latency Video ⇄ Audio switching with fair creator economics.
+          </p>
+
+          <div class="space-y-4 text-xs sm:text-sm text-apple-gray leading-relaxed mb-8">
+            <p>
+              <strong class="text-white font-medium">The Friction:</strong> Consumers juggle video (YouTube) and audio (Spotify/Podcasts) across siloed platforms. When commuting or multitasking with the screen off, video players force unnecessary screen rendering, wasting up to 75% mobile data and battery.
+            </p>
+            <p>
+              <strong class="text-white font-medium">The Innovation:</strong> A unified playback engine that switches between video and background audio instantly without losing millisecond playback state.
+            </p>
+            <p>
+              <strong class="text-white font-medium">Algorithmic Monetization:</strong> Features the "Active Audience Framework" and depth-weighted Creator Fair Pay algorithm, replacing impression vanity metrics with watch-time depth to project a <strong class="text-white">+22% 30-day retention lift</strong> and <strong class="text-white">+35% creator earnings</strong>.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="https://ashokkumarone.github.io/Flux/" target="_blank" rel="noopener noreferrer" 
+               class="px-6 py-3 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-wider hover:bg-apple-lightgray transition-all flex items-center gap-2 shadow-lg">
+              <span>Launch Live Prototype</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://github.com/ashokkumarone/Flux" target="_blank" rel="noopener noreferrer" 
+               class="px-6 py-3 rounded-full bg-white/[0.06] border border-white/10 text-white font-semibold text-xs font-mono hover:bg-white/[0.1] transition-all flex items-center gap-2">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>GitHub Repo</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE: THE REALISTIC IPHONE DEVICE MOCKUP -->
+      <div class="lg:col-span-5 flex justify-center lg:justify-end">
+        
+        <div class="iphone-case">
+          <!-- Dynamic Island -->
+          <div class="dynamic-island"></div>
+
+          <!-- SCREEN CONTAINER -->
+          <div class="w-full h-full pt-12 pb-6 px-4 bg-black text-white flex flex-col justify-between select-none">
+            
+            <!-- APP UI 1: TUNING MUSIC PHONE UI -->
+            <div id="phone-ui-tuning" class="flex flex-col h-full justify-between transition-opacity duration-300">
+              
+              <!-- Top Bar in App -->
+              <div class="flex items-center justify-between text-xs text-apple-gray pt-2 border-b border-white/10 pb-2.5">
+                <span class="font-bold text-white tracking-wider text-[11px]">TUNING MUSIC</span>
+                <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[10px] font-mono">LIVE SYNC</span>
+              </div>
+
+              <!-- Song Artwork & Info -->
+              <div class="my-auto text-center py-4">
+                <div class="w-36 h-36 mx-auto rounded-2xl bg-gradient-to-tr from-emerald-950 via-zinc-900 to-emerald-900 border border-white/10 flex items-center justify-center shadow-xl mb-4 relative overflow-hidden">
+                  <i data-lucide="music-2" class="w-14 h-14 text-emerald-400"></i>
+                  <div class="absolute bottom-2 left-2 right-2 px-2 py-1 bg-black/60 backdrop-blur rounded text-[9px] font-mono text-apple-lightgray">
+                    02:14 / 03:45
+                  </div>
+                </div>
+                <h4 class="font-bold text-base text-white">Midnight Resonance</h4>
+                <p class="text-xs text-apple-gray mt-0.5">Spotify Social Layer Concept</p>
+              </div>
+
+              <!-- Timestamped Social Lyric Comments -->
+              <div class="space-y-2 mb-4 bg-white/[0.04] p-3 rounded-xl border border-white/[0.06]">
+                <div class="text-[10px] font-mono text-emerald-400 flex items-center justify-between">
+                  <span>TIMESTAMPED LYRICS</span>
+                  <span>@priya.r</span>
+                </div>
+                <p class="text-xs text-white italic">"Lost in the sound where shadows fade..."</p>
+                <div class="flex items-center gap-1.5 text-xs pt-1">
+                  <span class="px-2 py-0.5 rounded-full bg-white/10 text-[10px]">🔥 24</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/10 text-[10px]">❤️ 18</span>
+                  <span class="px-2 py-0.5 rounded-full bg-white/10 text-[10px]">🎸 01:42</span>
+                </div>
+              </div>
+
+              <!-- Bottom Player Controls -->
+              <div class="pt-2 border-t border-white/10">
+                <div class="h-1 bg-white/20 rounded-full overflow-hidden mb-3">
+                  <div class="w-3/5 h-full bg-emerald-400"></div>
+                </div>
+                <div class="flex items-center justify-between text-xs text-apple-gray px-4">
+                  <i data-lucide="shuffle" class="w-4 h-4"></i>
+                  <i data-lucide="skip-back" class="w-4 h-4 text-white"></i>
+                  <div class="w-9 h-9 rounded-full bg-emerald-400 text-black flex items-center justify-center font-bold">
+                    <i data-lucide="pause" class="w-4 h-4 fill-current"></i>
+                  </div>
+                  <i data-lucide="skip-forward" class="w-4 h-4 text-white"></i>
+                  <i data-lucide="repeat" class="w-4 h-4"></i>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- APP UI 2: FLUX STREAMING PHONE UI -->
+            <div id="phone-ui-flux" class="hidden flex flex-col h-full justify-between transition-opacity duration-300">
+              
+              <!-- Top Bar in App -->
+              <div class="flex items-center justify-between text-xs text-apple-gray pt-2 border-b border-white/10 pb-2.5">
+                <span class="font-bold text-white tracking-wider text-[11px]">FLUX STREAMING</span>
+                <span class="px-2 py-0.5 rounded-full bg-apple-blue/20 text-apple-blue text-[10px] font-mono">0-LATENCY</span>
+              </div>
+
+              <!-- Mode Switcher Pill in Phone -->
+              <div class="my-2 p-1 rounded-full bg-zinc-900 border border-white/10 flex text-center text-[10px] font-bold">
+                <div class="flex-1 py-1 rounded-full text-apple-gray">VIDEO MODE</div>
+                <div class="flex-1 py-1 rounded-full bg-apple-blue text-white shadow">AUDIO MODE (ON)</div>
+              </div>
+
+              <!-- Stream Screen with 75% Data Saved Badge -->
+              <div class="my-auto text-center py-2">
+                <div class="w-full h-36 rounded-2xl bg-gradient-to-tr from-blue-950 via-zinc-900 to-indigo-950 border border-white/10 flex flex-col items-center justify-center shadow-xl mb-3 relative overflow-hidden">
+                  <div class="w-12 h-12 rounded-full bg-apple-blue/20 text-apple-blue flex items-center justify-center mb-2">
+                    <i data-lucide="headphones" class="w-6 h-6"></i>
+                  </div>
+                  <span class="text-[11px] font-bold text-white">Background Audio Active</span>
+                  <div class="absolute top-2 right-2 px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-[9px] font-mono rounded">
+                    -75% DATA
+                  </div>
+                </div>
+                <h4 class="font-bold text-sm text-white">Keynote 2026: Systems Design</h4>
+                <p class="text-[11px] text-apple-gray">Live Audience Engagement Layer</p>
+              </div>
+
+              <!-- Active Audience Metric in Phone -->
+              <div class="bg-white/[0.04] p-3 rounded-xl border border-white/[0.06] mb-3">
+                <div class="flex items-center justify-between text-[10px] font-mono text-apple-blue mb-1">
+                  <span>ACTIVE AUDIENCE FRAMEWORK</span>
+                  <span>68% DEPTH</span>
+                </div>
+                <div class="h-1.5 bg-white/10 rounded-full overflow-hidden flex">
+                  <div class="w-[68%] bg-apple-blue"></div>
+                  <div class="w-[20%] bg-amber-400"></div>
+                  <div class="w-[12%] bg-zinc-600"></div>
+                </div>
+                <div class="flex justify-between text-[9px] text-apple-gray mt-1 font-mono">
+                  <span>Active (68%)</span>
+                  <span>Semi (20%)</span>
+                  <span>Inactive</span>
+                </div>
+              </div>
+
+              <!-- Player Controls -->
+              <div class="pt-2 border-t border-white/10">
+                <div class="flex items-center justify-between text-xs text-apple-gray px-4">
+                  <i data-lucide="cast" class="w-4 h-4"></i>
+                  <i data-lucide="skip-back" class="w-4 h-4 text-white"></i>
+                  <div class="w-9 h-9 rounded-full bg-apple-blue text-white flex items-center justify-center font-bold">
+                    <i data-lucide="pause" class="w-4 h-4 fill-current"></i>
+                  </div>
+                  <i data-lucide="skip-forward" class="w-4 h-4 text-white"></i>
+                  <i data-lucide="share-2" class="w-4 h-4"></i>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- PAGE 3: GOOGLE PRODUCT STRATEGY (GIANT GOOGLE LOGO + 4 SPLITS) -->
+  <!-- ========================================================= -->
+  <section id="page-3" class="page-section max-w-6xl mx-auto w-full relative">
+    
+    <!-- Giant Subtle Google Watermark Silhouette -->
+    <svg class="watermark-google" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+    </svg>
+
+    <div class="relative z-10 w-full">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-mono uppercase tracking-[0.25em] text-apple-blue font-semibold block mb-2">
+          Big-Tech Product Strategy Suite
+        </span>
+        <h2 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white mb-4">
+          Google Product Strategy Cases
+        </h2>
+        <p class="text-sm sm:text-base text-apple-gray leading-relaxed">
+          4 Comprehensive PRDs Injecting Micro-Social Retention Loops into High-Volume Google Utilities. Includes a 7-screen interactive Shorts prototype and 10-page strategy PDF.
+        </p>
+      </div>
+
+      <!-- 4 Clean Frameless Splits (NOT heavy boxes! Subtle Apple Glass) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+        
+        <!-- PRD 1 -->
+        <div class="frameless-glass rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-full bg-blue-500/10 text-blue-400 flex items-center justify-center text-xs font-mono font-bold mb-4">
+              01
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">GPay Gifting</h3>
+            <p class="text-xs text-apple-gray leading-relaxed">
+              Transforms transactional UPI payments into conversational, gamified gifting envelopes with merchant-sponsored cashback surprises.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] text-[10px] font-mono text-apple-gray">
+            Focus: P2P Retention & Monetization
+          </div>
+        </div>
+
+        <!-- PRD 2 -->
+        <div class="frameless-glass rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xs font-mono font-bold mb-4">
+              02
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Search Campus Guild</h3>
+            <p class="text-xs text-apple-gray leading-relaxed">
+              Hyper-local, verified university micro-communities embedded directly in Google Search results to capture Gen-Z discussions.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] text-[10px] font-mono text-apple-gray">
+            Focus: Hyper-Local Community
+          </div>
+        </div>
+
+        <!-- PRD 3 -->
+        <div class="frameless-glass rounded-2xl p-6 flex flex-col justify-between border-apple-blue/30">
+          <div>
+            <div class="w-8 h-8 rounded-full bg-red-500/10 text-red-400 flex items-center justify-center text-xs font-mono font-bold mb-4">
+              03
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Shorts Smart Bar</h3>
+            <p class="text-xs text-apple-gray leading-relaxed">
+              Contextual audio scrubbers and timestamp-anchored comment threads to solve the 2nd-half completion drop-off in 60s shorts.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] text-[10px] font-mono text-apple-blue font-semibold">
+            Interactive 7-Screen UX Flow
+          </div>
+        </div>
+
+        <!-- PRD 4 -->
+        <div class="frameless-glass rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-8 h-8 rounded-full bg-amber-500/10 text-amber-400 flex items-center justify-center text-xs font-mono font-bold mb-4">
+              04
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Meet Couple Pack</h3>
+            <p class="text-xs text-apple-gray leading-relaxed">
+              Low-latency shared media canvas and synchronized watch parties tailored for long-distance relationships.
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-white/[0.06] text-[10px] font-mono text-apple-gray">
+            Focus: Synchronous Co-Viewing
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Row -->
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="https://ashokkumarone.github.io/Google-Product-Strategy-Cases/" target="_blank" rel="noopener noreferrer" 
+           class="px-6 py-3 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-wider hover:bg-apple-lightgray transition-all flex items-center gap-2 shadow-lg">
+          <span>Explore Google Cases Portal</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+        </a>
+        <a href="https://github.com/ashokkumarone/Google-Product-Strategy-Cases/blob/main/strategy/Google_Product_Strategy_Cases.pdf" target="_blank" rel="noopener noreferrer" 
+           class="px-6 py-3 rounded-full bg-white/[0.06] border border-white/10 text-white font-semibold text-xs hover:bg-white/[0.1] transition-all flex items-center gap-2">
+          <i data-lucide="file-text" class="w-4 h-4 text-apple-blue"></i>
+          <span>Read Strategy PDF (10 pgs)</span>
+        </a>
+        <a href="https://github.com/ashokkumarone/Google-Product-Strategy-Cases" target="_blank" rel="noopener noreferrer" 
+           class="px-5 py-3 rounded-full bg-transparent border border-white/10 text-apple-gray hover:text-white transition-all text-xs font-mono">
+          GitHub Repo ↗
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- PAGE 4: OTT INDIA DISRUPTION (GIANT NETFLIX WATERMARK + CONTACT) -->
+  <!-- ========================================================= -->
+  <section id="page-4" class="page-section max-w-6xl mx-auto w-full relative">
+    
+    <!-- Giant Subtle Netflix "N" Watermark Silhouette -->
+    <svg class="watermark-netflix" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.398 0v24h3.766V9.458l5.88 14.542h3.558V0h-3.766v14.542L8.956 0z" fill="#E50914"/>
+    </svg>
+
+    <div class="relative z-10 w-full">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-mono uppercase tracking-[0.25em] text-apple-red font-semibold block mb-2">
+          Media Economics & Anti-Piracy Framework
+        </span>
+        <h2 class="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-white mb-4">
+          OTT India Disruption Strategy 2026
+        </h2>
+        <p class="text-sm sm:text-base text-apple-gray leading-relaxed">
+          Overcoming India's 24% Paid-Conversion Ceiling & ₹8,700 Cr Piracy Leakage via a 12-Pillar Platform-Agnostic Operational Framework.
+        </p>
+      </div>
+
+      <!-- Macro Market Reality Numbers -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-4xl mx-auto">
+        <div class="frameless-glass rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-white">600M+</div>
+          <div class="text-[11px] font-mono text-apple-gray uppercase tracking-wider mt-1">Addressable Users</div>
+        </div>
+        <div class="frameless-glass rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-apple-red">₹8,700 Cr</div>
+          <div class="text-[11px] font-mono text-apple-gray uppercase tracking-wider mt-1">Annual Piracy Leak</div>
+        </div>
+        <div class="frameless-glass rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-white">24%</div>
+          <div class="text-[11px] font-mono text-apple-gray uppercase tracking-wider mt-1">Paid Conversion</div>
+        </div>
+        <div class="frameless-glass rounded-2xl p-5 text-center">
+          <div class="text-3xl font-black text-apple-blue">16%</div>
+          <div class="text-[11px] font-mono text-apple-gray uppercase tracking-wider mt-1">Revenue CAGR to 2029</div>
+        </div>
+      </div>
+
+      <!-- 4 Strategic Pillars & Playbooks (Apple Minimalist) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-10">
+        <div class="frameless-glass rounded-2xl p-6">
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-apple-red"></span>
+            Habit Formation & Cadence
+          </h4>
+          <p class="text-xs text-apple-gray leading-relaxed">
+            Daily episode release cycles and festival drop windows to break binge-and-churn dependency on theatrical acquisitions.
+          </p>
+        </div>
+        <div class="frameless-glass rounded-2xl p-6">
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-apple-blue"></span>
+            Radical Localization & AI Dubbing
+          </h4>
+          <p class="text-xs text-apple-gray leading-relaxed">
+            In-house polyglot AI dubbing across regional Indian dialects to unlock non-metro subscriber expansion.
+          </p>
+        </div>
+        <div class="frameless-glass rounded-2xl p-6">
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-apple-red"></span>
+            Copyright AI Shield & IP Defense
+          </h4>
+          <p class="text-xs text-apple-gray leading-relaxed">
+            Real-time forensic watermarking and automated piracy link detection to plug ₹8,700 Cr in lost streaming revenue.
+          </p>
+        </div>
+        <div class="frameless-glass rounded-2xl p-6">
+          <h4 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-apple-green"></span>
+            Micro-Sachet Pricing & Couple Packs
+          </h4>
+          <p class="text-xs text-apple-gray leading-relaxed">
+            Unit economic modeling for an "India-Only ₹49 Mobile Tier" and ₹499 Couple Pack to capture price-sensitive subscribers.
+          </p>
+        </div>
+      </div>
+
+      <!-- Action Links for OTT Strategy -->
       <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
-        <a href="#work" 
-           class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest bg-gold text-obsidian-950 hover:bg-gold-light hover:shadow-xl hover:shadow-gold/25 transition-all flex items-center gap-2 group">
-          <span>Explore 5 Flagship Works</span>
-          <i data-lucide="arrow-down" class="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform"></i>
+        <a href="https://ashokkumarone.github.io/OTT-India-Disruption-Strategy/" target="_blank" rel="noopener noreferrer" 
+           class="px-6 py-3 rounded-full bg-white text-black font-semibold text-xs uppercase tracking-wider hover:bg-apple-lightgray transition-all flex items-center gap-2 shadow-lg">
+          <span>Open Strategy Portal</span>
+          <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
         </a>
-        <a href="#dbs" 
-           class="px-7 py-3.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-obsidian-850/80 border border-white/10 text-titanium-200 hover:border-gold/40 hover:text-gold transition-all flex items-center gap-2">
-          <span>DBS Bank Authority</span>
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold"></i>
+        <a href="https://github.com/ashokkumarone/OTT-India-Disruption-Strategy/blob/main/strategy/OTT_India_Disruption_Strategy_Whitepaper.pdf" target="_blank" rel="noopener noreferrer" 
+           class="px-6 py-3 rounded-full bg-white/[0.06] border border-white/10 text-white font-semibold text-xs hover:bg-white/[0.1] transition-all flex items-center gap-2">
+          <i data-lucide="file-text" class="w-4 h-4 text-apple-red"></i>
+          <span>Read Whitepaper PDF (6 pgs)</span>
         </a>
       </div>
 
-      <!-- 4 Proof Points / Metric Studio Tiles (Pin 2 Style) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-white/[0.08]">
-        <div class="p-4 rounded-xl bg-obsidian-900/70 border border-white/[0.06] text-center">
-          <div class="font-cinzel text-2xl sm:text-3xl text-gold font-bold">5</div>
-          <div class="text-[10px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Flagship Cases & Apps</div>
-        </div>
-        <div class="p-4 rounded-xl bg-obsidian-900/70 border border-white/[0.06] text-center">
-          <div class="font-cinzel text-2xl sm:text-3xl text-gold font-bold">3</div>
-          <div class="text-[10px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Live Production Apps</div>
-        </div>
-        <div class="p-4 rounded-xl bg-obsidian-900/70 border border-white/[0.06] text-center">
-          <div class="font-cinzel text-2xl sm:text-3xl text-gold font-bold">Ex-DBS</div>
-          <div class="text-[10px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Banking Domain Authority</div>
-        </div>
-        <div class="p-4 rounded-xl bg-obsidian-900/70 border border-white/[0.06] text-center">
-          <div class="font-cinzel text-2xl sm:text-3xl text-gold font-bold">100%</div>
-          <div class="text-[10px] uppercase tracking-wider text-titanium-400 font-mono mt-1">IBM Excel Certified</div>
-        </div>
-      </div>
-
-    </div>
-  </header>
-
-  <!-- ==================================================== -->
-  <!-- PIN 2 STYLE: KINETIC CONTINUOUS MARQUEE TICKER -->
-  <!-- ==================================================== -->
-  <div class="relative py-4 bg-obsidian-900/80 border-y border-white/[0.07] overflow-hidden z-20">
-    <div class="marquee-track flex items-center gap-10 text-xs font-mono uppercase tracking-[0.2em] text-titanium-400">
-      <div class="flex items-center gap-10">
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> FINTECH CBS & OPERATIONS</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> CONSUMER STREAMING ENGINE</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> BIG-TECH PRD SUITE</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> DBS BANK PERSONAL BANKER AUTHORITY</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> REQUEST TRACKER INNOVATION</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> 12-PILLAR OTT MEDIA FRAMEWORK</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> REACT 19 & TYPESCRIPT</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> 100% IBM EXCEL DATA CERTIFIED</span>
-      </div>
-      <div class="flex items-center gap-10">
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> FINTECH CBS & OPERATIONS</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> CONSUMER STREAMING ENGINE</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> BIG-TECH PRD SUITE</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> DBS BANK PERSONAL BANKER AUTHORITY</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> REQUEST TRACKER INNOVATION</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> 12-PILLAR OTT MEDIA FRAMEWORK</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> REACT 19 & TYPESCRIPT</span>
-        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> 100% IBM EXCEL DATA CERTIFIED</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ==================================================== -->
-  <!-- FLAGSHIP SHOWCASE: 3D FLOATING BROWSER CARDS -->
-  <!-- ==================================================== -->
-  <section id="work" class="py-24 px-6 relative z-10">
-    <div class="max-w-6xl mx-auto">
-      
-      <!-- Section Header & Filter Capsules -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-        <div>
-          <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-2 font-semibold">Strategic Portfolio</span>
-          <h2 class="font-cinzel text-2xl sm:text-4xl md:text-5xl text-white font-bold tracking-wide">
-            FLAGSHIP PROJECTS & PROTOTYPES
-          </h2>
-          <p class="text-titanium-400 text-xs sm:text-sm mt-2 max-w-xl">
-            Each solution pairs an uncopyable product thesis with quantitative business models and production code.
-          </p>
-        </div>
-
-        <!-- Clustered Filter Capsules (Pin 2 Style) -->
-        <div class="inline-flex p-1 rounded-full bg-obsidian-850 border border-white/10 text-xs font-semibold self-start md:self-auto shadow-sm">
-          <button onclick="filterProjects('all')" id="tab-all" class="tab-btn px-4 py-2 rounded-full bg-gold text-obsidian-950 font-bold transition-all">All (5)</button>
-          <button onclick="filterProjects('fintech')" id="tab-fintech" class="tab-btn px-4 py-2 rounded-full text-titanium-400 hover:text-white transition-all">FinTech CBS</button>
-          <button onclick="filterProjects('streaming')" id="tab-streaming" class="tab-btn px-4 py-2 rounded-full text-titanium-400 hover:text-white transition-all">Streaming</button>
-          <button onclick="filterProjects('strategy')" id="tab-strategy" class="tab-btn px-4 py-2 rounded-full text-titanium-400 hover:text-white transition-all">Strategy & PRDs</button>
-        </div>
-      </div>
-
-      <!-- Projects Stack -->
-      <div class="space-y-12" id="projects-container">
-
-        <!-- ========================================== -->
-        <!-- 01: ONEBANK (Floating Viewport Card) -->
-        <!-- ========================================== -->
-        <div class="project-item fintech viewport-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10" data-category="fintech">
-          
-          <!-- macOS Window Title Bar Header -->
-          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
-            <div class="flex items-center gap-3">
-              <!-- Window Control Dots -->
-              <div class="flex items-center gap-1.5 mr-2">
-                <span class="dot dot-close"></span>
-                <span class="dot dot-min"></span>
-                <span class="dot dot-max"></span>
-              </div>
-              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-gold-dim border border-gold/20">01 / FINTECH CBS</span>
-              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live React 19 App
-              </span>
-            </div>
-            <div class="flex items-center gap-4">
-              <a href="https://ashokkumarone.github.io/OneBank/" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
-                <span>Launch App</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-              <span class="text-white/20">|</span>
-              <a href="https://github.com/ashokkumarone/OneBank" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-1.5 text-xs font-mono text-titanium-400 hover:text-white transition-colors">
-                <i data-lucide="github" class="w-3.5 h-3.5"></i>
-                <span>Repository</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Split Content Grid -->
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-            <div class="lg:col-span-7 flex flex-col justify-between">
-              <div>
-                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide mb-2">
-                  OneBank — Enterprise Core Banking Solution
-                </h3>
-                <p class="text-xs sm:text-sm font-medium text-gold/90 mb-5 font-mono">
-                  Flagship Innovation: Eliminating Retail Banking's "Come Back Tomorrow" Failure Loop
-                </p>
-
-                <!-- Core Problem -->
-                <div class="mb-4 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
-                  <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-amber-400"></i> The Ground-Floor Bottleneck (DBS Context)
-                  </h4>
-                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
-                    In branch banking operations, customer service requests frequently fail because desk handovers occur across fragmented paper slips and siloed software. When an assigned officer is off-duty, customers are told "come back tomorrow," triggering severe SLA breaches, customer churn, and audit penalties.
-                  </p>
-                </div>
-
-                <!-- Strategic Solution -->
-                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
-                  <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold"></i> Strategic Mechanism: SLA-Driven Request Tracker
-                  </h4>
-                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
-                    Designed an immutable, branch-wide <strong>Request Tracker</strong> with strict SLA aging, instant ownership reassignment, and audit trails. Table-stakes operations (7-step e-KYC onboarding, Deposits, Loan origination, CBS Search) are unified into a single coherent interface with zero external dependencies.
-                  </p>
-                </div>
-              </div>
-
-              <!-- Tech Stack Badges -->
-              <div class="pt-4 border-t border-white/[0.06]">
-                <div class="text-[10px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Technical Architecture</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">React 19</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">TypeScript</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">Tailwind CSS</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">Recharts Analytics</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">DBS Domain Logic</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Side Deliverables Box -->
-            <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
-              <div>
-                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Production Deliverables</h4>
-                <ul class="space-y-3.5 text-xs text-titanium-300">
-                  <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div><strong class="text-white">Flagship Request Tracker:</strong> Complete lifecycle tracking from intake to verification, dispatch, and closure with audit timestamps.</div>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div><strong class="text-white">7-Step e-KYC Onboarding:</strong> Aadhaar, PAN, Video verification, risk tiering, and instant customer ID generation.</div>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div><strong class="text-white">Deposits & Loan Processing:</strong> Real-time FD/RD compounding calculations, loan stage pipeline, and EMI simulation.</div>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div><strong class="text-white">Universal CBS Account Search:</strong> Sub-second customer lookup across 7 account categories with KYC validation states.</div>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="mt-8 pt-6 border-t border-white/[0.08]">
-                <a href="https://ashokkumarone.github.io/OneBank/" target="_blank" rel="noopener noreferrer" 
-                   class="w-full py-3 rounded-full bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-md">
-                  <span>Open Live OneBank App</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- ========================================== -->
-        <!-- 02: GOOGLE PRODUCT STRATEGY CASES -->
-        <!-- ========================================== -->
-        <div class="project-item strategy viewport-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10" data-category="strategy">
-          
-          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
-            <div class="flex items-center gap-3">
-              <div class="flex items-center gap-1.5 mr-2">
-                <span class="dot dot-close"></span>
-                <span class="dot dot-min"></span>
-                <span class="dot dot-max"></span>
-              </div>
-              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-gold-dim border border-gold/20">02 / BIG-TECH PRD SUITE</span>
-              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Portal & Interactive UX
-              </span>
-            </div>
-            <div class="flex items-center gap-4">
-              <a href="https://ashokkumarone.github.io/Google-Product-Strategy-Cases/" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
-                <span>Read Cases</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-              <span class="text-white/20">|</span>
-              <a href="https://github.com/ashokkumarone/Google-Product-Strategy-Cases" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-1.5 text-xs font-mono text-titanium-400 hover:text-white transition-colors">
-                <i data-lucide="github" class="w-3.5 h-3.5"></i>
-                <span>Repository</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-            <div class="lg:col-span-7 flex flex-col justify-between">
-              <div>
-                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide mb-2">
-                  Google Product Strategy Cases — 4 PRDs & Shorts Flow
-                </h3>
-                <p class="text-xs sm:text-sm font-medium text-gold/90 mb-5 font-mono">
-                  Injecting Micro-Social Retention Loops into High-Volume Transactional Utilities
-                </p>
-
-                <div class="mb-4 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
-                  <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="help-circle" class="w-3.5 h-3.5 text-blue-400"></i> The Big-Tech Challenge
-                  </h4>
-                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
-                    Large consumer ecosystems face engagement plateaus when transactional utilities fail to generate organic social network effects. How do we unlock recurring daily retention across UPI payments, university queries, short-form video discovery, and synchronous co-viewing?
-                  </p>
-                </div>
-
-                <!-- 4 Cases Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
-                  <div class="p-3 rounded-lg bg-obsidian-850/80 border border-white/[0.06]">
-                    <div class="text-xs font-bold text-white mb-1"><span class="text-gold font-mono">1.</span> GPay Gifting</div>
-                    <p class="text-[11px] text-titanium-400 leading-normal">P2P gamified gifting envelopes with merchant-sponsored cashback surprises.</p>
-                  </div>
-                  <div class="p-3 rounded-lg bg-obsidian-850/80 border border-white/[0.06]">
-                    <div class="text-xs font-bold text-white mb-1"><span class="text-gold font-mono">2.</span> Search Campus Guild</div>
-                    <p class="text-[11px] text-titanium-400 leading-normal">Hyper-local, verified university micro-communities embedded directly in Google Search results.</p>
-                  </div>
-                  <div class="p-3 rounded-lg bg-obsidian-850/80 border border-white/[0.06]">
-                    <div class="text-xs font-bold text-white mb-1"><span class="text-gold font-mono">3.</span> Shorts Smart Bar</div>
-                    <p class="text-[11px] text-titanium-400 leading-normal">Contextual audio scrubbers & timestamp-pinned comments with 7-screen interactive UX prototype.</p>
-                  </div>
-                  <div class="p-3 rounded-lg bg-obsidian-850/80 border border-white/[0.06]">
-                    <div class="text-xs font-bold text-white mb-1"><span class="text-gold font-mono">4.</span> Meet Couple Pack</div>
-                    <p class="text-[11px] text-titanium-400 leading-normal">Low-latency shared media canvas and synchronized watch parties for long-distance couples.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-white/[0.06]">
-                <div class="text-[10px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Deliverables & Formats</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">4 Full PRDs</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">7-Screen Shorts Mobile Flow</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">10-Page Strategy PDF</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">KPI & Counter-Metric Trees</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
-              <div>
-                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">PM Rigor & Prototyping</h4>
-                <div class="space-y-4">
-                  <div class="p-3.5 rounded-lg bg-obsidian-850/70 border border-white/[0.05]">
-                    <div class="text-xs font-bold text-white mb-1">Interactive 7-Screen Shorts UX Prototype</div>
-                    <p class="text-xs text-titanium-400 leading-relaxed">
-                      Hands-on mobile simulator validating touch gestures, contextual comment anchors, and zero-loss audio scrubbing to boost short-form completion rates.
-                    </p>
-                  </div>
-                  <div class="p-3.5 rounded-lg bg-obsidian-850/70 border border-white/[0.05]">
-                    <div class="text-xs font-bold text-white mb-1">Executive 10-Page Whitepaper PDF</div>
-                    <p class="text-xs text-titanium-400 leading-relaxed">
-                      Complete product strategy document detailing user personas, RICE prioritization, edge-case fallback states, and guardrail metrics.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="mt-8 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row gap-3">
-                <a href="https://ashokkumarone.github.io/Google-Product-Strategy-Cases/" target="_blank" rel="noopener noreferrer" 
-                   class="flex-1 py-3 rounded-full bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-md">
-                  <span>Open Strategy Portal</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
-                <a href="https://github.com/ashokkumarone/Google-Product-Strategy-Cases/blob/main/strategy/Google_Product_Strategy_Cases.pdf" target="_blank" rel="noopener noreferrer" 
-                   class="px-5 py-3 rounded-full bg-obsidian-800 border border-white/10 text-titanium-200 font-semibold text-xs hover:border-gold/30 hover:text-gold transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="file-text" class="w-3.5 h-3.5 text-gold"></i>
-                  <span>PDF (10 pgs)</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- ========================================== -->
-        <!-- 03: OTT INDIA DISRUPTION STRATEGY 2026 -->
-        <!-- ========================================== -->
-        <div class="project-item strategy viewport-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10" data-category="strategy">
-          
-          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
-            <div class="flex items-center gap-3">
-              <div class="flex items-center gap-1.5 mr-2">
-                <span class="dot dot-close"></span>
-                <span class="dot dot-min"></span>
-                <span class="dot dot-max"></span>
-              </div>
-              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-gold-dim border border-gold/20">03 / MEDIA ECONOMICS</span>
-              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Strategy Whitepaper
-              </span>
-            </div>
-            <div class="flex items-center gap-4">
-              <a href="https://ashokkumarone.github.io/OTT-India-Disruption-Strategy/" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
-                <span>View Strategy</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-              <span class="text-white/20">|</span>
-              <a href="https://github.com/ashokkumarone/OTT-India-Disruption-Strategy" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-1.5 text-xs font-mono text-titanium-400 hover:text-white transition-colors">
-                <i data-lucide="github" class="w-3.5 h-3.5"></i>
-                <span>Repository</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-            <div class="lg:col-span-7 flex flex-col justify-between">
-              <div>
-                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide mb-2">
-                  OTT India Disruption Strategy 2026 — 12 Pillars
-                </h3>
-                <p class="text-xs sm:text-sm font-medium text-gold/90 mb-5 font-mono">
-                  Overcoming India's 24% Paid-Conversion Ceiling & ₹8,700 Cr Piracy Leakage
-                </p>
-
-                <div class="mb-4 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
-                  <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="trending-down" class="w-3.5 h-3.5 text-red-400"></i> The Market Paradox
-                  </h4>
-                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
-                    India has <strong class="text-white">600M+ OTT viewers</strong>, yet only <strong class="text-white">~24% convert to paying subscribers</strong>. Concurrently, <strong class="text-white">₹8,700 Cr is lost annually to piracy</strong> (EY-IAMAI), and platforms suffer massive post-blockbuster churn due to heavy theatrical dependency.
-                  </p>
-                </div>
-
-                <!-- 4 Framework Pillars -->
-                <div class="grid grid-cols-2 gap-2 mb-5 text-[11px] text-titanium-300">
-                  <div class="p-2.5 rounded-lg bg-obsidian-850/80 border border-white/[0.05]">
-                    <span class="text-gold font-mono font-bold block mb-0.5">Habit & Cadence</span>
-                    Daily Drops, Festival Windows, Theatre Hijack
-                  </div>
-                  <div class="p-2.5 rounded-lg bg-obsidian-850/80 border border-white/[0.05]">
-                    <span class="text-gold font-mono font-bold block mb-0.5">Localization</span>
-                    Polyglot AI Dubbing, Co-production
-                  </div>
-                  <div class="p-2.5 rounded-lg bg-obsidian-850/80 border border-white/[0.05]">
-                    <span class="text-gold font-mono font-bold block mb-0.5">IP Defense</span>
-                    Copyright AI Shield, Watermarked Forensics
-                  </div>
-                  <div class="p-2.5 rounded-lg bg-obsidian-850/80 border border-white/[0.05]">
-                    <span class="text-gold font-mono font-bold block mb-0.5">Micro-Monetization</span>
-                    India-Only ₹49 Micro-Tier, ₹499 Couple Pack
-                  </div>
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-white/[0.06]">
-                <div class="text-[10px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Benchmarking & Research</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">JustWatch Q2 2025 Data</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">EY-IAMAI Piracy Report</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">JioHotstar / Prime / Netflix Playbooks</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
-              <div>
-                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Macro Market Metrics</h4>
-                <div class="grid grid-cols-2 gap-3 mb-5">
-                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
-                    <div class="font-cinzel text-2xl text-gold font-bold">600M+</div>
-                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Addressable Viewers</div>
-                  </div>
-                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
-                    <div class="font-cinzel text-2xl text-gold font-bold">₹8,700 Cr</div>
-                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Annual Piracy Loss</div>
-                  </div>
-                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
-                    <div class="font-cinzel text-2xl text-gold font-bold">24%</div>
-                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Paid Conversion</div>
-                  </div>
-                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
-                    <div class="font-cinzel text-2xl text-gold font-bold">16%</div>
-                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">CAGR Growth to 2029</div>
-                  </div>
-                </div>
-
-                <div class="p-3.5 rounded-lg bg-obsidian-850/70 border border-white/[0.05]">
-                  <div class="text-xs font-bold text-white mb-1">Execution Playbooks</div>
-                  <p class="text-xs text-titanium-400 leading-relaxed">
-                    Custom strategic weighting for JioHotstar (cricket retention), Amazon Prime (marketplace bundling), and Netflix (regional price elasticity).
-                  </p>
-                </div>
-              </div>
-
-              <div class="mt-8 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row gap-3">
-                <a href="https://ashokkumarone.github.io/OTT-India-Disruption-Strategy/" target="_blank" rel="noopener noreferrer" 
-                   class="flex-1 py-3 rounded-full bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-md">
-                  <span>Open Strategy Portal</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
-                <a href="https://github.com/ashokkumarone/OTT-India-Disruption-Strategy/blob/main/strategy/OTT_India_Disruption_Strategy_Whitepaper.pdf" target="_blank" rel="noopener noreferrer" 
-                   class="px-5 py-3 rounded-full bg-obsidian-800 border border-white/10 text-titanium-200 font-semibold text-xs hover:border-gold/30 hover:text-gold transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="file-text" class="w-3.5 h-3.5 text-gold"></i>
-                  <span>PDF (6 pgs)</span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- ========================================== -->
-        <!-- 04: FLUX (Unified Streaming Engine) -->
-        <!-- ========================================== -->
-        <div class="project-item streaming viewport-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10" data-category="streaming">
-          
-          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
-            <div class="flex items-center gap-3">
-              <div class="flex items-center gap-1.5 mr-2">
-                <span class="dot dot-close"></span>
-                <span class="dot dot-min"></span>
-                <span class="dot dot-max"></span>
-              </div>
-              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-gold-dim border border-gold/20">04 / CONSUMER STREAMING</span>
-              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live React App
-              </span>
-            </div>
-            <div class="flex items-center gap-4">
-              <a href="https://ashokkumarone.github.io/Flux/" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
-                <span>Launch App</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-              <span class="text-white/20">|</span>
-              <a href="https://github.com/ashokkumarone/Flux" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-1.5 text-xs font-mono text-titanium-400 hover:text-white transition-colors">
-                <i data-lucide="github" class="w-3.5 h-3.5"></i>
-                <span>Repository</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-            <div class="lg:col-span-7 flex flex-col justify-between">
-              <div>
-                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide mb-2">
-                  Flux — Unified Video & Audio Streaming
-                </h3>
-                <p class="text-xs sm:text-sm font-medium text-gold/90 mb-5 font-mono">
-                  Eliminating Playback Context-Switching & Mobile Bandwidth Waste
-                </p>
-
-                <div class="mb-4 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
-                  <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="zap-off" class="w-3.5 h-3.5 text-amber-400"></i> The Context Fragmentation
-                  </h4>
-                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
-                    Users consume music, podcasts, and video on separate platforms. When commuting or multitasking with the screen off, video players force unnecessary screen usage, draining up to 75% more mobile battery and mobile data bandwidth.
-                  </p>
-                </div>
-
-                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
-                  <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-gold"></i> Core Mechanism: Instant Video ⇄ Audio Toggle
-                  </h4>
-                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
-                    Flux unifies both modes in a single playback pipeline. Users switch from video to background audio mode instantly without losing timestamp position, paired with an <strong>Active Audience Algorithm</strong> that compensates creators based on retention depth rather than surface impressions.
-                  </p>
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-white/[0.06]">
-                <div class="text-[10px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Stack & Media Pipeline</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">React</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">TypeScript</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">HTML5 Audio Engine</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">State Persistence</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
-              <div>
-                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Impact Modeling & Features</h4>
-                <ul class="space-y-3.5 text-xs text-titanium-300">
-                  <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div><strong class="text-white">+22% Daily Retention Lift:</strong> Screen-off background playback eliminates session drops during commutes.</div>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div><strong class="text-white">Active Audience Framework:</strong> Categorizes viewers into Active, Semi-Active, and Inactive based on interaction velocity.</div>
-                  </li>
-                  <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div><strong class="text-white">+35% Creator Monetization:</strong> Depth-weighted CPM algorithm that rewards high-retention long-form creators.</div>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="mt-8 pt-6 border-t border-white/[0.08]">
-                <a href="https://ashokkumarone.github.io/Flux/" target="_blank" rel="noopener noreferrer" 
-                   class="w-full py-3 rounded-full bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-md">
-                  <span>Open Live Flux Prototype</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- ========================================== -->
-        <!-- 05: TUNING MUSIC (Social Audio Layer) -->
-        <!-- ========================================== -->
-        <div class="project-item streaming viewport-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10" data-category="streaming">
-          
-          <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
-            <div class="flex items-center gap-3">
-              <div class="flex items-center gap-1.5 mr-2">
-                <span class="dot dot-close"></span>
-                <span class="dot dot-min"></span>
-                <span class="dot dot-max"></span>
-              </div>
-              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-gold-dim border border-gold/20">05 / SOCIAL AUDIO</span>
-              <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
-                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live React App
-              </span>
-            </div>
-            <div class="flex items-center gap-4">
-              <a href="https://ashokkumarone.github.io/Tuning-Music/" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
-                <span>Launch App</span>
-                <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              </a>
-              <span class="text-white/20">|</span>
-              <a href="https://github.com/ashokkumarone/Tuning-Music" target="_blank" rel="noopener noreferrer" 
-                 class="inline-flex items-center gap-1.5 text-xs font-mono text-titanium-400 hover:text-white transition-colors">
-                <i data-lucide="github" class="w-3.5 h-3.5"></i>
-                <span>Repository</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-            <div class="lg:col-span-7 flex flex-col justify-between">
-              <div>
-                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide mb-2">
-                  Tuning Music — Social Audio Layer
-                </h3>
-                <p class="text-xs sm:text-sm font-medium text-gold/90 mb-5 font-mono">
-                  "No Keyboard. Just Music." — Turning Songs into Conversational Currency
-                </p>
-
-                <div class="mb-4 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
-                  <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="message-square-off" class="w-3.5 h-3.5 text-amber-400"></i> The Social Silo in Music
-                  </h4>
-                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
-                    Streaming music is hyper-personalized yet emotionally isolated. When users want to share a specific 15-second guitar solo or lyric drop, sharing links to messaging apps forces recipients through external paywalls and broken timestamps.
-                  </p>
-                </div>
-
-                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
-                  <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="music" class="w-3.5 h-3.5 text-gold"></i> Song-Anchored Conversations
-                  </h4>
-                  <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
-                    Tuning replaces plain text with timestamped lyric snippets and emoji reactions. Built on a clean relational SQL schema (<code class="text-gold font-mono text-xs">Users</code>, <code class="text-gold font-mono text-xs">Songs</code>, <code class="text-gold font-mono text-xs">TuningLogs</code>) and a tiered freemium monetization model.
-                  </p>
-                </div>
-              </div>
-
-              <div class="pt-4 border-t border-white/[0.06]">
-                <div class="text-[10px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Technical Architecture</div>
-                <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">React</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">TypeScript</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">Relational SQL Schema</span>
-                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">PRD & Freemium Model</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
-              <div>
-                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Projected Growth Metrics</h4>
-                <div class="grid grid-cols-2 gap-3 mb-5">
-                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
-                    <div class="font-cinzel text-2xl text-gold font-bold">+28%</div>
-                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Projected DAU Lift</div>
-                  </div>
-                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
-                    <div class="font-cinzel text-2xl text-gold font-bold">+45%</div>
-                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Session Length</div>
-                  </div>
-                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
-                    <div class="font-cinzel text-2xl text-gold font-bold">4x</div>
-                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Social Sharing Velocity</div>
-                  </div>
-                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
-                    <div class="font-cinzel text-2xl text-gold font-bold">New</div>
-                    <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Freemium Tier</div>
-                  </div>
-                </div>
-
-                <div class="p-3.5 rounded-lg bg-obsidian-850/70 border border-white/[0.05]">
-                  <div class="text-xs font-bold text-white mb-1">Interactive Feature Suite</div>
-                  <p class="text-xs text-titanium-400 leading-relaxed">
-                    Search-and-share modal, synchronized lyrics viewer, song-based inbox threads, and dynamic emoji reaction bar.
-                  </p>
-                </div>
-              </div>
-
-              <div class="mt-8 pt-6 border-t border-white/[0.08]">
-                <a href="https://ashokkumarone.github.io/Tuning-Music/" target="_blank" rel="noopener noreferrer" 
-                   class="w-full py-3 rounded-full bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-md">
-                  <span>Open Live Tuning Prototype</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================================================== -->
-  <!-- DBS BANK AUTHORITY: GROUND-LEVEL FINTECH FOUNDATION -->
-  <!-- ==================================================== -->
-  <section id="dbs" class="py-24 px-6 relative z-10 bg-obsidian-900/50 border-t border-white/[0.06]">
-    <div class="max-w-5xl mx-auto">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-2 font-semibold">Uncopyable Edge</span>
-        <h2 class="font-cinzel text-2xl sm:text-4xl text-white font-bold tracking-wide">
-          WHY GROUND-LEVEL BANKING EXPERIENCE MATTERS
-        </h2>
-        <p class="text-titanium-400 text-xs sm:text-sm mt-3">
-          Most FinTech PMs operate on whiteboard assumptions. Having managed live customer onboarding and risk compliance at DBS Bank India, my product decisions are grounded in operational reality.
+      <!-- EXECUTIVE CONTACT & FOOTER -->
+      <div class="pt-12 border-t border-white/[0.08] text-center max-w-2xl mx-auto">
+        <h3 class="text-2xl sm:text-3xl font-black text-white mb-3">
+          Let's build something exceptional.
+        </h3>
+        <p class="text-xs sm:text-sm text-apple-gray mb-8">
+          Open to Associate Product Manager, Product Analyst, and Junior PM opportunities in FinTech, Consumer Tech, and Streaming.
         </p>
-      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div class="viewport-card p-6 rounded-2xl">
-          <div class="w-10 h-10 rounded-full bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5 shadow-sm">
-            <i data-lucide="user-check" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-cinzel text-base text-white font-bold mb-2">Real KYC & Compliance Frictions</h3>
-          <p class="text-xs text-titanium-400 leading-relaxed">
-            Personally handled 10–15 daily retail customer interactions and account opening funnels. Understand exactly where customers drop off during document validation and risk scoring.
-          </p>
+        <div class="flex flex-wrap items-center justify-center gap-4 mb-10">
+          <a href="https://linkedin.com/in/ashokkumarone" target="_blank" rel="noopener noreferrer" 
+             class="px-5 py-2.5 rounded-full bg-[#0a66c2] text-white text-xs font-semibold flex items-center gap-2">
+            <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/ashokkumarone" target="_blank" rel="noopener noreferrer" 
+             class="px-5 py-2.5 rounded-full bg-white/[0.06] border border-white/10 text-white text-xs font-semibold font-mono flex items-center gap-2">
+            <i data-lucide="github" class="w-3.5 h-3.5"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="mailto:ashokkumarone@outlook.com" 
+             class="px-5 py-2.5 rounded-full bg-white text-black text-xs font-semibold flex items-center gap-2">
+            <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+            <span>ashokkumarone@outlook.com</span>
+          </a>
         </div>
 
-        <div class="viewport-card p-6 rounded-2xl">
-          <div class="w-10 h-10 rounded-full bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5 shadow-sm">
-            <i data-lucide="git-pull-request" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-cinzel text-base text-white font-bold mb-2">Operational Bottleneck Empathy</h3>
-          <p class="text-xs text-titanium-400 leading-relaxed">
-            Saw how branch bankers lose customer follow-ups when shifting desks — directly inspiring the <em>Request Tracker</em> feature in OneBank that prevents SLA drops.
-          </p>
+        <div class="text-[11px] font-mono text-apple-gray">
+          © 2026 Ashokkumar S · Built with intention · Deployed on GitHub Pages
         </div>
-
-        <div class="viewport-card p-6 rounded-2xl">
-          <div class="w-10 h-10 rounded-full bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5 shadow-sm">
-            <i data-lucide="trending-up" class="w-5 h-5"></i>
-          </div>
-          <h3 class="font-cinzel text-base text-white font-bold mb-2">Consultative Cross-Sell Instinct</h3>
-          <p class="text-xs text-titanium-400 leading-relaxed">
-            Consistently exceeded branch targets by mapping customer savings habits to high-yield Fixed Deposits and insurance products — translating directly into monetization design.
-          </p>
-        </div>
-      </div>
-
-      <!-- DBS Experience Card -->
-      <div class="viewport-card p-6 sm:p-8 rounded-2xl border-gold/30 bg-gradient-to-r from-obsidian-850 via-obsidian-900 to-obsidian-850 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <div class="flex items-center gap-3 mb-1">
-            <span class="text-xs font-mono font-bold text-gold uppercase tracking-wider">Assistant Officer – Personal Banker</span>
-            <span class="text-titanium-500 text-xs">|</span>
-            <span class="text-titanium-400 text-xs font-mono">Nov 2022 – Jul 2023</span>
-          </div>
-          <h4 class="font-cinzel text-lg sm:text-xl text-white font-bold tracking-wide">DBS Bank India Ltd</h4>
-          <p class="text-xs text-titanium-300 mt-2 max-w-2xl leading-relaxed">
-            Managed branch operations, customer advisory, savings/deposit origination, and KYC compliance in a high-accountability banking environment.
-          </p>
-        </div>
-        <a href="#work" class="px-5 py-2.5 rounded-full bg-gold-dim border border-gold/30 text-gold text-xs font-semibold uppercase tracking-wider hover:bg-gold hover:text-obsidian-950 transition-all shrink-0">
-          See OneBank Solution →
-        </a>
       </div>
 
     </div>
+
   </section>
 
-  <!-- ==================================================== -->
-  <!-- PRODUCT PHILOSOPHY & PLAYBOOK -->
-  <!-- ==================================================== -->
-  <section id="philosophy" class="py-24 px-6 relative z-10">
-    <div class="max-w-5xl mx-auto">
-      
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-2 font-semibold">The Playbook</span>
-        <h2 class="font-cinzel text-2xl sm:text-4xl text-white font-bold tracking-wide">
-          HOW I APPROACH PRODUCT STRATEGY
-        </h2>
-        <p class="text-titanium-400 text-xs sm:text-sm mt-3">
-          Product management is not about opinions; it is about building tight feedback loops between qualitative customer friction and quantitative business economics.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl bg-obsidian-900/70 border border-white/[0.06]">
-          <div class="font-mono text-xs font-bold text-gold mb-3">01 / FIRST PRINCIPLES DISCOVERY</div>
-          <h3 class="font-cinzel text-base text-white font-bold mb-2">Find the Unspoken Friction</h3>
-          <p class="text-xs text-titanium-400 leading-relaxed">
-            Before touching software, identify the structural bottleneck: Why do 76% of Indian OTT users pirate? Why do banking follow-ups get dropped? Target root causes, not surface symptoms.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-obsidian-900/70 border border-white/[0.06]">
-          <div class="font-mono text-xs font-bold text-gold mb-3">02 / QUANTITATIVE RIGOR</div>
-          <h3 class="font-cinzel text-base text-white font-bold mb-2">Data-Backed Unit Economics</h3>
-          <p class="text-xs text-titanium-400 leading-relaxed">
-            Every feature must prove its economic viability: 100% IBM Excel certified modeling, SQL relational schemas, CAC/LTV payback, and retention funnel analytics.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-obsidian-900/70 border border-white/[0.06]">
-          <div class="font-mono text-xs font-bold text-gold mb-3">03 / TANGIBLE PROTOTYPING</div>
-          <h3 class="font-cinzel text-base text-white font-bold mb-2">Decks Don't Ship. Code Does.</h3>
-          <p class="text-xs text-titanium-400 leading-relaxed">
-            I don't stop at PRDs or static slides. I write clean React, TypeScript, and Tailwind code to build working interactive proofs-of-concept that validate usability before engineering sprint allocation.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================================================== -->
-  <!-- BACKGROUND, EDUCATION & SKILLS -->
-  <!-- ==================================================== -->
-  <section id="about" class="py-24 px-6 relative z-10 bg-obsidian-900/30 border-t border-white/[0.06]">
-    <div class="max-w-5xl mx-auto">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        <div class="lg:col-span-6">
-          <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-2 font-semibold">Background & Foundations</span>
-          <h2 class="font-cinzel text-2xl sm:text-4xl text-white font-bold tracking-wide mb-6">
-            ENGINEERING RIGOR MEETS BUSINESS EMPATHY
-          </h2>
-          
-          <div class="space-y-4 text-xs sm:text-sm text-titanium-400 leading-relaxed">
-            <p>
-              I hold a <strong class="text-white">Bachelor of Engineering in Computer Science</strong> from Builder Engineering College. My engineering background gives me deep technical empathy — understanding API contracts, state management, latency constraints, and database relationships when communicating with engineering teams.
-            </p>
-            <p>
-              Transitioning into retail banking at <strong class="text-white">DBS Bank India</strong> honed my business acumen: reading consumer behavior, financial compliance, and operational efficiency under high daily targets.
-            </p>
-            <p>
-              Over the last two years, I have channeled both skill sets into building an independent, comprehensive portfolio of 5 flagship product solutions with 3 live production apps.
-            </p>
-          </div>
-
-          <div class="mt-8 p-5 rounded-2xl bg-obsidian-850 border border-white/[0.08] flex items-start gap-4">
-            <div class="w-10 h-10 rounded-full bg-obsidian-800 border border-white/10 flex items-center justify-center text-gold shrink-0">
-              <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-xs font-mono text-titanium-400">2017 – 2021</div>
-              <h4 class="font-cinzel text-base text-white font-bold">B.E. Computer Science Engineering</h4>
-              <p class="text-xs text-titanium-400 mt-1">Builder Engineering College, Tiruppur | 72%</p>
-              <p class="text-[11px] text-titanium-500 mt-1">Core coursework in Data Structures, Algorithms, Relational Databases & System Architecture.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="lg:col-span-6">
-          <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-2 font-semibold">Core Capabilities</span>
-          <h2 class="font-cinzel text-2xl sm:text-4xl text-white font-bold tracking-wide mb-6">
-            SKILLS & TOOLKIT
-          </h2>
-
-          <div class="space-y-4">
-            <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
-              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2 flex items-center gap-2">
-                <i data-lucide="compass" class="w-4 h-4 text-gold"></i> Product Strategy & Execution
-              </div>
-              <div class="flex flex-wrap gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">PRD Authoring</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">User Journey Mapping</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Prioritization (RICE/MoSCoW)</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">TAM/SAM Sizing</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Monetization Models</span>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
-              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2 flex items-center gap-2">
-                <i data-lucide="bar-chart-3" class="w-4 h-4 text-gold"></i> Data & Analytical Modeling
-              </div>
-              <div class="flex flex-wrap gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-gold border border-gold/20 font-semibold">IBM Excel Certified (100%)</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">SQL & Relational Schemas</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Python</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Cohort Analysis</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Unit Economics</span>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
-              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2 flex items-center gap-2">
-                <i data-lucide="code" class="w-4 h-4 text-gold"></i> Prototyping & Front-End Engineering
-              </div>
-              <div class="flex flex-wrap gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">React 19 & TypeScript</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Tailwind CSS</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">REST API Design</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Git & GitHub Pages</span>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
-              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2 flex items-center gap-2">
-                <i data-lucide="shield" class="w-4 h-4 text-gold"></i> Domain Expertise
-              </div>
-              <div class="flex flex-wrap gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Retail Banking Operations</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">e-KYC & Compliance</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">OTT Streaming Economics</span>
-                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Anti-Piracy IP Frameworks</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================================================== -->
-  <!-- CONTACT & FOOTER -->
-  <!-- ==================================================== -->
-  <footer id="contact" class="py-24 px-6 relative z-10 overflow-hidden border-t border-white/[0.06]">
-    <div class="max-w-4xl mx-auto text-center">
-      
-      <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-3 font-semibold">Initiate Conversation</span>
-      <h2 class="font-cinzel text-3xl sm:text-5xl md:text-6xl text-white font-bold tracking-wide mb-6">
-        LET'S BUILD SOMETHING <br />
-        <span class="italic font-serif text-gold font-normal">EXCEPTIONAL</span> TOGETHER.
-      </h2>
-      <p class="max-w-xl mx-auto text-xs sm:text-sm text-titanium-400 font-light leading-relaxed mb-10">
-        Actively seeking <strong class="text-white font-medium">Associate Product Manager, Product Analyst, and Junior PM</strong> roles across FinTech, Consumer Tech, and Media/Streaming platforms. Open to remote or on-site opportunities.
-      </p>
-
-      <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
-        <a href="https://linkedin.com/in/ashokkumarone" target="_blank" rel="noopener noreferrer" 
-           class="px-6 py-3.5 rounded-full bg-[#0a66c2] text-white font-semibold text-xs uppercase tracking-wider hover:bg-[#084e96] transition-all flex items-center gap-2.5 shadow-md">
-          <i data-lucide="linkedin" class="w-4 h-4"></i>
-          <span>Connect on LinkedIn</span>
-        </a>
-
-        <a href="https://github.com/ashokkumarone" target="_blank" rel="noopener noreferrer" 
-           class="px-6 py-3.5 rounded-full bg-obsidian-850 border border-white/10 text-titanium-200 font-semibold text-xs uppercase tracking-wider hover:border-gold/40 hover:text-gold transition-all flex items-center gap-2.5">
-          <i data-lucide="github" class="w-4 h-4"></i>
-          <span>GitHub Profile</span>
-        </a>
-
-        <a href="mailto:ashokkumarone@outlook.com?subject=Product%20Opportunity%20-%20Ashokkumar%20S" 
-           class="px-6 py-3.5 rounded-full bg-obsidian-850 border border-white/10 text-titanium-200 font-semibold text-xs uppercase tracking-wider hover:border-gold/40 hover:text-gold transition-all flex items-center gap-2.5">
-          <i data-lucide="mail" class="w-4 h-4 text-gold"></i>
-          <span>ashokkumarone@outlook.com</span>
-        </a>
-      </div>
-
-      <div class="pt-10 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between text-xs text-titanium-500 font-mono gap-4">
-        <div>
-          © 2026 Ashokkumar S. Built with purpose & deployed on GitHub Pages.
-        </div>
-        <div class="flex items-center gap-6">
-          <a href="#work" class="hover:text-gold transition-colors">Projects</a>
-          <a href="#dbs" class="hover:text-gold transition-colors">DBS Authority</a>
-          <a href="#about" class="hover:text-gold transition-colors">Background</a>
-          <a href="#" class="hover:text-gold transition-colors">Top ↑</a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
-
-  <!-- Interactive JavaScript Logic -->
+  <!-- ========================================================= -->
+  <!-- INTERACTIVE APP SWITCHER JAVASCRIPT -->
+  <!-- ========================================================= -->
   <script>
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Category Filter Logic
-    function filterProjects(category) {
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('bg-gold', 'text-obsidian-950', 'font-bold');
-        btn.classList.add('text-titanium-400');
-      });
-      const activeTab = document.getElementById('tab-' + category);
-      if (activeTab) {
-        activeTab.classList.add('bg-gold', 'text-obsidian-950', 'font-bold');
-        activeTab.classList.remove('text-titanium-400');
-      }
+    // Toggle Phone UI & Story between Tuning and Flux
+    function switchPhoneApp(app) {
+      const pillTuning = document.getElementById('pill-tuning');
+      const pillFlux = document.getElementById('pill-flux');
 
-      const projects = document.querySelectorAll('.project-item');
-      projects.forEach(project => {
-        if (category === 'all' || project.dataset.category === category) {
-          project.style.display = 'block';
-          setTimeout(() => {
-            project.style.opacity = '1';
-            project.style.transform = 'translateY(0)';
-          }, 10);
-        } else {
-          project.style.opacity = '0';
-          project.style.transform = 'translateY(12px)';
-          setTimeout(() => {
-            project.style.display = 'none';
-          }, 200);
-        }
-      });
+      const storyTuning = document.getElementById('story-tuning');
+      const storyFlux = document.getElementById('story-flux');
+
+      const phoneTuning = document.getElementById('phone-ui-tuning');
+      const phoneFlux = document.getElementById('phone-ui-flux');
+
+      if (app === 'tuning') {
+        // Active Tuning Pill
+        pillTuning.classList.add('active');
+        pillTuning.classList.remove('text-apple-gray');
+        pillFlux.classList.remove('active');
+        pillFlux.classList.add('text-apple-gray');
+
+        // Show Tuning Story
+        storyTuning.classList.remove('hidden');
+        storyFlux.classList.add('hidden');
+
+        // Show Tuning Phone UI
+        phoneTuning.classList.remove('hidden');
+        phoneFlux.classList.add('hidden');
+      } else {
+        // Active Flux Pill
+        pillFlux.classList.add('active');
+        pillFlux.classList.remove('text-apple-gray');
+        pillTuning.classList.remove('active');
+        pillTuning.classList.add('text-apple-gray');
+
+        // Show Flux Story
+        storyFlux.classList.remove('hidden');
+        storyTuning.classList.add('hidden');
+
+        // Show Flux Phone UI
+        phoneFlux.classList.remove('hidden');
+        phoneTuning.classList.add('hidden');
+      }
     }
   </script>
 
