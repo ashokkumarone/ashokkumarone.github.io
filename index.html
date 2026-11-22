@@ -7,12 +7,12 @@
   <meta name="description" content="Portfolio of Ashokkumar S — Associate Product Manager, Product Strategist, and Ex-Personal Banker (DBS Bank). Featuring 5 flagship projects across FinTech CBS, Consumer Streaming, and Big-Tech Strategy." />
   
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2308080c'/><text x='50' y='65' font-size='48' font-family='serif' font-weight='bold' fill='%23e5c07b' text-anchor='middle'>A</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%2307070a'/><text x='50' y='66' font-size='52' font-family='serif' font-weight='bold' fill='%23e5c07b' text-anchor='middle'>A</text></svg>" />
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Cinzel (Pin 1 Roman Serif) + DM Serif Display + Plus Jakarta Sans (Pin 2 Neo-Grotesque) + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -22,19 +22,25 @@
         extend: {
           colors: {
             obsidian: {
-              950: '#060609',
-              900: '#0a0a0f',
-              850: '#0e0e16',
-              800: '#14141f',
-              700: '#1c1c2b',
-              600: '#28283d'
+              950: '#060608',
+              900: '#0a0a0e',
+              850: '#101016',
+              800: '#161620',
+              700: '#1e1e2c',
+              600: '#2a2a3c'
+            },
+            amberflare: {
+              300: '#fed7aa',
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c'
             },
             gold: {
-              light: '#f5d78e',
+              light: '#f7dfa5',
               DEFAULT: '#e5c07b',
               dark: '#c9a84c',
               dim: 'rgba(229, 192, 123, 0.08)',
-              glow: 'rgba(229, 192, 123, 0.22)'
+              glow: 'rgba(229, 192, 123, 0.28)'
             },
             titanium: {
               100: '#f8fafc',
@@ -45,6 +51,7 @@
             }
           },
           fontFamily: {
+            cinzel: ['"Cinzel"', 'Georgia', 'serif'],
             serif: ['"DM Serif Display"', 'Georgia', 'serif'],
             sans: ['"Plus Jakarta Sans"', '-apple-system', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace']
@@ -58,192 +65,274 @@
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Custom Luxury Glass & Glows */
-    .glass-card {
-      background: rgba(14, 14, 22, 0.7);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid rgba(255, 255, 255, 0.07);
-    }
-    .glass-card:hover {
-      border-color: rgba(229, 192, 123, 0.28);
-      box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.7), 0 0 30px -5px rgba(229, 192, 123, 0.08);
-    }
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #ffffff 20%, #f5d78e 65%, #c9a84c 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .gold-gradient-bg {
-      background: linear-gradient(135deg, #f5d78e 0%, #e5c07b 50%, #c9a84c 100%);
-    }
-    .border-gold-glow {
-      border: 1px solid rgba(229, 192, 123, 0.35);
-      box-shadow: 0 0 20px -3px rgba(229, 192, 123, 0.15);
-    }
-    /* Ambient backdrop aura */
-    .ambient-glow {
+    /* Pin 1: Volumetric Sunflare & Golden Atmospheric Back-Glow */
+    .hero-sunflare {
       position: absolute;
-      width: 750px;
-      height: 750px;
-      background: radial-gradient(circle, rgba(229, 192, 123, 0.06) 0%, rgba(20, 20, 35, 0) 70%);
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 850px;
+      height: 550px;
+      background: radial-gradient(ellipse at center, rgba(245, 158, 11, 0.16) 0%, rgba(229, 192, 123, 0.08) 40%, rgba(7, 7, 10, 0) 75%);
+      pointer-events: none;
+      z-index: 0;
+      filter: blur(40px);
+    }
+    .ambient-glow-secondary {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(229, 192, 123, 0.05) 0%, rgba(10, 10, 14, 0) 70%);
       pointer-events: none;
       z-index: 0;
     }
+
+    /* Pin 1: Floating Capsule Navbar */
+    .capsule-nav {
+      background: rgba(14, 14, 20, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), 0 0 20px -2px rgba(229, 192, 123, 0.08);
+    }
+
+    /* Pin 2: Floating 3D Browser Viewport Cards */
+    .viewport-card {
+      background: rgba(13, 13, 19, 0.82);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.85), 0 0 35px -8px rgba(229, 192, 123, 0.06);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .viewport-card:hover {
+      border-color: rgba(229, 192, 123, 0.32);
+      transform: translateY(-4px);
+      box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9), 0 0 45px -5px rgba(229, 192, 123, 0.14);
+    }
+
+    /* Window Control Dots */
+    .dot { width: 10px; height: 10px; border-radius: 9999px; display: inline-block; }
+    .dot-close { background: #ef4444; opacity: 0.8; }
+    .dot-min { background: #eab308; opacity: 0.8; }
+    .dot-max { background: #22c55e; opacity: 0.8; }
+
+    /* Pin 2: Kinetic Continuous Marquee Ticker */
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 32s linear infinite;
+    }
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Custom Luxury Text Gradient */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #ffffff 15%, #f7dfa5 60%, #c9a84c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
     /* Custom Scrollbar */
     ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #08080c; }
-    ::-webkit-scrollbar-thumb { background: #1c1c2b; border-radius: 4px; }
+    ::-webkit-scrollbar-track { background: #060608; }
+    ::-webkit-scrollbar-thumb { background: #1c1c28; border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #c9a84c; }
   </style>
 </head>
 
 <body class="bg-obsidian-950 text-titanium-200 font-sans antialiased selection:bg-gold selection:text-obsidian-950 overflow-x-hidden relative">
 
-  <!-- Ambient Glow Backgrounds -->
-  <div class="ambient-glow -top-40 -left-40"></div>
-  <div class="ambient-glow top-[35%] -right-40"></div>
-  <div class="ambient-glow top-[75%] left-1/3"></div>
+  <!-- Ambient Light Fields -->
+  <div class="hero-sunflare"></div>
+  <div class="ambient-glow-secondary top-[40%] -right-40"></div>
+  <div class="ambient-glow-secondary top-[75%] -left-40"></div>
 
-  <!-- Executive Sticky Navigation -->
-  <nav class="fixed top-0 left-0 right-0 z-50 bg-obsidian-950/85 backdrop-blur-xl border-b border-white/[0.06] transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+  <!-- ==================================================== -->
+  <!-- PIN 1 STYLE: FLOATING CAPSULE NAVIGATION -->
+  <!-- ==================================================== -->
+  <div class="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+    <nav class="capsule-nav pointer-events-auto rounded-full px-4 sm:px-6 py-2.5 flex items-center justify-between gap-4 sm:gap-8 max-w-4xl w-full">
+      
+      <!-- Identity Monogram -->
       <a href="#" class="flex items-center gap-3 group">
-        <span class="w-9 h-9 rounded-lg bg-obsidian-850 border border-gold/30 flex items-center justify-center font-serif text-lg font-bold text-gold group-hover:border-gold group-hover:scale-105 transition-all">
+        <span class="w-8 h-8 rounded-full bg-obsidian-850 border border-gold/40 flex items-center justify-center font-cinzel text-xs font-bold text-gold group-hover:border-gold group-hover:scale-105 transition-all shadow-sm">
           AK
         </span>
         <div class="flex flex-col">
-          <span class="font-bold text-sm tracking-tight text-white group-hover:text-gold transition-colors">Ashokkumar S</span>
-          <span class="text-[10px] tracking-wider uppercase text-titanium-400 font-mono">Product Strategist</span>
+          <span class="font-bold text-xs tracking-tight text-white group-hover:text-gold transition-colors font-sans">Ashokkumar S</span>
+          <span class="text-[9px] tracking-widest uppercase text-titanium-400 font-mono">Product Strategist</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation Links -->
-      <div class="hidden md:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-titanium-400">
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-6 text-[11px] font-semibold uppercase tracking-wider text-titanium-400 font-sans">
         <a href="#work" class="hover:text-gold transition-colors">Flagship Work</a>
-        <a href="#banking" class="hover:text-gold transition-colors">DBS Bank Authority</a>
-        <a href="#philosophy" class="hover:text-gold transition-colors">Product Philosophy</a>
+        <a href="#dbs" class="hover:text-gold transition-colors">DBS Authority</a>
+        <a href="#philosophy" class="hover:text-gold transition-colors">Philosophy</a>
         <a href="#about" class="hover:text-gold transition-colors">Background</a>
-        <a href="#contact" class="hover:text-gold transition-colors">Contact</a>
       </div>
 
-      <!-- Action Button -->
-      <div class="flex items-center gap-3">
+      <!-- Action Capsule CTA -->
+      <div class="flex items-center gap-2">
         <a href="https://linkedin.com/in/ashokkumarone" target="_blank" rel="noopener noreferrer" 
-           class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold tracking-wide bg-obsidian-800 border border-white/10 text-titanium-200 hover:border-gold/40 hover:text-gold transition-all">
-          <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+           class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-mono text-titanium-300 hover:text-white bg-obsidian-850 border border-white/10 hover:border-gold/30 transition-all">
+          <i data-lucide="linkedin" class="w-3 h-3 text-gold"></i>
           <span>LinkedIn</span>
         </a>
         <a href="#contact" 
-           class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-gold text-obsidian-950 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 transition-all">
+           class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-gold text-obsidian-950 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20 transition-all">
           <span>Let's Talk</span>
-          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
         </a>
       </div>
-    </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <header class="relative pt-36 pb-20 md:pt-44 md:pb-28 px-6 overflow-hidden">
-    <div class="max-w-5xl mx-auto relative z-10 text-center">
-      
-      <!-- Executive Status Badge -->
-      <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-obsidian-850 border border-gold/20 text-gold text-xs font-mono tracking-wide mb-8 shadow-sm">
+    </nav>
+  </div>
+
+  <!-- ==================================================== -->
+  <!-- HERO SECTION: CINEMATIC DARK LUXURY & SUNFLARE -->
+  <!-- ==================================================== -->
+  <header class="relative pt-36 pb-20 md:pt-48 md:pb-28 px-6 text-center z-10 overflow-hidden">
+    <div class="max-w-5xl mx-auto relative z-10">
+
+      <!-- Status Capsule Pill (Pin 2 Style) -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-obsidian-850/90 border border-gold/30 text-gold text-[11px] font-mono tracking-wider mb-8 shadow-sm">
         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
         <span>OPEN TO ASSOCIATE PRODUCT MANAGER & PRODUCT ANALYST ROLES</span>
       </div>
 
-      <!-- Main Headline -->
-      <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[76px] font-normal leading-[1.08] tracking-tight text-white mb-8">
-        Architecting products from <br class="hidden sm:inline" />
-        <span class="font-serif italic text-gold font-normal">first principles</span> to working systems.
+      <!-- Headline: Pin 1 Classical Roman Serif Grandeur -->
+      <h1 class="font-cinzel text-3xl sm:text-5xl md:text-6xl lg:text-[68px] font-bold leading-[1.12] tracking-wider text-white mb-8">
+        BUILDING SYSTEMS, <br class="hidden sm:inline" />
+        <span class="gold-gradient-text italic font-serif font-normal">CRAFTING STRATEGY</span>
       </h1>
 
-      <!-- Executive Subtitle -->
-      <p class="max-w-3xl mx-auto text-base sm:text-lg md:text-xl text-titanium-400 font-light leading-relaxed mb-10">
-        I combine ground-level <strong class="text-white font-medium">Personal Banker experience at DBS Bank</strong> with rigorous product discovery, quantitative modeling, and functioning prototypes across <strong class="text-titanium-200 font-medium">FinTech CBS, Consumer Streaming, and Big-Tech Platforms</strong>.
+      <!-- Executive Positioning Narrative -->
+      <p class="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-titanium-400 font-light leading-relaxed mb-10">
+        I combine ground-level <strong class="text-white font-medium">Personal Banker experience at DBS Bank India</strong> with quantitative product discovery, unit economic modeling, and functioning prototypes across <strong class="text-titanium-200 font-medium">FinTech CBS, Consumer Streaming, and Big-Tech Growth Frameworks</strong>.
       </p>
 
-      <!-- CTA Buttons -->
+      <!-- Capsule Action Buttons -->
       <div class="flex flex-wrap items-center justify-center gap-4 mb-16">
         <a href="#work" 
-           class="px-8 py-4 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider bg-gold text-obsidian-950 hover:bg-gold-light hover:shadow-xl hover:shadow-gold/25 transition-all flex items-center gap-2 group">
-          <span>Explore 5 Flagship Projects</span>
-          <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-0.5 transition-transform"></i>
+           class="px-8 py-3.5 rounded-full text-xs font-bold uppercase tracking-widest bg-gold text-obsidian-950 hover:bg-gold-light hover:shadow-xl hover:shadow-gold/25 transition-all flex items-center gap-2 group">
+          <span>Explore 5 Flagship Works</span>
+          <i data-lucide="arrow-down" class="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform"></i>
         </a>
-        <a href="#banking" 
-           class="px-8 py-4 rounded-full text-xs sm:text-sm font-semibold tracking-wide bg-obsidian-850 border border-white/10 text-titanium-200 hover:border-gold/40 hover:text-gold transition-all flex items-center gap-2">
-          <span>DBS Bank Case & Insights</span>
-          <i data-lucide="shield-check" class="w-4 h-4 text-gold"></i>
+        <a href="#dbs" 
+           class="px-7 py-3.5 rounded-full text-xs font-semibold tracking-wider uppercase bg-obsidian-850/80 border border-white/10 text-titanium-200 hover:border-gold/40 hover:text-gold transition-all flex items-center gap-2">
+          <span>DBS Bank Authority</span>
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gold"></i>
         </a>
       </div>
 
-      <!-- Verified Executive Proof Points Bar -->
+      <!-- 4 Proof Points / Metric Studio Tiles (Pin 2 Style) -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto pt-8 border-t border-white/[0.08]">
-        <div class="p-4 rounded-xl bg-obsidian-900/60 border border-white/[0.05] text-center">
-          <div class="font-serif text-2xl sm:text-3xl text-gold font-normal">5 Flagship</div>
-          <div class="text-[11px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Cases & Prototypes</div>
+        <div class="p-4 rounded-xl bg-obsidian-900/70 border border-white/[0.06] text-center">
+          <div class="font-cinzel text-2xl sm:text-3xl text-gold font-bold">5</div>
+          <div class="text-[10px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Flagship Cases & Apps</div>
         </div>
-        <div class="p-4 rounded-xl bg-obsidian-900/60 border border-white/[0.05] text-center">
-          <div class="font-serif text-2xl sm:text-3xl text-gold font-normal">3 Live</div>
-          <div class="text-[11px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Production Apps</div>
+        <div class="p-4 rounded-xl bg-obsidian-900/70 border border-white/[0.06] text-center">
+          <div class="font-cinzel text-2xl sm:text-3xl text-gold font-bold">3</div>
+          <div class="text-[10px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Live Production Apps</div>
         </div>
-        <div class="p-4 rounded-xl bg-obsidian-900/60 border border-white/[0.05] text-center">
-          <div class="font-serif text-2xl sm:text-3xl text-gold font-normal">Ex-DBS</div>
-          <div class="text-[11px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Retail Banking Authority</div>
+        <div class="p-4 rounded-xl bg-obsidian-900/70 border border-white/[0.06] text-center">
+          <div class="font-cinzel text-2xl sm:text-3xl text-gold font-bold">Ex-DBS</div>
+          <div class="text-[10px] uppercase tracking-wider text-titanium-400 font-mono mt-1">Banking Domain Authority</div>
         </div>
-        <div class="p-4 rounded-xl bg-obsidian-900/60 border border-white/[0.05] text-center">
-          <div class="font-serif text-2xl sm:text-3xl text-gold font-normal">100%</div>
-          <div class="text-[11px] uppercase tracking-wider text-titanium-400 font-mono mt-1">IBM Excel Certified</div>
+        <div class="p-4 rounded-xl bg-obsidian-900/70 border border-white/[0.06] text-center">
+          <div class="font-cinzel text-2xl sm:text-3xl text-gold font-bold">100%</div>
+          <div class="text-[10px] uppercase tracking-wider text-titanium-400 font-mono mt-1">IBM Excel Certified</div>
         </div>
       </div>
 
     </div>
   </header>
 
-  <!-- Section Divider -->
-  <div class="max-w-6xl mx-auto px-6"><div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
+  <!-- ==================================================== -->
+  <!-- PIN 2 STYLE: KINETIC CONTINUOUS MARQUEE TICKER -->
+  <!-- ==================================================== -->
+  <div class="relative py-4 bg-obsidian-900/80 border-y border-white/[0.07] overflow-hidden z-20">
+    <div class="marquee-track flex items-center gap-10 text-xs font-mono uppercase tracking-[0.2em] text-titanium-400">
+      <div class="flex items-center gap-10">
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> FINTECH CBS & OPERATIONS</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> CONSUMER STREAMING ENGINE</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> BIG-TECH PRD SUITE</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> DBS BANK PERSONAL BANKER AUTHORITY</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> REQUEST TRACKER INNOVATION</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> 12-PILLAR OTT MEDIA FRAMEWORK</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> REACT 19 & TYPESCRIPT</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> 100% IBM EXCEL DATA CERTIFIED</span>
+      </div>
+      <div class="flex items-center gap-10">
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> FINTECH CBS & OPERATIONS</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> CONSUMER STREAMING ENGINE</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> BIG-TECH PRD SUITE</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> DBS BANK PERSONAL BANKER AUTHORITY</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> REQUEST TRACKER INNOVATION</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> 12-PILLAR OTT MEDIA FRAMEWORK</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> REACT 19 & TYPESCRIPT</span>
+        <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span> 100% IBM EXCEL DATA CERTIFIED</span>
+      </div>
+    </div>
+  </div>
 
-  <!-- Flagship Projects Section -->
+  <!-- ==================================================== -->
+  <!-- FLAGSHIP SHOWCASE: 3D FLOATING BROWSER CARDS -->
+  <!-- ==================================================== -->
   <section id="work" class="py-24 px-6 relative z-10">
     <div class="max-w-6xl mx-auto">
       
-      <!-- Section Header with Category Tabs -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+      <!-- Section Header & Filter Capsules -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
         <div>
-          <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-2 font-semibold">Portfolio Showcase</span>
-          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-white font-normal tracking-tight">
-            Flagship Product Case Studies & Prototypes
+          <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-2 font-semibold">Strategic Portfolio</span>
+          <h2 class="font-cinzel text-2xl sm:text-4xl md:text-5xl text-white font-bold tracking-wide">
+            FLAGSHIP PROJECTS & PROTOTYPES
           </h2>
-          <p class="text-titanium-400 text-sm sm:text-base mt-2 max-w-xl">
-            Each project addresses a verified structural industry failure with strategic PRD documentation, quantitative metrics, and functioning production code.
+          <p class="text-titanium-400 text-xs sm:text-sm mt-2 max-w-xl">
+            Each solution pairs an uncopyable product thesis with quantitative business models and production code.
           </p>
         </div>
 
-        <!-- Interactive Category Switcher -->
-        <div class="inline-flex p-1.5 rounded-xl bg-obsidian-850 border border-white/10 text-xs font-semibold self-start md:self-auto">
-          <button onclick="filterProjects('all')" id="tab-all" class="tab-btn px-4 py-2 rounded-lg bg-gold text-obsidian-950 font-bold transition-all">All (5)</button>
-          <button onclick="filterProjects('fintech')" id="tab-fintech" class="tab-btn px-4 py-2 rounded-lg text-titanium-400 hover:text-white transition-all">FinTech CBS</button>
-          <button onclick="filterProjects('streaming')" id="tab-streaming" class="tab-btn px-4 py-2 rounded-lg text-titanium-400 hover:text-white transition-all">Streaming</button>
-          <button onclick="filterProjects('strategy')" id="tab-strategy" class="tab-btn px-4 py-2 rounded-lg text-titanium-400 hover:text-white transition-all">Strategy & PRDs</button>
+        <!-- Clustered Filter Capsules (Pin 2 Style) -->
+        <div class="inline-flex p-1 rounded-full bg-obsidian-850 border border-white/10 text-xs font-semibold self-start md:self-auto shadow-sm">
+          <button onclick="filterProjects('all')" id="tab-all" class="tab-btn px-4 py-2 rounded-full bg-gold text-obsidian-950 font-bold transition-all">All (5)</button>
+          <button onclick="filterProjects('fintech')" id="tab-fintech" class="tab-btn px-4 py-2 rounded-full text-titanium-400 hover:text-white transition-all">FinTech CBS</button>
+          <button onclick="filterProjects('streaming')" id="tab-streaming" class="tab-btn px-4 py-2 rounded-full text-titanium-400 hover:text-white transition-all">Streaming</button>
+          <button onclick="filterProjects('strategy')" id="tab-strategy" class="tab-btn px-4 py-2 rounded-full text-titanium-400 hover:text-white transition-all">Strategy & PRDs</button>
         </div>
       </div>
 
-      <!-- Projects Container -->
+      <!-- Projects Stack -->
       <div class="space-y-12" id="projects-container">
 
-        <!-- ============================================== -->
-        <!-- PROJECT 1: ONEBANK -->
-        <!-- ============================================== -->
-        <div class="project-item fintech glass-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10 transition-all duration-300" data-category="fintech">
+        <!-- ========================================== -->
+        <!-- 01: ONEBANK (Floating Viewport Card) -->
+        <!-- ========================================== -->
+        <div class="project-item fintech viewport-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10" data-category="fintech">
+          
+          <!-- macOS Window Title Bar Header -->
           <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
             <div class="flex items-center gap-3">
-              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-md bg-gold-dim border border-gold/20">01 / FINTECH CBS</span>
+              <!-- Window Control Dots -->
+              <div class="flex items-center gap-1.5 mr-2">
+                <span class="dot dot-close"></span>
+                <span class="dot dot-min"></span>
+                <span class="dot dot-max"></span>
+              </div>
+              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-gold-dim border border-gold/20">01 / FINTECH CBS</span>
               <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live React 19 Application
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live React 19 App
               </span>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-4">
               <a href="https://ashokkumarone.github.io/OneBank/" target="_blank" rel="noopener noreferrer" 
                  class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
                 <span>Launch App</span>
@@ -258,31 +347,31 @@
             </div>
           </div>
 
+          <!-- Split Content Grid -->
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-            <!-- Left Info Column -->
             <div class="lg:col-span-7 flex flex-col justify-between">
               <div>
-                <h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-3">
-                  OneBank — Enterprise Core Banking Solution & Request Tracker
+                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide mb-2">
+                  OneBank — Enterprise Core Banking Solution
                 </h3>
-                <p class="text-sm font-medium text-gold/90 mb-6">
-                  Solving Retail Banking's Chronic "Come Back Tomorrow" Failure Loop
+                <p class="text-xs sm:text-sm font-medium text-gold/90 mb-5 font-mono">
+                  Flagship Innovation: Eliminating Retail Banking's "Come Back Tomorrow" Failure Loop
                 </p>
 
-                <!-- Problem Statement -->
-                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                <!-- Core Problem -->
+                <div class="mb-4 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
                   <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="alert-circle" class="w-3.5 h-3.5 text-amber-400"></i> The Ground-Floor Problem (DBS Context)
+                    <i data-lucide="alert-triangle" class="w-3.5 h-3.5 text-amber-400"></i> The Ground-Floor Bottleneck (DBS Context)
                   </h4>
                   <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
                     In branch banking operations, customer service requests frequently fail because desk handovers occur across fragmented paper slips and siloed software. When an assigned officer is off-duty, customers are told "come back tomorrow," triggering severe SLA breaches, customer churn, and audit penalties.
                   </p>
                 </div>
 
-                <!-- Product Innovation -->
-                <div class="mb-6 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                <!-- Strategic Solution -->
+                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
                   <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold"></i> Flagship Innovation: Unified Request Tracker
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold"></i> Strategic Mechanism: SLA-Driven Request Tracker
                   </h4>
                   <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
                     Designed an immutable, branch-wide <strong>Request Tracker</strong> with strict SLA aging, instant ownership reassignment, and audit trails. Table-stakes operations (7-step e-KYC onboarding, Deposits, Loan origination, CBS Search) are unified into a single coherent interface with zero external dependencies.
@@ -290,77 +379,76 @@
                 </div>
               </div>
 
-              <!-- Tech Stack & Architecture Pills -->
+              <!-- Tech Stack Badges -->
               <div class="pt-4 border-t border-white/[0.06]">
-                <div class="text-[11px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Technical Architecture</div>
+                <div class="text-[10px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Technical Architecture</div>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">React 19</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">TypeScript</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">Tailwind CSS</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">Recharts Analytics</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">DBS Domain Logic</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">React 19</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">TypeScript</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">Tailwind CSS</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">Recharts Analytics</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">DBS Domain Logic</span>
                 </div>
               </div>
             </div>
 
-            <!-- Right Impact & Feature Card -->
+            <!-- Right Side Deliverables Box -->
             <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
               <div>
-                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Core Deliverables & Highlights</h4>
-                <ul class="space-y-3.5 text-xs sm:text-sm text-titanium-300">
+                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Production Deliverables</h4>
+                <ul class="space-y-3.5 text-xs text-titanium-300">
                   <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div>
-                      <strong class="text-white">Flagship Request Tracker:</strong> Complete lifecycle tracking from intake to verification, dispatch, and closure with audit timestamps.
-                    </div>
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div><strong class="text-white">Flagship Request Tracker:</strong> Complete lifecycle tracking from intake to verification, dispatch, and closure with audit timestamps.</div>
                   </li>
                   <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div>
-                      <strong class="text-white">7-Step e-KYC Onboarding:</strong> Aadhaar, PAN, Video verification, risk tiering, and instant customer ID generation.
-                    </div>
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div><strong class="text-white">7-Step e-KYC Onboarding:</strong> Aadhaar, PAN, Video verification, risk tiering, and instant customer ID generation.</div>
                   </li>
                   <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div>
-                      <strong class="text-white">Deposits & Loan Processing:</strong> Real-time FD/RD compounding calculations, loan stage pipeline, and EMI simulation.
-                    </div>
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div><strong class="text-white">Deposits & Loan Processing:</strong> Real-time FD/RD compounding calculations, loan stage pipeline, and EMI simulation.</div>
                   </li>
                   <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div>
-                      <strong class="text-white">Universal CBS Account Search:</strong> Sub-second customer lookup across 7 account categories with KYC validation states.
-                    </div>
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div><strong class="text-white">Universal CBS Account Search:</strong> Sub-second customer lookup across 7 account categories with KYC validation states.</div>
                   </li>
                 </ul>
               </div>
 
               <div class="mt-8 pt-6 border-t border-white/[0.08]">
                 <a href="https://ashokkumarone.github.io/OneBank/" target="_blank" rel="noopener noreferrer" 
-                   class="w-full py-3 rounded-lg bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2">
+                   class="w-full py-3 rounded-full bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-md">
                   <span>Open Live OneBank App</span>
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                 </a>
               </div>
             </div>
           </div>
+
         </div>
 
-        <!-- ============================================== -->
-        <!-- PROJECT 2: GOOGLE PRODUCT STRATEGY CASES -->
-        <!-- ============================================== -->
-        <div class="project-item strategy glass-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10 transition-all duration-300" data-category="strategy">
+        <!-- ========================================== -->
+        <!-- 02: GOOGLE PRODUCT STRATEGY CASES -->
+        <!-- ========================================== -->
+        <div class="project-item strategy viewport-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10" data-category="strategy">
+          
           <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
             <div class="flex items-center gap-3">
-              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-md bg-gold-dim border border-gold/20">02 / BIG-TECH PRD SUITE</span>
+              <div class="flex items-center gap-1.5 mr-2">
+                <span class="dot dot-close"></span>
+                <span class="dot dot-min"></span>
+                <span class="dot dot-max"></span>
+              </div>
+              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-gold-dim border border-gold/20">02 / BIG-TECH PRD SUITE</span>
               <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Portal & Interactive UX Flow
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Portal & Interactive UX
               </span>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-4">
               <a href="https://ashokkumarone.github.io/Google-Product-Strategy-Cases/" target="_blank" rel="noopener noreferrer" 
                  class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
-                <span>Read Case Studies</span>
+                <span>Read Cases</span>
                 <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               </a>
               <span class="text-white/20">|</span>
@@ -373,90 +461,70 @@
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-            <!-- Left Info Column -->
             <div class="lg:col-span-7 flex flex-col justify-between">
               <div>
-                <h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-3">
-                  Google Product Strategy Cases — 4 PRDs & YouTube Shorts Flow
+                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide mb-2">
+                  Google Product Strategy Cases — 4 PRDs & Shorts Flow
                 </h3>
-                <p class="text-sm font-medium text-gold/90 mb-6">
-                  Unlocking High-Growth Engagement Across GPay, Search, Shorts & Meet
+                <p class="text-xs sm:text-sm font-medium text-gold/90 mb-5 font-mono">
+                  Injecting Micro-Social Retention Loops into High-Volume Transactional Utilities
                 </p>
 
-                <!-- Problem Statement -->
-                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                <div class="mb-4 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
                   <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="help-circle" class="w-3.5 h-3.5 text-blue-400"></i> The Strategic Context
+                    <i data-lucide="help-circle" class="w-3.5 h-3.5 text-blue-400"></i> The Big-Tech Challenge
                   </h4>
                   <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
-                    Large-scale consumer platforms (Google ecosystem) face engagement plateaus when transactional utilities fail to capture social network effects. How do we drive organic retention in UPI payments, university micro-communities, short-form video discovery, and synchronous co-viewing?
+                    Large consumer ecosystems face engagement plateaus when transactional utilities fail to generate organic social network effects. How do we unlock recurring daily retention across UPI payments, university queries, short-form video discovery, and synchronous co-viewing?
                   </p>
                 </div>
 
-                <!-- 4 Cases Breakdown -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                  <div class="p-3 rounded-lg bg-obsidian-900/60 border border-white/[0.06]">
-                    <div class="text-xs font-bold text-white mb-1 flex items-center gap-1.5">
-                      <span class="text-gold font-mono">1.</span> GPay Gifting
-                    </div>
-                    <p class="text-[11px] text-titanium-400 leading-normal">
-                      P2P gamified gifting envelopes with instant merchant redemption & social surprise triggers.
-                    </p>
+                <!-- 4 Cases Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
+                  <div class="p-3 rounded-lg bg-obsidian-850/80 border border-white/[0.06]">
+                    <div class="text-xs font-bold text-white mb-1"><span class="text-gold font-mono">1.</span> GPay Gifting</div>
+                    <p class="text-[11px] text-titanium-400 leading-normal">P2P gamified gifting envelopes with merchant-sponsored cashback surprises.</p>
                   </div>
-                  <div class="p-3 rounded-lg bg-obsidian-900/60 border border-white/[0.06]">
-                    <div class="text-xs font-bold text-white mb-1 flex items-center gap-1.5">
-                      <span class="text-gold font-mono">2.</span> Search Campus Guild
-                    </div>
-                    <p class="text-[11px] text-titanium-400 leading-normal">
-                      Hyper-local, verified university micro-communities embedded directly in Google Search results.
-                    </p>
+                  <div class="p-3 rounded-lg bg-obsidian-850/80 border border-white/[0.06]">
+                    <div class="text-xs font-bold text-white mb-1"><span class="text-gold font-mono">2.</span> Search Campus Guild</div>
+                    <p class="text-[11px] text-titanium-400 leading-normal">Hyper-local, verified university micro-communities embedded directly in Google Search results.</p>
                   </div>
-                  <div class="p-3 rounded-lg bg-obsidian-900/60 border border-white/[0.06]">
-                    <div class="text-xs font-bold text-white mb-1 flex items-center gap-1.5">
-                      <span class="text-gold font-mono">3.</span> Shorts Smart Bar
-                    </div>
-                    <p class="text-[11px] text-titanium-400 leading-normal">
-                      Contextual timestamp anchors & live audio scrubbers with 7-screen interactive UX prototype.
-                    </p>
+                  <div class="p-3 rounded-lg bg-obsidian-850/80 border border-white/[0.06]">
+                    <div class="text-xs font-bold text-white mb-1"><span class="text-gold font-mono">3.</span> Shorts Smart Bar</div>
+                    <p class="text-[11px] text-titanium-400 leading-normal">Contextual audio scrubbers & timestamp-pinned comments with 7-screen interactive UX prototype.</p>
                   </div>
-                  <div class="p-3 rounded-lg bg-obsidian-900/60 border border-white/[0.06]">
-                    <div class="text-xs font-bold text-white mb-1 flex items-center gap-1.5">
-                      <span class="text-gold font-mono">4.</span> Meet Couple Pack
-                    </div>
-                    <p class="text-[11px] text-titanium-400 leading-normal">
-                      Low-latency shared media canvas and synchronized watch parties for long-distance relationships.
-                    </p>
+                  <div class="p-3 rounded-lg bg-obsidian-850/80 border border-white/[0.06]">
+                    <div class="text-xs font-bold text-white mb-1"><span class="text-gold font-mono">4.</span> Meet Couple Pack</div>
+                    <p class="text-[11px] text-titanium-400 leading-normal">Low-latency shared media canvas and synchronized watch parties for long-distance couples.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- Tech Stack & Architecture Pills -->
               <div class="pt-4 border-t border-white/[0.06]">
-                <div class="text-[11px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Deliverables & Formats</div>
+                <div class="text-[10px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Deliverables & Formats</div>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">4 Full PRDs</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">7-Screen Shorts UX Flow</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">10-Page Strategy PDF</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">KPI & Metrics Trees</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">4 Full PRDs</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">7-Screen Shorts Mobile Flow</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">10-Page Strategy PDF</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">KPI & Counter-Metric Trees</span>
                 </div>
               </div>
             </div>
 
-            <!-- Right Impact & Feature Card -->
             <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
               <div>
-                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">PM Rigor & Deliverables</h4>
+                <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">PM Rigor & Prototyping</h4>
                 <div class="space-y-4">
-                  <div class="p-3.5 rounded-lg bg-obsidian-800/60 border border-white/[0.05]">
-                    <div class="text-xs font-bold text-white mb-1">Interactive 7-Screen Shorts UX Flow</div>
+                  <div class="p-3.5 rounded-lg bg-obsidian-850/70 border border-white/[0.05]">
+                    <div class="text-xs font-bold text-white mb-1">Interactive 7-Screen Shorts UX Prototype</div>
                     <p class="text-xs text-titanium-400 leading-relaxed">
-                      Hands-on mobile simulator demonstrating the exact swipe-up gesture, contextual comment anchor tags, and zero-loss audio scrubbing mechanism.
+                      Hands-on mobile simulator validating touch gestures, contextual comment anchors, and zero-loss audio scrubbing to boost short-form completion rates.
                     </p>
                   </div>
-                  <div class="p-3.5 rounded-lg bg-obsidian-800/60 border border-white/[0.05]">
-                    <div class="text-xs font-bold text-white mb-1">Complete Strategy Whitepaper PDF</div>
+                  <div class="p-3.5 rounded-lg bg-obsidian-850/70 border border-white/[0.05]">
+                    <div class="text-xs font-bold text-white mb-1">Executive 10-Page Whitepaper PDF</div>
                     <p class="text-xs text-titanium-400 leading-relaxed">
-                      10-page executive document with user personas, prioritized requirements, edge case matrices, and North Star metrics for all 4 features.
+                      Complete product strategy document detailing user personas, RICE prioritization, edge-case fallback states, and guardrail metrics.
                     </p>
                   </div>
                 </div>
@@ -464,35 +532,42 @@
 
               <div class="mt-8 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row gap-3">
                 <a href="https://ashokkumarone.github.io/Google-Product-Strategy-Cases/" target="_blank" rel="noopener noreferrer" 
-                   class="flex-1 py-3 rounded-lg bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2">
+                   class="flex-1 py-3 rounded-full bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-md">
                   <span>Open Strategy Portal</span>
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                 </a>
                 <a href="https://github.com/ashokkumarone/Google-Product-Strategy-Cases/blob/main/strategy/Google_Product_Strategy_Cases.pdf" target="_blank" rel="noopener noreferrer" 
-                   class="px-4 py-3 rounded-lg bg-obsidian-800 border border-white/10 text-titanium-200 font-semibold text-xs hover:border-gold/30 hover:text-gold transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="file-text" class="w-4 h-4 text-gold"></i>
+                   class="px-5 py-3 rounded-full bg-obsidian-800 border border-white/10 text-titanium-200 font-semibold text-xs hover:border-gold/30 hover:text-gold transition-all flex items-center justify-center gap-2">
+                  <i data-lucide="file-text" class="w-3.5 h-3.5 text-gold"></i>
                   <span>PDF (10 pgs)</span>
                 </a>
               </div>
             </div>
           </div>
+
         </div>
 
-        <!-- ============================================== -->
-        <!-- PROJECT 3: OTT INDIA DISRUPTION STRATEGY 2026 -->
-        <!-- ============================================== -->
-        <div class="project-item strategy glass-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10 transition-all duration-300" data-category="strategy">
+        <!-- ========================================== -->
+        <!-- 03: OTT INDIA DISRUPTION STRATEGY 2026 -->
+        <!-- ========================================== -->
+        <div class="project-item strategy viewport-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10" data-category="strategy">
+          
           <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
             <div class="flex items-center gap-3">
-              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-md bg-gold-dim border border-gold/20">03 / MEDIA ECONOMICS & STRATEGY</span>
+              <div class="flex items-center gap-1.5 mr-2">
+                <span class="dot dot-close"></span>
+                <span class="dot dot-min"></span>
+                <span class="dot dot-max"></span>
+              </div>
+              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-gold-dim border border-gold/20">03 / MEDIA ECONOMICS</span>
               <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live Portal & 12-Pillar Whitepaper
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live Strategy Whitepaper
               </span>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-4">
               <a href="https://ashokkumarone.github.io/OTT-India-Disruption-Strategy/" target="_blank" rel="noopener noreferrer" 
                  class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
-                <span>View Strategy Portal</span>
+                <span>View Strategy</span>
                 <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               </a>
               <span class="text-white/20">|</span>
@@ -505,122 +580,120 @@
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-            <!-- Left Info Column -->
             <div class="lg:col-span-7 flex flex-col justify-between">
               <div>
-                <h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-3">
-                  OTT India Disruption Strategy 2026 — 12-Pillar Framework
+                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide mb-2">
+                  OTT India Disruption Strategy 2026 — 12 Pillars
                 </h3>
-                <p class="text-sm font-medium text-gold/90 mb-6">
-                  Platform-Agnostic Monetization & Piracy Defense for Indian Streaming
+                <p class="text-xs sm:text-sm font-medium text-gold/90 mb-5 font-mono">
+                  Overcoming India's 24% Paid-Conversion Ceiling & ₹8,700 Cr Piracy Leakage
                 </p>
 
-                <!-- Market Reality -->
-                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                <div class="mb-4 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
                   <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="trending-down" class="w-3.5 h-3.5 text-red-400"></i> The Indian OTT Bottleneck
+                    <i data-lucide="trending-down" class="w-3.5 h-3.5 text-red-400"></i> The Market Paradox
                   </h4>
                   <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
-                    India boasts <strong class="text-white">600M+ OTT users</strong>, yet only <strong class="text-white">~24% convert to paying subscribers</strong>. Simultaneously, <strong class="text-white">₹8,700 Crore is lost annually to digital piracy</strong> (EY-IAMAI), and massive theatrical release dependencies crush subscriber retention post-blockbusters.
+                    India has <strong class="text-white">600M+ OTT viewers</strong>, yet only <strong class="text-white">~24% convert to paying subscribers</strong>. Concurrently, <strong class="text-white">₹8,700 Cr is lost annually to piracy</strong> (EY-IAMAI), and platforms suffer massive post-blockbuster churn due to heavy theatrical dependency.
                   </p>
                 </div>
 
-                <!-- 12 Pillars Overview -->
-                <div class="mb-6 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
-                  <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-2 flex items-center gap-2">
-                    <i data-lucide="layers" class="w-3.5 h-3.5 text-gold"></i> The 4-Tier Strategic Framework
-                  </h4>
-                  <div class="grid grid-cols-2 gap-2 text-[11px] text-titanium-300">
-                    <div class="p-2 rounded bg-obsidian-850">
-                      <span class="text-gold font-mono font-bold block">Habit & Release</span>
-                      Daily Drops, Festival Windows, Theatre Hijack
-                    </div>
-                    <div class="p-2 rounded bg-obsidian-850">
-                      <span class="text-gold font-mono font-bold block">Localization</span>
-                      Polyglot AI Dubbing, Regional Co-production
-                    </div>
-                    <div class="p-2 rounded bg-obsidian-850">
-                      <span class="text-gold font-mono font-bold block">IP Defense</span>
-                      Copyright AI Shield, Watermarked Forensics
-                    </div>
-                    <div class="p-2 rounded bg-obsidian-850">
-                      <span class="text-gold font-mono font-bold block">Monetization</span>
-                      India-Only ₹49 Micro-Tier, ₹499 Couple Pack
-                    </div>
+                <!-- 4 Framework Pillars -->
+                <div class="grid grid-cols-2 gap-2 mb-5 text-[11px] text-titanium-300">
+                  <div class="p-2.5 rounded-lg bg-obsidian-850/80 border border-white/[0.05]">
+                    <span class="text-gold font-mono font-bold block mb-0.5">Habit & Cadence</span>
+                    Daily Drops, Festival Windows, Theatre Hijack
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-obsidian-850/80 border border-white/[0.05]">
+                    <span class="text-gold font-mono font-bold block mb-0.5">Localization</span>
+                    Polyglot AI Dubbing, Co-production
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-obsidian-850/80 border border-white/[0.05]">
+                    <span class="text-gold font-mono font-bold block mb-0.5">IP Defense</span>
+                    Copyright AI Shield, Watermarked Forensics
+                  </div>
+                  <div class="p-2.5 rounded-lg bg-obsidian-850/80 border border-white/[0.05]">
+                    <span class="text-gold font-mono font-bold block mb-0.5">Micro-Monetization</span>
+                    India-Only ₹49 Micro-Tier, ₹499 Couple Pack
                   </div>
                 </div>
               </div>
 
-              <!-- Tech Stack & Architecture Pills -->
               <div class="pt-4 border-t border-white/[0.06]">
-                <div class="text-[11px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Data Sources & Benchmarking</div>
+                <div class="text-[10px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Benchmarking & Research</div>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">JustWatch Q2 2025 Data</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">EY-IAMAI Piracy Report</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">JioHotstar / Prime / Netflix Playbooks</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">JustWatch Q2 2025 Data</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">EY-IAMAI Piracy Report</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">JioHotstar / Prime / Netflix Playbooks</span>
                 </div>
               </div>
             </div>
 
-            <!-- Right Impact & Feature Card -->
             <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
               <div>
                 <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Macro Market Metrics</h4>
-                <div class="grid grid-cols-2 gap-3 mb-6">
-                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
-                    <div class="font-serif text-2xl text-gold font-normal">600M+</div>
+                <div class="grid grid-cols-2 gap-3 mb-5">
+                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
+                    <div class="font-cinzel text-2xl text-gold font-bold">600M+</div>
                     <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Addressable Viewers</div>
                   </div>
-                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
-                    <div class="font-serif text-2xl text-gold font-normal">₹8,700 Cr</div>
+                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
+                    <div class="font-cinzel text-2xl text-gold font-bold">₹8,700 Cr</div>
                     <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Annual Piracy Loss</div>
                   </div>
-                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
-                    <div class="font-serif text-2xl text-gold font-normal">24%</div>
+                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
+                    <div class="font-cinzel text-2xl text-gold font-bold">24%</div>
                     <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Paid Conversion</div>
                   </div>
-                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
-                    <div class="font-serif text-2xl text-gold font-normal">16%</div>
+                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
+                    <div class="font-cinzel text-2xl text-gold font-bold">16%</div>
                     <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">CAGR Growth to 2029</div>
                   </div>
                 </div>
 
-                <div class="p-3.5 rounded-lg bg-obsidian-800/60 border border-white/[0.05]">
-                  <div class="text-xs font-bold text-white mb-1">Platform Execution Playbook</div>
+                <div class="p-3.5 rounded-lg bg-obsidian-850/70 border border-white/[0.05]">
+                  <div class="text-xs font-bold text-white mb-1">Execution Playbooks</div>
                   <p class="text-xs text-titanium-400 leading-relaxed">
-                    Custom strategic weighting for JioHotstar (cricket-to-entertainment retention), Amazon Prime (marketplace bundling), and Netflix (regional price elasticity).
+                    Custom strategic weighting for JioHotstar (cricket retention), Amazon Prime (marketplace bundling), and Netflix (regional price elasticity).
                   </p>
                 </div>
               </div>
 
               <div class="mt-8 pt-6 border-t border-white/[0.08] flex flex-col sm:flex-row gap-3">
                 <a href="https://ashokkumarone.github.io/OTT-India-Disruption-Strategy/" target="_blank" rel="noopener noreferrer" 
-                   class="flex-1 py-3 rounded-lg bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2">
+                   class="flex-1 py-3 rounded-full bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-md">
                   <span>Open Strategy Portal</span>
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                 </a>
                 <a href="https://github.com/ashokkumarone/OTT-India-Disruption-Strategy/blob/main/strategy/OTT_India_Disruption_Strategy_Whitepaper.pdf" target="_blank" rel="noopener noreferrer" 
-                   class="px-4 py-3 rounded-lg bg-obsidian-800 border border-white/10 text-titanium-200 font-semibold text-xs hover:border-gold/30 hover:text-gold transition-all flex items-center justify-center gap-2">
-                  <i data-lucide="file-text" class="w-4 h-4 text-gold"></i>
+                   class="px-5 py-3 rounded-full bg-obsidian-800 border border-white/10 text-titanium-200 font-semibold text-xs hover:border-gold/30 hover:text-gold transition-all flex items-center justify-center gap-2">
+                  <i data-lucide="file-text" class="w-3.5 h-3.5 text-gold"></i>
                   <span>PDF (6 pgs)</span>
                 </a>
               </div>
             </div>
           </div>
+
         </div>
 
-        <!-- ============================================== -->
-        <!-- PROJECT 4: FLUX -->
-        <!-- ============================================== -->
-        <div class="project-item streaming glass-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10 transition-all duration-300" data-category="streaming">
+        <!-- ========================================== -->
+        <!-- 04: FLUX (Unified Streaming Engine) -->
+        <!-- ========================================== -->
+        <div class="project-item streaming viewport-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10" data-category="streaming">
+          
           <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
             <div class="flex items-center gap-3">
-              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-md bg-gold-dim border border-gold/20">04 / CONSUMER STREAMING</span>
+              <div class="flex items-center gap-1.5 mr-2">
+                <span class="dot dot-close"></span>
+                <span class="dot dot-min"></span>
+                <span class="dot dot-max"></span>
+              </div>
+              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-gold-dim border border-gold/20">04 / CONSUMER STREAMING</span>
               <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live React Application
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live React App
               </span>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-4">
               <a href="https://ashokkumarone.github.io/Flux/" target="_blank" rel="noopener noreferrer" 
                  class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
                 <span>Launch App</span>
@@ -636,18 +709,16 @@
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-            <!-- Left Info Column -->
             <div class="lg:col-span-7 flex flex-col justify-between">
               <div>
-                <h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-3">
-                  Flux — Unified Video & Audio Streaming Platform
+                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide mb-2">
+                  Flux — Unified Video & Audio Streaming
                 </h3>
-                <p class="text-sm font-medium text-gold/90 mb-6">
-                  Zero-Latency Mode Switching with Fair Creator Economics
+                <p class="text-xs sm:text-sm font-medium text-gold/90 mb-5 font-mono">
+                  Eliminating Playback Context-Switching & Mobile Bandwidth Waste
                 </p>
 
-                <!-- Problem Statement -->
-                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                <div class="mb-4 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
                   <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
                     <i data-lucide="zap-off" class="w-3.5 h-3.5 text-amber-400"></i> The Context Fragmentation
                   </h4>
@@ -656,10 +727,9 @@
                   </p>
                 </div>
 
-                <!-- Product Innovation -->
-                <div class="mb-6 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
                   <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-1 flex items-center gap-2">
-                    <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-gold"></i> Flagship UX: Instant Video ⇄ Audio Toggle
+                    <i data-lucide="refresh-cw" class="w-3.5 h-3.5 text-gold"></i> Core Mechanism: Instant Video ⇄ Audio Toggle
                   </h4>
                   <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
                     Flux unifies both modes in a single playback pipeline. Users switch from video to background audio mode instantly without losing timestamp position, paired with an <strong>Active Audience Algorithm</strong> that compensates creators based on retention depth rather than surface impressions.
@@ -667,67 +737,66 @@
                 </div>
               </div>
 
-              <!-- Tech Stack & Architecture Pills -->
               <div class="pt-4 border-t border-white/[0.06]">
-                <div class="text-[11px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Stack & Media Pipeline</div>
+                <div class="text-[10px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Stack & Media Pipeline</div>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">React</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">TypeScript</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">HTML5 Audio Engine</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">State Persistence</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">React</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">TypeScript</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">HTML5 Audio Engine</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">State Persistence</span>
                 </div>
               </div>
             </div>
 
-            <!-- Right Impact & Feature Card -->
             <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
               <div>
                 <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Impact Modeling & Features</h4>
-                <ul class="space-y-3.5 text-xs sm:text-sm text-titanium-300">
+                <ul class="space-y-3.5 text-xs text-titanium-300">
                   <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div>
-                      <strong class="text-white">+22% Daily Retention Lift:</strong> Screen-off background playback eliminates session drops during commutes.
-                    </div>
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div><strong class="text-white">+22% Daily Retention Lift:</strong> Screen-off background playback eliminates session drops during commutes.</div>
                   </li>
                   <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div>
-                      <strong class="text-white">Active Audience Framework:</strong> Categorizes viewers into Active, Semi-Active, and Inactive based on interaction velocity.
-                    </div>
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div><strong class="text-white">Active Audience Framework:</strong> Categorizes viewers into Active, Semi-Active, and Inactive based on interaction velocity.</div>
                   </li>
                   <li class="flex items-start gap-3">
-                    <i data-lucide="check-circle" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
-                    <div>
-                      <strong class="text-white">+35% Creator Monetization:</strong> Depth-weighted CPM algorithm that rewards high-retention long-form creators.
-                    </div>
+                    <i data-lucide="check-circle-2" class="w-4 h-4 text-gold shrink-0 mt-0.5"></i>
+                    <div><strong class="text-white">+35% Creator Monetization:</strong> Depth-weighted CPM algorithm that rewards high-retention long-form creators.</div>
                   </li>
                 </ul>
               </div>
 
               <div class="mt-8 pt-6 border-t border-white/[0.08]">
                 <a href="https://ashokkumarone.github.io/Flux/" target="_blank" rel="noopener noreferrer" 
-                   class="w-full py-3 rounded-lg bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2">
+                   class="w-full py-3 rounded-full bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-md">
                   <span>Open Live Flux Prototype</span>
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                 </a>
               </div>
             </div>
           </div>
+
         </div>
 
-        <!-- ============================================== -->
-        <!-- PROJECT 5: TUNING MUSIC -->
-        <!-- ============================================== -->
-        <div class="project-item streaming glass-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10 transition-all duration-300" data-category="streaming">
+        <!-- ========================================== -->
+        <!-- 05: TUNING MUSIC (Social Audio Layer) -->
+        <!-- ========================================== -->
+        <div class="project-item streaming viewport-card rounded-2xl overflow-hidden p-6 sm:p-8 md:p-10" data-category="streaming">
+          
           <div class="flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/[0.08]">
             <div class="flex items-center gap-3">
-              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-md bg-gold-dim border border-gold/20">05 / SOCIAL AUDIO</span>
+              <div class="flex items-center gap-1.5 mr-2">
+                <span class="dot dot-close"></span>
+                <span class="dot dot-min"></span>
+                <span class="dot dot-max"></span>
+              </div>
+              <span class="font-mono text-xs font-bold text-gold px-2.5 py-1 rounded-full bg-gold-dim border border-gold/20">05 / SOCIAL AUDIO</span>
               <span class="inline-flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-emerald-400">
-                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Live React Application
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Live React App
               </span>
             </div>
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-4">
               <a href="https://ashokkumarone.github.io/Tuning-Music/" target="_blank" rel="noopener noreferrer" 
                  class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold hover:text-gold-light transition-colors">
                 <span>Launch App</span>
@@ -743,18 +812,16 @@
           </div>
 
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 pt-8">
-            <!-- Left Info Column -->
             <div class="lg:col-span-7 flex flex-col justify-between">
               <div>
-                <h3 class="font-serif text-2xl sm:text-3xl text-white font-normal mb-3">
-                  Tuning Music — Social Layer for Music Streaming
+                <h3 class="font-cinzel text-xl sm:text-2xl md:text-3xl text-white font-bold tracking-wide mb-2">
+                  Tuning Music — Social Audio Layer
                 </h3>
-                <p class="text-sm font-medium text-gold/90 mb-6">
-                  "No Keyboard. Just Music." — Conversational Audio & Lyric Timestamps
+                <p class="text-xs sm:text-sm font-medium text-gold/90 mb-5 font-mono">
+                  "No Keyboard. Just Music." — Turning Songs into Conversational Currency
                 </p>
 
-                <!-- Problem Statement -->
-                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                <div class="mb-4 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
                   <h4 class="text-xs uppercase tracking-wider font-mono text-titanium-300 font-semibold mb-1 flex items-center gap-2">
                     <i data-lucide="message-square-off" class="w-3.5 h-3.5 text-amber-400"></i> The Social Silo in Music
                   </h4>
@@ -763,8 +830,7 @@
                   </p>
                 </div>
 
-                <!-- Product Innovation -->
-                <div class="mb-6 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
+                <div class="mb-5 bg-obsidian-900/80 p-4 rounded-xl border border-white/[0.06]">
                   <h4 class="text-xs uppercase tracking-wider font-mono text-gold font-semibold mb-1 flex items-center gap-2">
                     <i data-lucide="music" class="w-3.5 h-3.5 text-gold"></i> Song-Anchored Conversations
                   </h4>
@@ -774,42 +840,40 @@
                 </div>
               </div>
 
-              <!-- Tech Stack & Architecture Pills -->
               <div class="pt-4 border-t border-white/[0.06]">
-                <div class="text-[11px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Technical Deliverables</div>
+                <div class="text-[10px] uppercase tracking-wider font-mono text-titanium-500 mb-2 font-semibold">Technical Architecture</div>
                 <div class="flex flex-wrap gap-2">
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">React</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">TypeScript</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">Relational SQL Schema</span>
-                  <span class="px-2.5 py-1 rounded bg-obsidian-800 border border-white/10 text-xs font-mono text-titanium-300">PRD & Freemium Model</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">React</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">TypeScript</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">Relational SQL Schema</span>
+                  <span class="px-2.5 py-1 rounded-full bg-obsidian-850 border border-white/10 text-[11px] font-mono text-titanium-300">PRD & Freemium Model</span>
                 </div>
               </div>
             </div>
 
-            <!-- Right Impact & Feature Card -->
             <div class="lg:col-span-5 flex flex-col justify-between bg-obsidian-900/90 rounded-xl p-6 border border-white/[0.08]">
               <div>
                 <h4 class="text-xs font-mono uppercase tracking-widest text-titanium-400 mb-4 font-semibold">Projected Growth Metrics</h4>
-                <div class="grid grid-cols-2 gap-3 mb-6">
-                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
-                    <div class="font-serif text-2xl text-gold font-normal">+28%</div>
+                <div class="grid grid-cols-2 gap-3 mb-5">
+                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
+                    <div class="font-cinzel text-2xl text-gold font-bold">+28%</div>
                     <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Projected DAU Lift</div>
                   </div>
-                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
-                    <div class="font-serif text-2xl text-gold font-normal">+45%</div>
+                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
+                    <div class="font-cinzel text-2xl text-gold font-bold">+45%</div>
                     <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Session Length</div>
                   </div>
-                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
-                    <div class="font-serif text-2xl text-gold font-normal">4x</div>
+                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
+                    <div class="font-cinzel text-2xl text-gold font-bold">4x</div>
                     <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Social Sharing Velocity</div>
                   </div>
-                  <div class="p-3 rounded-lg bg-obsidian-800/60 border border-white/[0.05] text-center">
-                    <div class="font-serif text-2xl text-gold font-normal">New</div>
+                  <div class="p-3 rounded-lg bg-obsidian-850/70 border border-white/[0.05] text-center">
+                    <div class="font-cinzel text-2xl text-gold font-bold">New</div>
                     <div class="text-[10px] text-titanium-400 uppercase font-mono mt-0.5">Freemium Tier</div>
                   </div>
                 </div>
 
-                <div class="p-3.5 rounded-lg bg-obsidian-800/60 border border-white/[0.05]">
+                <div class="p-3.5 rounded-lg bg-obsidian-850/70 border border-white/[0.05]">
                   <div class="text-xs font-bold text-white mb-1">Interactive Feature Suite</div>
                   <p class="text-xs text-titanium-400 leading-relaxed">
                     Search-and-share modal, synchronized lyrics viewer, song-based inbox threads, and dynamic emoji reaction bar.
@@ -819,84 +883,82 @@
 
               <div class="mt-8 pt-6 border-t border-white/[0.08]">
                 <a href="https://ashokkumarone.github.io/Tuning-Music/" target="_blank" rel="noopener noreferrer" 
-                   class="w-full py-3 rounded-lg bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2">
+                   class="w-full py-3 rounded-full bg-gold text-obsidian-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-light transition-all flex items-center justify-center gap-2 shadow-md">
                   <span>Open Live Tuning Prototype</span>
-                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                 </a>
               </div>
             </div>
           </div>
+
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- Section Divider -->
-  <div class="max-w-6xl mx-auto px-6"><div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
-
-  <!-- DBS Bank Authority & FinTech Domain Section -->
-  <section id="banking" class="py-24 px-6 relative z-10 bg-obsidian-900/40">
+  <!-- ==================================================== -->
+  <!-- DBS BANK AUTHORITY: GROUND-LEVEL FINTECH FOUNDATION -->
+  <!-- ==================================================== -->
+  <section id="dbs" class="py-24 px-6 relative z-10 bg-obsidian-900/50 border-t border-white/[0.06]">
     <div class="max-w-5xl mx-auto">
       
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-2 font-semibold">Rare Domain Authority</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight">
-          Why Ground-Level Banking Experience Makes a Better PM
+        <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-2 font-semibold">Uncopyable Edge</span>
+        <h2 class="font-cinzel text-2xl sm:text-4xl text-white font-bold tracking-wide">
+          WHY GROUND-LEVEL BANKING EXPERIENCE MATTERS
         </h2>
-        <p class="text-titanium-400 text-sm sm:text-base mt-3">
-          Most FinTech product managers operate on secondhand assumptions. Having managed live customer onboarding and risk compliance at DBS Bank India, my product decisions are grounded in operational reality.
+        <p class="text-titanium-400 text-xs sm:text-sm mt-3">
+          Most FinTech PMs operate on whiteboard assumptions. Having managed live customer onboarding and risk compliance at DBS Bank India, my product decisions are grounded in operational reality.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        
-        <div class="glass-card p-6 rounded-xl border border-white/[0.07]">
-          <div class="w-10 h-10 rounded-lg bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5">
+        <div class="viewport-card p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-full bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5 shadow-sm">
             <i data-lucide="user-check" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-serif text-lg text-white font-normal mb-2">Real KYC & Compliance Frictions</h3>
-          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+          <h3 class="font-cinzel text-base text-white font-bold mb-2">Real KYC & Compliance Frictions</h3>
+          <p class="text-xs text-titanium-400 leading-relaxed">
             Personally handled 10–15 daily retail customer interactions and account opening funnels. Understand exactly where customers drop off during document validation and risk scoring.
           </p>
         </div>
 
-        <div class="glass-card p-6 rounded-xl border border-white/[0.07]">
-          <div class="w-10 h-10 rounded-lg bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5">
+        <div class="viewport-card p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-full bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5 shadow-sm">
             <i data-lucide="git-pull-request" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-serif text-lg text-white font-normal mb-2">Operational Bottleneck Empathy</h3>
-          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+          <h3 class="font-cinzel text-base text-white font-bold mb-2">Operational Bottleneck Empathy</h3>
+          <p class="text-xs text-titanium-400 leading-relaxed">
             Saw how branch bankers lose customer follow-ups when shifting desks — directly inspiring the <em>Request Tracker</em> feature in OneBank that prevents SLA drops.
           </p>
         </div>
 
-        <div class="glass-card p-6 rounded-xl border border-white/[0.07]">
-          <div class="w-10 h-10 rounded-lg bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5">
+        <div class="viewport-card p-6 rounded-2xl">
+          <div class="w-10 h-10 rounded-full bg-gold-dim border border-gold/30 flex items-center justify-center text-gold mb-5 shadow-sm">
             <i data-lucide="trending-up" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-serif text-lg text-white font-normal mb-2">Consultative Cross-Sell Instinct</h3>
-          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+          <h3 class="font-cinzel text-base text-white font-bold mb-2">Consultative Cross-Sell Instinct</h3>
+          <p class="text-xs text-titanium-400 leading-relaxed">
             Consistently exceeded branch targets by mapping customer savings habits to high-yield Fixed Deposits and insurance products — translating directly into monetization design.
           </p>
         </div>
-
       </div>
 
       <!-- DBS Experience Card -->
-      <div class="glass-card p-6 sm:p-8 rounded-xl border border-gold/20 bg-gradient-to-r from-obsidian-850 via-obsidian-900 to-obsidian-850 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div class="viewport-card p-6 sm:p-8 rounded-2xl border-gold/30 bg-gradient-to-r from-obsidian-850 via-obsidian-900 to-obsidian-850 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <div>
           <div class="flex items-center gap-3 mb-1">
             <span class="text-xs font-mono font-bold text-gold uppercase tracking-wider">Assistant Officer – Personal Banker</span>
             <span class="text-titanium-500 text-xs">|</span>
             <span class="text-titanium-400 text-xs font-mono">Nov 2022 – Jul 2023</span>
           </div>
-          <h4 class="font-serif text-xl text-white font-normal">DBS Bank India Ltd</h4>
-          <p class="text-xs sm:text-sm text-titanium-300 mt-2 max-w-2xl leading-relaxed">
+          <h4 class="font-cinzel text-lg sm:text-xl text-white font-bold tracking-wide">DBS Bank India Ltd</h4>
+          <p class="text-xs text-titanium-300 mt-2 max-w-2xl leading-relaxed">
             Managed branch operations, customer advisory, savings/deposit origination, and KYC compliance in a high-accountability banking environment.
           </p>
         </div>
-        <a href="#work" class="px-5 py-2.5 rounded-lg bg-gold-dim border border-gold/30 text-gold text-xs font-semibold uppercase tracking-wider hover:bg-gold hover:text-obsidian-950 transition-all shrink-0">
+        <a href="#work" class="px-5 py-2.5 rounded-full bg-gold-dim border border-gold/30 text-gold text-xs font-semibold uppercase tracking-wider hover:bg-gold hover:text-obsidian-950 transition-all shrink-0">
           See OneBank Solution →
         </a>
       </div>
@@ -904,68 +966,62 @@
     </div>
   </section>
 
-  <!-- Section Divider -->
-  <div class="max-w-6xl mx-auto px-6"><div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
-
-  <!-- Product Philosophy Section -->
+  <!-- ==================================================== -->
+  <!-- PRODUCT PHILOSOPHY & PLAYBOOK -->
+  <!-- ==================================================== -->
   <section id="philosophy" class="py-24 px-6 relative z-10">
     <div class="max-w-5xl mx-auto">
       
       <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-2 font-semibold">The Playbook</span>
-        <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight">
-          How I Approach Product Strategy
+        <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-2 font-semibold">The Playbook</span>
+        <h2 class="font-cinzel text-2xl sm:text-4xl text-white font-bold tracking-wide">
+          HOW I APPROACH PRODUCT STRATEGY
         </h2>
-        <p class="text-titanium-400 text-sm sm:text-base mt-3">
+        <p class="text-titanium-400 text-xs sm:text-sm mt-3">
           Product management is not about opinions; it is about building tight feedback loops between qualitative customer friction and quantitative business economics.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        
-        <div class="p-6 rounded-xl bg-obsidian-900/60 border border-white/[0.06] relative">
+        <div class="p-6 rounded-2xl bg-obsidian-900/70 border border-white/[0.06]">
           <div class="font-mono text-xs font-bold text-gold mb-3">01 / FIRST PRINCIPLES DISCOVERY</div>
-          <h3 class="font-serif text-lg text-white font-normal mb-2">Find the Unspoken Friction</h3>
-          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+          <h3 class="font-cinzel text-base text-white font-bold mb-2">Find the Unspoken Friction</h3>
+          <p class="text-xs text-titanium-400 leading-relaxed">
             Before touching software, identify the structural bottleneck: Why do 76% of Indian OTT users pirate? Why do banking follow-ups get dropped? Target root causes, not surface symptoms.
           </p>
         </div>
 
-        <div class="p-6 rounded-xl bg-obsidian-900/60 border border-white/[0.06] relative">
+        <div class="p-6 rounded-2xl bg-obsidian-900/70 border border-white/[0.06]">
           <div class="font-mono text-xs font-bold text-gold mb-3">02 / QUANTITATIVE RIGOR</div>
-          <h3 class="font-serif text-lg text-white font-normal mb-2">Data-Backed Unit Economics</h3>
-          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+          <h3 class="font-cinzel text-base text-white font-bold mb-2">Data-Backed Unit Economics</h3>
+          <p class="text-xs text-titanium-400 leading-relaxed">
             Every feature must prove its economic viability: 100% IBM Excel certified modeling, SQL relational schemas, CAC/LTV payback, and retention funnel analytics.
           </p>
         </div>
 
-        <div class="p-6 rounded-xl bg-obsidian-900/60 border border-white/[0.06] relative">
+        <div class="p-6 rounded-2xl bg-obsidian-900/70 border border-white/[0.06]">
           <div class="font-mono text-xs font-bold text-gold mb-3">03 / TANGIBLE PROTOTYPING</div>
-          <h3 class="font-serif text-lg text-white font-normal mb-2">Decks Don't Ship. Code Does.</h3>
-          <p class="text-xs sm:text-sm text-titanium-400 leading-relaxed">
+          <h3 class="font-cinzel text-base text-white font-bold mb-2">Decks Don't Ship. Code Does.</h3>
+          <p class="text-xs text-titanium-400 leading-relaxed">
             I don't stop at PRDs or static slides. I write clean React, TypeScript, and Tailwind code to build working interactive proofs-of-concept that validate usability before engineering sprint allocation.
           </p>
         </div>
-
       </div>
 
     </div>
   </section>
 
-  <!-- Section Divider -->
-  <div class="max-w-6xl mx-auto px-6"><div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
-
-  <!-- Background, Skills & Education Section -->
-  <section id="about" class="py-24 px-6 relative z-10 bg-obsidian-900/30">
+  <!-- ==================================================== -->
+  <!-- BACKGROUND, EDUCATION & SKILLS -->
+  <!-- ==================================================== -->
+  <section id="about" class="py-24 px-6 relative z-10 bg-obsidian-900/30 border-t border-white/[0.06]">
     <div class="max-w-5xl mx-auto">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        
-        <!-- Left: Background Story & Education -->
         <div class="lg:col-span-6">
-          <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-2 font-semibold">Background & Education</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight mb-6">
-            Engineering Rigor Meets Business Empathy
+          <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-2 font-semibold">Background & Foundations</span>
+          <h2 class="font-cinzel text-2xl sm:text-4xl text-white font-bold tracking-wide mb-6">
+            ENGINEERING RIGOR MEETS BUSINESS EMPATHY
           </h2>
           
           <div class="space-y-4 text-xs sm:text-sm text-titanium-400 leading-relaxed">
@@ -980,143 +1036,127 @@
             </p>
           </div>
 
-          <!-- Education Card -->
-          <div class="mt-8 p-5 rounded-xl bg-obsidian-850 border border-white/[0.08] flex items-start gap-4">
-            <div class="w-10 h-10 rounded-lg bg-obsidian-800 border border-white/10 flex items-center justify-center text-gold shrink-0">
+          <div class="mt-8 p-5 rounded-2xl bg-obsidian-850 border border-white/[0.08] flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-obsidian-800 border border-white/10 flex items-center justify-center text-gold shrink-0">
               <i data-lucide="graduation-cap" class="w-5 h-5"></i>
             </div>
             <div>
               <div class="text-xs font-mono text-titanium-400">2017 – 2021</div>
-              <h4 class="font-serif text-base text-white font-normal">B.E. Computer Science Engineering</h4>
-              <p class="text-xs text-titanium-400 mt-1">Builder Engineering College, Tiruppur</p>
+              <h4 class="font-cinzel text-base text-white font-bold">B.E. Computer Science Engineering</h4>
+              <p class="text-xs text-titanium-400 mt-1">Builder Engineering College, Tiruppur | 72%</p>
               <p class="text-[11px] text-titanium-500 mt-1">Core coursework in Data Structures, Algorithms, Relational Databases & System Architecture.</p>
             </div>
           </div>
         </div>
 
-        <!-- Right: Technical & PM Skills Matrix -->
         <div class="lg:col-span-6">
-          <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-2 font-semibold">Capabilities</span>
-          <h2 class="font-serif text-3xl sm:text-4xl text-white font-normal tracking-tight mb-6">
-            Skills & Toolkit
+          <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-2 font-semibold">Core Capabilities</span>
+          <h2 class="font-cinzel text-2xl sm:text-4xl text-white font-bold tracking-wide mb-6">
+            SKILLS & TOOLKIT
           </h2>
 
-          <div class="space-y-6">
-            <!-- Product Strategy -->
+          <div class="space-y-4">
             <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
-              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2.5 flex items-center gap-2">
+              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2 flex items-center gap-2">
                 <i data-lucide="compass" class="w-4 h-4 text-gold"></i> Product Strategy & Execution
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">PRD Authoring</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">User Journey Mapping</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Prioritization (RICE/MoSCoW)</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Competitive Sizing (TAM/SAM)</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Monetization Modeling</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">PRD Authoring</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">User Journey Mapping</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Prioritization (RICE/MoSCoW)</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">TAM/SAM Sizing</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Monetization Models</span>
               </div>
             </div>
 
-            <!-- Data & Analytics -->
             <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
-              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2.5 flex items-center gap-2">
+              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2 flex items-center gap-2">
                 <i data-lucide="bar-chart-3" class="w-4 h-4 text-gold"></i> Data & Analytical Modeling
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-gold border border-gold/20 font-semibold">IBM Excel Certified (100%)</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">SQL & Relational Schemas</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Python</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Cohort & Funnel Analysis</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Unit Economics</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-gold border border-gold/20 font-semibold">IBM Excel Certified (100%)</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">SQL & Relational Schemas</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Python</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Cohort Analysis</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Unit Economics</span>
               </div>
             </div>
 
-            <!-- Technical & Prototyping -->
             <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
-              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2.5 flex items-center gap-2">
+              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2 flex items-center gap-2">
                 <i data-lucide="code" class="w-4 h-4 text-gold"></i> Prototyping & Front-End Engineering
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">React 19 & TypeScript</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Tailwind CSS</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">REST API Design</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Git & GitHub Pages</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Rapid Interactive Mockups</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">React 19 & TypeScript</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">REST API Design</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Git & GitHub Pages</span>
               </div>
             </div>
 
-            <!-- Domain Knowledge -->
             <div class="p-4 rounded-xl bg-obsidian-850 border border-white/[0.08]">
-              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2.5 flex items-center gap-2">
+              <div class="text-xs font-mono font-bold uppercase tracking-wider text-gold mb-2 flex items-center gap-2">
                 <i data-lucide="shield" class="w-4 h-4 text-gold"></i> Domain Expertise
               </div>
               <div class="flex flex-wrap gap-2 text-xs">
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Retail Banking Operations</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">e-KYC & Regulatory Compliance</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">OTT Streaming Economics</span>
-                <span class="px-2.5 py-1 rounded-md bg-obsidian-800 text-titanium-200 border border-white/5">Anti-Piracy IP Strategies</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Retail Banking Operations</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">e-KYC & Compliance</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">OTT Streaming Economics</span>
+                <span class="px-2.5 py-1 rounded-full bg-obsidian-800 text-titanium-200 border border-white/5">Anti-Piracy IP Frameworks</span>
               </div>
             </div>
           </div>
 
         </div>
-
       </div>
 
     </div>
   </section>
 
-  <!-- Section Divider -->
-  <div class="max-w-6xl mx-auto px-6"><div class="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div></div>
-
-  <!-- Contact & Footer Section -->
-  <footer id="contact" class="py-24 px-6 relative z-10 overflow-hidden">
+  <!-- ==================================================== -->
+  <!-- CONTACT & FOOTER -->
+  <!-- ==================================================== -->
+  <footer id="contact" class="py-24 px-6 relative z-10 overflow-hidden border-t border-white/[0.06]">
     <div class="max-w-4xl mx-auto text-center">
       
-      <span class="text-xs uppercase tracking-[0.2em] font-mono text-gold block mb-3 font-semibold">Initiate Conversation</span>
-      <h2 class="font-serif text-3xl sm:text-5xl md:text-6xl text-white font-normal tracking-tight mb-6">
-        Let's build something <br />
-        <span class="italic text-gold">exceptional</span> together.
+      <span class="text-xs uppercase tracking-[0.25em] font-mono text-gold block mb-3 font-semibold">Initiate Conversation</span>
+      <h2 class="font-cinzel text-3xl sm:text-5xl md:text-6xl text-white font-bold tracking-wide mb-6">
+        LET'S BUILD SOMETHING <br />
+        <span class="italic font-serif text-gold font-normal">EXCEPTIONAL</span> TOGETHER.
       </h2>
-      <p class="max-w-xl mx-auto text-sm sm:text-base text-titanium-400 font-light leading-relaxed mb-10">
-        I am actively seeking <strong class="text-white font-medium">Associate Product Manager, Product Analyst, and Junior PM</strong> roles across FinTech, Consumer Tech, and Media/Streaming platforms. Open to remote or on-site opportunities.
+      <p class="max-w-xl mx-auto text-xs sm:text-sm text-titanium-400 font-light leading-relaxed mb-10">
+        Actively seeking <strong class="text-white font-medium">Associate Product Manager, Product Analyst, and Junior PM</strong> roles across FinTech, Consumer Tech, and Media/Streaming platforms. Open to remote or on-site opportunities.
       </p>
 
-      <!-- Contact Buttons Strip -->
       <div class="flex flex-wrap items-center justify-center gap-4 mb-14">
-        
-        <!-- LinkedIn -->
         <a href="https://linkedin.com/in/ashokkumarone" target="_blank" rel="noopener noreferrer" 
            class="px-6 py-3.5 rounded-full bg-[#0a66c2] text-white font-semibold text-xs uppercase tracking-wider hover:bg-[#084e96] transition-all flex items-center gap-2.5 shadow-md">
           <i data-lucide="linkedin" class="w-4 h-4"></i>
           <span>Connect on LinkedIn</span>
         </a>
 
-        <!-- GitHub -->
         <a href="https://github.com/ashokkumarone" target="_blank" rel="noopener noreferrer" 
            class="px-6 py-3.5 rounded-full bg-obsidian-850 border border-white/10 text-titanium-200 font-semibold text-xs uppercase tracking-wider hover:border-gold/40 hover:text-gold transition-all flex items-center gap-2.5">
           <i data-lucide="github" class="w-4 h-4"></i>
           <span>GitHub Profile</span>
         </a>
 
-        <!-- Email -->
         <a href="mailto:ashokkumarone@outlook.com?subject=Product%20Opportunity%20-%20Ashokkumar%20S" 
            class="px-6 py-3.5 rounded-full bg-obsidian-850 border border-white/10 text-titanium-200 font-semibold text-xs uppercase tracking-wider hover:border-gold/40 hover:text-gold transition-all flex items-center gap-2.5">
           <i data-lucide="mail" class="w-4 h-4 text-gold"></i>
           <span>ashokkumarone@outlook.com</span>
         </a>
-
       </div>
 
-      <!-- Quick Links & Copyright -->
       <div class="pt-10 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between text-xs text-titanium-500 font-mono gap-4">
         <div>
           © 2026 Ashokkumar S. Built with purpose & deployed on GitHub Pages.
         </div>
         <div class="flex items-center gap-6">
           <a href="#work" class="hover:text-gold transition-colors">Projects</a>
-          <a href="#banking" class="hover:text-gold transition-colors">DBS Authority</a>
+          <a href="#dbs" class="hover:text-gold transition-colors">DBS Authority</a>
           <a href="#about" class="hover:text-gold transition-colors">Background</a>
-          <a href="#" class="hover:text-gold transition-colors">Back to Top ↑</a>
+          <a href="#" class="hover:text-gold transition-colors">Top ↑</a>
         </div>
       </div>
 
@@ -1128,9 +1168,8 @@
     // Initialize Lucide Icons
     lucide.createIcons();
 
-    // Project Filter Functionality
+    // Category Filter Logic
     function filterProjects(category) {
-      // Update tab active states
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('bg-gold', 'text-obsidian-950', 'font-bold');
         btn.classList.add('text-titanium-400');
@@ -1141,7 +1180,6 @@
         activeTab.classList.remove('text-titanium-400');
       }
 
-      // Filter project cards
       const projects = document.querySelectorAll('.project-item');
       projects.forEach(project => {
         if (category === 'all' || project.dataset.category === category) {
