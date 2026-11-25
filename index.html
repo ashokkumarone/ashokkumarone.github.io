@@ -61,12 +61,12 @@
       -webkit-text-fill-color: transparent;
     }
 
-    /* Compact Apple iPhone Frame with Inner Bezel */
+    /* Compact Apple iPhone Frame with Inner Bezel (Adaptive across Mobile & Desktop) */
     .iphone-case {
-      width: 220px;
-      height: 450px;
+      width: 216px;
+      height: 440px;
       background: #111113;
-      border-radius: 38px;
+      border-radius: 36px;
       border: 3px solid #38383a;
       box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.1) inset, 0 0 25px rgba(0, 113, 227, 0.06);
       position: relative;
@@ -87,10 +87,15 @@
     .phone-screen-container {
       width: 100%;
       height: 100%;
-      border-radius: 30px;
+      border-radius: 28px;
       overflow: hidden;
       position: relative;
       background: #000000;
+    }
+    @media (min-width: 1024px) {
+      .phone-screen-container {
+        border-radius: 30px;
+      }
     }
 
     .dynamic-island {
@@ -107,7 +112,7 @@
       box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
     }
 
-    /* Scaled Live App iFrame inside Compact iPhone Screen (Exact 216px x 416px container fit) */
+    /* Scaled Live App iFrame inside Compact iPhone Screen */
     .phone-live-iframe {
       width: 375px;
       height: 720px;
@@ -115,7 +120,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      transform: scale(0.533);
+      transform: scale(0.544);
       transform-origin: top left;
       transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       background: #000000;
@@ -139,18 +144,25 @@
       box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.06);
     }
 
-    /* Vibrant Visible Watermarks */
+    /* Razor-Sharp Geometric Google Watermark (Architectural Vector, Zero Blur) */
     .watermark-google-light {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 520px;
-      height: 520px;
+      width: 440px;
+      height: 440px;
       pointer-events: none;
-      opacity: 0.12;
+      opacity: 0.055;
       z-index: 0;
-      filter: blur(8px);
+      filter: none; /* Authentic sharp geometry, no blurry haze */
+    }
+    @media (max-width: 640px) {
+      .watermark-google-light {
+        width: 280px;
+        height: 280px;
+        opacity: 0.06;
+      }
     }
     .watermark-netflix-light {
       position: absolute;
@@ -197,12 +209,12 @@
 <body class="selection:bg-apple-blue selection:text-white">
 
   <!-- ========================================================= -->
-  <!-- HERO (NO TOP BAR, NO PERSISTENT HEADER, NO DOTS IN HEADLINE) -->
+  <!-- HERO (RESPONSIVE, DEVICE-ADAPTIVE, NO PERIOD DOTS) -->
   <!-- ========================================================= -->
-  <section id="hero" class="min-h-screen flex flex-col justify-center px-6 pt-16 pb-20 max-w-5xl mx-auto w-full text-center relative">
+  <section id="hero" class="min-h-[85vh] lg:min-h-screen flex flex-col justify-center px-4 sm:px-6 pt-12 pb-14 sm:pt-16 sm:pb-20 max-w-5xl mx-auto w-full text-center relative">
     
     <!-- Clean Minimalist Social Icons (Unobtrusive, top-right, no bar, no background) -->
-    <div class="absolute top-8 right-6 flex items-center gap-5 z-20">
+    <div class="absolute top-6 right-4 sm:top-8 sm:right-6 flex items-center gap-4 sm:gap-5 z-20">
       <a href="https://linkedin.com/in/ashokkumarone" target="_blank" rel="noopener noreferrer" 
          class="text-apple-gray hover:text-[#0a66c2] transition-colors p-1" title="LinkedIn">
         <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -223,23 +235,23 @@
     </div>
 
     <!-- Role Subtitle Badge -->
-    <p class="text-xs font-mono uppercase tracking-[0.25em] text-apple-gray mb-6 font-semibold">
+    <p class="text-[11px] sm:text-xs font-mono uppercase tracking-[0.2em] sm:tracking-[0.25em] text-apple-gray mb-4 sm:mb-6 font-semibold">
       Ashokkumar S · Associate Product Manager & Product Strategist
     </p>
 
-    <!-- Main Headline (NO PERIOD DOTS) -->
-    <h1 class="text-5xl sm:text-7xl md:text-8xl font-black tracking-tight leading-[1.04] mb-8">
+    <!-- Main Headline (Adaptive sizing, No period dots) -->
+    <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.06] mb-6 sm:mb-8">
       <span class="apple-headline">Think in systems</span><br />
       <span class="text-apple-black">Ship in reality</span>
     </h1>
 
     <!-- Pure Product Narrative -->
-    <p class="max-w-2xl mx-auto text-base sm:text-lg md:text-xl text-apple-gray font-normal leading-relaxed mb-10">
+    <p class="max-w-2xl mx-auto text-sm sm:text-base md:text-lg lg:text-xl text-apple-gray font-normal leading-relaxed mb-8 sm:mb-10 px-2 sm:px-0">
       Product Strategist building zero-to-one consumer streaming engines, enterprise fintech systems, and Big-Tech retention frameworks with deep architectural rigor.
     </p>
 
     <!-- Proof Points (Clean text, No numbers, No dots) -->
-    <div class="flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs font-mono uppercase tracking-wider text-apple-gray">
+    <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 lg:gap-10 text-[10px] sm:text-xs font-mono uppercase tracking-wider text-apple-gray">
       <span class="text-apple-black font-semibold">Flagship Product Solutions</span>
       <span class="text-black/15">/</span>
       <span class="text-apple-black font-semibold">Live Production Applications</span>
@@ -250,150 +262,170 @@
   </section>
 
   <!-- ========================================================= -->
-  <!-- 3-IN-1 STICKY IPHONE STAGE (TUNING ➔ FLUX ➔ ONEBANK) -->
+  <!-- 3-IN-1 IPHONE STAGE (TUNING ➔ FLUX ➔ ONEBANK) -->
   <!-- ========================================================= -->
-  <section id="streaming-stage" class="relative min-h-[320vh] bg-apple-canvas border-y border-black/[0.06]">
+  <section id="streaming-stage" class="relative py-12 lg:py-0 lg:min-h-[320vh] bg-apple-canvas border-y border-black/[0.06]">
     
-    <!-- Sticky Viewport Stage -->
-    <div class="sticky top-0 h-screen flex items-center px-6 max-w-6xl mx-auto w-full overflow-hidden">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
-        
-        <!-- LEFT SIDE: EDITORIAL STORIES (CROSSFADES ON SCROLL, NO SEPARATE BUTTONS) -->
-        <div class="lg:col-span-8 flex flex-col justify-center pr-0 lg:pr-10 relative min-h-[380px]">
-          
-          <!-- STORY 1: TUNING MUSIC -->
-          <div id="story-tuning" class="flex flex-col justify-center transition-opacity duration-300">
-            <p class="text-xs font-mono uppercase tracking-widest text-emerald-600 mb-2 font-semibold">
-              Social Audio Layer
-            </p>
-            <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-apple-black mb-3">
-              Tuning Music
-            </h2>
-            <p class="text-base sm:text-xl font-medium text-apple-gray mb-5">
-              "No keyboard. Just music." — Turning songs into conversational currency.
-            </p>
+    <!-- Sticky Viewport Stage (Sticky on Desktop, Natural Flow on Mobile) -->
+    <div class="relative lg:sticky lg:top-0 h-auto lg:h-screen flex items-center px-4 sm:px-6 max-w-6xl mx-auto w-full overflow-hidden">
+      <div class="w-full">
 
-            <div class="space-y-3.5 text-xs sm:text-sm text-apple-gray leading-relaxed">
-              <p>
-                <strong class="text-apple-black font-medium">The Friction:</strong> Streaming music is emotionally resonant yet completely anti-social. Sharing a track link on WhatsApp dumps recipients into an external app, losing the exact 15-second lyric moment that sparked the feeling.
-              </p>
-              <p>
-                <strong class="text-apple-black font-medium">The Innovation:</strong> Tuning turns song timestamps and lyrics into the messaging layer itself. Users share pinned lyric moments, react with contextual emojis, and chat without ever pausing playback.
-              </p>
-              <p>
-                <strong class="text-apple-black font-medium">Product Rigor:</strong> Normalized relational SQL schema (<code class="text-emerald-700 font-mono text-xs">Users</code>, <code class="text-emerald-700 font-mono text-xs">Songs</code>, <code class="text-emerald-700 font-mono text-xs">TuningLogs</code>) + freemium conversion model projecting Daily Active User lift and longer session lengths.
-              </p>
-            </div>
-          </div>
-
-          <!-- STORY 2: FLUX -->
-          <div id="story-flux" class="opacity-0 pointer-events-none absolute inset-0 flex flex-col justify-center transition-opacity duration-300">
-            <p class="text-xs font-mono uppercase tracking-widest text-apple-blue mb-2 font-semibold">
-              Consumer Streaming Engine
-            </p>
-            <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-apple-black mb-3">
-              Flux
-            </h2>
-            <p class="text-base sm:text-xl font-medium text-apple-gray mb-5">
-              Zero-latency Video ⇄ Audio switching with fair creator economics.
-            </p>
-
-            <div class="space-y-3.5 text-xs sm:text-sm text-apple-gray leading-relaxed">
-              <p>
-                <strong class="text-apple-black font-medium">The Friction:</strong> Consumers juggle video (YouTube) and audio (Spotify/Podcasts) across siloed platforms. When commuting or multitasking with the screen off, video players force unnecessary screen rendering, wasting up to 75% mobile data and battery.
-              </p>
-              <p>
-                <strong class="text-apple-black font-medium">The Innovation:</strong> A unified playback engine that switches between video and background audio instantly without losing millisecond playback state.
-              </p>
-              <p>
-                <strong class="text-apple-black font-medium">Algorithmic Monetization:</strong> Features the "Active Audience Framework" and depth-weighted Creator Fair Pay algorithm, replacing impression vanity metrics with watch-time depth to reward quality creators.
-              </p>
-            </div>
-          </div>
-
-          <!-- STORY 3: ONEBANK -->
-          <div id="story-onebank" class="opacity-0 pointer-events-none absolute inset-0 flex flex-col justify-center transition-opacity duration-300">
-            <p class="text-xs font-mono uppercase tracking-widest text-blue-600 mb-2 font-semibold">
-              Enterprise FinTech Flagship
-            </p>
-            <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-apple-black mb-3">
-              OneBank
-            </h2>
-            <p class="text-base sm:text-xl font-medium text-apple-gray mb-5">
-              Enterprise Core Banking Solution & Universal Request Tracker.
-            </p>
-
-            <div class="space-y-3.5 text-xs sm:text-sm text-apple-gray leading-relaxed">
-              <p>
-                <strong class="text-apple-black font-medium">The Operational Problem:</strong> Retail branch banking operations suffer from severe fragmentation. Customer service requests get siloed across non-communicative legacy CBS terminals without unified end-to-end visibility.
-              </p>
-              <p>
-                <strong class="text-apple-black font-medium">The Innovation:</strong> Replaces handover amnesia with an immutable branch-wide Request Tracker featuring real-time SLA aging clocks, instant cross-desk reassignment, and audit trails — reducing customer follow-up leakage to 0%.
-              </p>
-              <p>
-                <strong class="text-apple-black font-medium">Architectural Rigor:</strong> Built with React 19, TypeScript, and Tailwind CSS. Features 7-step e-KYC digital onboarding, universal CBS account search across 7 tiers, and live FD/RD compounding calculations.
-              </p>
-            </div>
-          </div>
-
+        <!-- Mobile App Switcher Tabs (Only visible on < lg screens) -->
+        <div class="flex lg:hidden items-center justify-center p-1 rounded-full bg-black/[0.05] border border-black/[0.08] mb-6 max-w-[280px] mx-auto select-none">
+          <button type="button" onclick="setAppState('tuning')" id="mobile-tab-tuning" 
+                  class="flex-1 py-1.5 px-3 rounded-full text-[11px] font-semibold transition-all bg-white text-apple-black shadow-sm">
+            Tuning
+          </button>
+          <button type="button" onclick="setAppState('flux')" id="mobile-tab-flux" 
+                  class="flex-1 py-1.5 px-3 rounded-full text-[11px] font-semibold transition-all text-apple-gray hover:text-apple-black">
+            Flux
+          </button>
+          <button type="button" onclick="setAppState('onebank')" id="mobile-tab-onebank" 
+                  class="flex-1 py-1.5 px-3 rounded-full text-[11px] font-semibold transition-all text-apple-gray hover:text-apple-black">
+            OneBank
+          </button>
         </div>
 
-        <!-- RIGHT SIDE: REALISTIC SLEEK IPHONE (SCALED LIVE APPS INSIDE PHONE) -->
-        <div class="lg:col-span-4 flex justify-center lg:justify-center">
-          <div class="iphone-case">
-            <!-- Screen OLED Container with clean rounded corners -->
-            <div class="phone-screen-container relative w-full h-full rounded-[30px] overflow-hidden bg-black flex flex-col">
-              
-              <!-- AUTHENTIC iOS STATUS BAR (TIME, DYNAMIC ISLAND, SIGNAL TOWER, WIFI, BATTERY) -->
-              <div class="h-[25px] w-full flex items-center justify-between px-3 bg-black z-40 select-none shrink-0 border-b border-white/[0.04]">
-                <!-- Time 9:41 -->
-                <span class="text-[9.5px] font-semibold text-white tracking-tight">9:41</span>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center w-full">
+          
+          <!-- LEFT SIDE: EDITORIAL STORIES (CROSSFADES ON SCROLL OR TAB CLICK) -->
+          <div class="lg:col-span-8 flex flex-col justify-center pr-0 lg:pr-10 relative min-h-[290px] sm:min-h-[320px] lg:min-h-[380px]">
+            
+            <!-- STORY 1: TUNING MUSIC -->
+            <div id="story-tuning" class="flex flex-col justify-center transition-opacity duration-300">
+              <p class="text-xs font-mono uppercase tracking-widest text-emerald-600 mb-2 font-semibold">
+                Social Audio Layer
+              </p>
+              <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-apple-black mb-2.5 sm:mb-3">
+                Tuning Music
+              </h2>
+              <p class="text-sm sm:text-lg lg:text-xl font-medium text-apple-gray mb-4 sm:mb-5">
+                "No keyboard. Just music." — Turning songs into conversational currency.
+              </p>
 
-                <!-- Dynamic Island Center Notch -->
-                <div class="w-[50px] h-[12px] bg-[#0d0d0f] rounded-full border border-white/[0.08] shadow-inner"></div>
+              <div class="space-y-3 text-xs sm:text-sm text-apple-gray leading-relaxed">
+                <p>
+                  <strong class="text-apple-black font-medium">The Friction:</strong> Streaming music is emotionally resonant yet completely anti-social. Sharing a track link on WhatsApp dumps recipients into an external app, losing the exact 15-second lyric moment that sparked the feeling.
+                </p>
+                <p>
+                  <strong class="text-apple-black font-medium">The Innovation:</strong> Tuning turns song timestamps and lyrics into the messaging layer itself. Users share pinned lyric moments, react with contextual emojis, and chat without ever pausing playback.
+                </p>
+                <p>
+                  <strong class="text-apple-black font-medium">Product Rigor:</strong> Normalized relational SQL schema (<code class="text-emerald-700 font-mono text-xs">Users</code>, <code class="text-emerald-700 font-mono text-xs">Songs</code>, <code class="text-emerald-700 font-mono text-xs">TuningLogs</code>) + freemium conversion model projecting Daily Active User lift and longer session lengths.
+                </p>
+              </div>
+            </div>
 
-                <!-- Signal Tower, Wi-Fi & Battery -->
-                <div class="flex items-center gap-1.5">
-                  <!-- Cellular Tower Signal Bars -->
-                  <svg class="w-3 h-2.5 fill-white" viewBox="0 0 17 12">
-                    <rect x="0" y="9" width="2.5" height="3" rx="0.5"/>
-                    <rect x="4" y="6.5" width="2.5" height="5.5" rx="0.5"/>
-                    <rect x="8" y="3.5" width="2.5" height="8.5" rx="0.5"/>
-                    <rect x="12" y="0.5" width="2.5" height="11.5" rx="0.5"/>
-                  </svg>
+            <!-- STORY 2: FLUX -->
+            <div id="story-flux" class="opacity-0 pointer-events-none absolute inset-0 flex flex-col justify-center transition-opacity duration-300">
+              <p class="text-xs font-mono uppercase tracking-widest text-apple-blue mb-2 font-semibold">
+                Consumer Streaming Engine
+              </p>
+              <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-apple-black mb-2.5 sm:mb-3">
+                Flux
+              </h2>
+              <p class="text-sm sm:text-lg lg:text-xl font-medium text-apple-gray mb-4 sm:mb-5">
+                Zero-latency Video ⇄ Audio switching with fair creator economics.
+              </p>
 
-                  <!-- Wi-Fi Icon -->
-                  <svg class="w-3 h-2.5 fill-white" viewBox="0 0 16 12">
-                    <path d="M8 10.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-3.5-3.2a5 5 0 0 1 7 0 .8.8 0 0 1-1.1 1.1 3.5 3.5 0 0 0-4.8 0 .8.8 0 0 1-1.1-1.1zm-3.2-3.2a9.5 9.5 0 0 1 13.4 0 .8.8 0 0 1-1.1 1.1 8 8 0 0 0-11.2 0 .8.8 0 0 1-1.1-1.1z"/>
-                  </svg>
+              <div class="space-y-3 text-xs sm:text-sm text-apple-gray leading-relaxed">
+                <p>
+                  <strong class="text-apple-black font-medium">The Friction:</strong> Consumers juggle video (YouTube) and audio (Spotify/Podcasts) across siloed platforms. When commuting or multitasking with the screen off, video players force unnecessary screen rendering, wasting up to 75% mobile data and battery.
+                </p>
+                <p>
+                  <strong class="text-apple-black font-medium">The Innovation:</strong> A unified playback engine that switches between video and background audio instantly without losing millisecond playback state.
+                </p>
+                <p>
+                  <strong class="text-apple-black font-medium">Algorithmic Monetization:</strong> Features the "Active Audience Framework" and depth-weighted Creator Fair Pay algorithm, replacing impression vanity metrics with watch-time depth to reward quality creators.
+                </p>
+              </div>
+            </div>
 
-                  <!-- Battery Icon with Level Indicator -->
-                  <div class="w-4 h-2 border border-white/80 rounded-[3px] p-[0.8px] flex items-center relative">
-                    <div class="w-full h-full bg-white rounded-[1.5px]"></div>
-                    <div class="w-[1.5px] h-1 bg-white/80 absolute -right-[2.5px] top-[2px] rounded-r-[0.5px]"></div>
+            <!-- STORY 3: ONEBANK -->
+            <div id="story-onebank" class="opacity-0 pointer-events-none absolute inset-0 flex flex-col justify-center transition-opacity duration-300">
+              <p class="text-xs font-mono uppercase tracking-widest text-blue-600 mb-2 font-semibold">
+                Enterprise FinTech Flagship
+              </p>
+              <h2 class="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-apple-black mb-2.5 sm:mb-3">
+                OneBank
+              </h2>
+              <p class="text-sm sm:text-lg lg:text-xl font-medium text-apple-gray mb-4 sm:mb-5">
+                Enterprise Core Banking Solution & Universal Request Tracker.
+              </p>
+
+              <div class="space-y-3 text-xs sm:text-sm text-apple-gray leading-relaxed">
+                <p>
+                  <strong class="text-apple-black font-medium">The Operational Problem:</strong> Retail branch banking operations suffer from severe fragmentation. Customer service requests get siloed across non-communicative legacy CBS terminals without unified end-to-end visibility.
+                </p>
+                <p>
+                  <strong class="text-apple-black font-medium">The Innovation:</strong> Replaces handover amnesia with an immutable branch-wide Request Tracker featuring real-time SLA aging clocks, instant cross-desk reassignment, and audit trails — reducing customer follow-up leakage to 0%.
+                </p>
+                <p>
+                  <strong class="text-apple-black font-medium">Architectural Rigor:</strong> Built with React 19, TypeScript, and Tailwind CSS. Features 7-step e-KYC digital onboarding, universal CBS account search across 7 tiers, and live FD/RD compounding calculations.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT SIDE: REALISTIC SLEEK IPHONE (SCALED LIVE APPS INSIDE PHONE) -->
+          <div class="lg:col-span-4 flex justify-center lg:justify-center mt-2 lg:mt-0">
+            <div class="iphone-case">
+              <!-- Screen OLED Container with clean rounded corners -->
+              <div class="phone-screen-container relative w-full h-full overflow-hidden bg-black flex flex-col">
+                
+                <!-- AUTHENTIC iOS STATUS BAR (TIME, DYNAMIC ISLAND, SIGNAL TOWER, WIFI, BATTERY) -->
+                <div class="h-[25px] w-full flex items-center justify-between px-3 bg-black z-40 select-none shrink-0 border-b border-white/[0.04]">
+                  <!-- Time 9:41 -->
+                  <span class="text-[9.5px] font-semibold text-white tracking-tight">9:41</span>
+
+                  <!-- Dynamic Island Center Notch -->
+                  <div class="w-[50px] h-[12px] bg-[#0d0d0f] rounded-full border border-white/[0.08] shadow-inner"></div>
+
+                  <!-- Signal Tower, Wi-Fi & Battery -->
+                  <div class="flex items-center gap-1.5">
+                    <!-- Cellular Tower Signal Bars -->
+                    <svg class="w-3 h-2.5 fill-white" viewBox="0 0 17 12">
+                      <rect x="0" y="9" width="2.5" height="3" rx="0.5"/>
+                      <rect x="4" y="6.5" width="2.5" height="5.5" rx="0.5"/>
+                      <rect x="8" y="3.5" width="2.5" height="8.5" rx="0.5"/>
+                      <rect x="12" y="0.5" width="2.5" height="11.5" rx="0.5"/>
+                    </svg>
+
+                    <!-- Wi-Fi Icon -->
+                    <svg class="w-3 h-2.5 fill-white" viewBox="0 0 16 12">
+                      <path d="M8 10.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm-3.5-3.2a5 5 0 0 1 7 0 .8.8 0 0 1-1.1 1.1 3.5 3.5 0 0 0-4.8 0 .8.8 0 0 1-1.1-1.1zm-3.2-3.2a9.5 9.5 0 0 1 13.4 0 .8.8 0 0 1-1.1 1.1 8 8 0 0 0-11.2 0 .8.8 0 0 1-1.1-1.1z"/>
+                    </svg>
+
+                    <!-- Battery Icon with Level Indicator -->
+                    <div class="w-4 h-2 border border-white/80 rounded-[3px] p-[0.8px] flex items-center relative">
+                      <div class="w-full h-full bg-white rounded-[1.5px]"></div>
+                      <div class="w-[1.5px] h-1 bg-white/80 absolute -right-[2.5px] top-[2px] rounded-r-[0.5px]"></div>
+                    </div>
                   </div>
                 </div>
+
+                <!-- INNER APP VIEWPORT (BELOW STATUS BAR, ABOVE HOME BAR) -->
+                <div class="relative flex-1 w-full overflow-hidden bg-black">
+                  <!-- Live Tuning Music App inside Phone -->
+                  <iframe id="iframe-tuning" src="https://ashokkumarone.github.io/Tuning-Music/index.html" class="phone-live-iframe" style="opacity: 1; z-index: 20;" title="Tuning Music Live App" loading="eager"></iframe>
+
+                  <!-- Live Flux Streaming App inside Phone -->
+                  <iframe id="iframe-flux" src="https://ashokkumarone.github.io/Flux/index.html" class="phone-live-iframe" style="opacity: 0; z-index: 10;" title="Flux Streaming Live App" loading="eager"></iframe>
+
+                  <!-- Live OneBank FinTech App inside Phone -->
+                  <iframe id="iframe-onebank" src="https://ashokkumarone.github.io/OneBank/index.html" class="phone-live-iframe" style="opacity: 0; z-index: 10;" title="OneBank Enterprise FinTech Live App" loading="eager"></iframe>
+                </div>
+
+                <!-- AUTHENTIC iOS HOME BAR / NAVIGATION BUTTON -->
+                <div class="h-[15px] w-full flex items-center justify-center bg-black z-40 select-none shrink-0 border-t border-white/[0.04]">
+                  <div class="w-14 h-[3.5px] bg-white/70 rounded-full"></div>
+                </div>
+
               </div>
-
-              <!-- INNER APP VIEWPORT (BELOW STATUS BAR, ABOVE HOME BAR) -->
-              <div class="relative flex-1 w-full overflow-hidden bg-black">
-                <!-- Live Tuning Music App inside Phone -->
-                <iframe id="iframe-tuning" src="https://ashokkumarone.github.io/Tuning-Music/index.html" class="phone-live-iframe" style="opacity: 1; z-index: 20;" title="Tuning Music Live App" loading="eager"></iframe>
-
-                <!-- Live Flux Streaming App inside Phone -->
-                <iframe id="iframe-flux" src="https://ashokkumarone.github.io/Flux/index.html" class="phone-live-iframe" style="opacity: 0; z-index: 10;" title="Flux Streaming Live App" loading="eager"></iframe>
-
-                <!-- Live OneBank FinTech App inside Phone -->
-                <iframe id="iframe-onebank" src="https://ashokkumarone.github.io/OneBank/index.html" class="phone-live-iframe" style="opacity: 0; z-index: 10;" title="OneBank Enterprise FinTech Live App" loading="eager"></iframe>
-              </div>
-
-              <!-- AUTHENTIC iOS HOME BAR / NAVIGATION BUTTON -->
-              <div class="h-[15px] w-full flex items-center justify-center bg-black z-40 select-none shrink-0 border-t border-white/[0.04]">
-                <div class="w-14 h-[3.5px] bg-white/70 rounded-full"></div>
-              </div>
-
             </div>
           </div>
+
         </div>
 
       </div>
@@ -402,11 +434,11 @@
   </section>
 
   <!-- ========================================================= -->
-  <!-- SECTION: GOOGLE PRODUCT STRATEGY (SLIDE-FIT VIEWPORT) -->
+  <!-- SECTION: GOOGLE PRODUCT STRATEGY (SLIDE-FIT VIEWPORT, CRISP GOOGLE IDENTITY) -->
   <!-- ========================================================= -->
-  <section id="google-strategy" class="min-h-screen flex flex-col justify-center px-6 py-16 max-w-6xl mx-auto w-full relative overflow-hidden">
+  <section id="google-strategy" class="py-12 sm:py-16 min-h-0 lg:min-h-screen flex flex-col justify-center px-4 sm:px-6 max-w-6xl mx-auto w-full relative overflow-hidden">
     
-    <!-- Vivid Colorful Google Watermark on White -->
+    <!-- Authentic Razor-Sharp Geometric Google Watermark (Zero Blur) -->
     <svg class="watermark-google-light" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
       <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
@@ -415,65 +447,90 @@
     </svg>
 
     <div class="relative z-10 w-full">
-      <div class="text-center max-w-3xl mx-auto mb-10">
-        <p class="text-xs font-mono uppercase tracking-[0.25em] text-blue-600 font-semibold mb-2">
-          Big-Tech Product Strategy Suite
-        </p>
-        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-apple-black mb-3">
+      <div class="text-center max-w-3xl mx-auto mb-8 sm:mb-10">
+        
+        <!-- Official Google Multi-Color Identity Badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black/[0.08] shadow-[0_2px_8px_rgba(0,0,0,0.04)] mb-3 select-none">
+          <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span class="text-[11px] font-bold font-mono tracking-wider text-apple-black">Google Product Strategy Suite</span>
+        </div>
+
+        <h2 class="text-3xl sm:text-5xl font-black tracking-tight text-apple-black mb-2.5 sm:mb-3">
           Google Product Strategy Cases
         </h2>
-        <p class="text-xs sm:text-sm text-apple-gray leading-relaxed">
+        <p class="text-xs sm:text-sm text-apple-gray leading-relaxed max-w-xl mx-auto px-2 sm:px-0">
           4 Comprehensive PRDs injecting micro-social retention loops into high-volume Google utilities with interactive Shorts UX.
         </p>
       </div>
 
-      <!-- 4 Clean Frameless Splits on White (NO NUMBERS) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <!-- 4 Clean Frameless Splits on White with Brand Color Accents -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4 mb-6 sm:mb-8">
         
-        <div class="apple-card-light p-5 flex flex-col justify-between">
+        <!-- Case 1: GPay Gifting (Google Blue) -->
+        <div class="apple-card-light border-t-2 border-t-[#4285F4] p-5 flex flex-col justify-between">
           <div>
-            <h3 class="text-base font-bold text-apple-black mb-1.5">GPay Gifting</h3>
+            <div class="flex items-center justify-between mb-1.5">
+              <h3 class="text-base font-bold text-apple-black">GPay Gifting</h3>
+              <span class="w-2 h-2 rounded-full bg-[#4285F4]"></span>
+            </div>
             <p class="text-xs text-apple-gray leading-relaxed">
               Transforms transactional UPI payments into conversational, gamified gifting envelopes with merchant-sponsored cashback surprises.
             </p>
           </div>
-          <div class="mt-4 pt-3 border-t border-black/[0.05] text-[10px] font-mono text-apple-gray">
+          <div class="mt-4 pt-3 border-t border-black/[0.05] text-[10px] font-mono text-blue-700 font-semibold">
             P2P Retention & Monetization
           </div>
         </div>
 
-        <div class="apple-card-light p-5 flex flex-col justify-between">
+        <!-- Case 2: Search Campus Guild (Google Green) -->
+        <div class="apple-card-light border-t-2 border-t-[#34A853] p-5 flex flex-col justify-between">
           <div>
-            <h3 class="text-base font-bold text-apple-black mb-1.5">Search Campus Guild</h3>
+            <div class="flex items-center justify-between mb-1.5">
+              <h3 class="text-base font-bold text-apple-black">Search Campus Guild</h3>
+              <span class="w-2 h-2 rounded-full bg-[#34A853]"></span>
+            </div>
             <p class="text-xs text-apple-gray leading-relaxed">
               Hyper-local, verified university micro-communities embedded directly in Google Search results to capture student discussions.
             </p>
           </div>
-          <div class="mt-4 pt-3 border-t border-black/[0.05] text-[10px] font-mono text-apple-gray">
+          <div class="mt-4 pt-3 border-t border-black/[0.05] text-[10px] font-mono text-emerald-700 font-semibold">
             Hyper-Local Community
           </div>
         </div>
 
-        <div class="apple-card-light p-5 flex flex-col justify-between">
+        <!-- Case 3: Shorts Smart Bar (Google Red) -->
+        <div class="apple-card-light border-t-2 border-t-[#EA4335] p-5 flex flex-col justify-between">
           <div>
-            <h3 class="text-base font-bold text-apple-black mb-1.5">Shorts Smart Bar</h3>
+            <div class="flex items-center justify-between mb-1.5">
+              <h3 class="text-base font-bold text-apple-black">Shorts Smart Bar</h3>
+              <span class="w-2 h-2 rounded-full bg-[#EA4335]"></span>
+            </div>
             <p class="text-xs text-apple-gray leading-relaxed">
               Contextual audio scrubbers and timestamp-anchored comment threads to solve the completion drop-off in 60s shorts.
             </p>
           </div>
-          <div class="mt-4 pt-3 border-t border-black/[0.05] text-[10px] font-mono text-apple-gray">
+          <div class="mt-4 pt-3 border-t border-black/[0.05] text-[10px] font-mono text-red-700 font-semibold">
             Interactive UX Flow
           </div>
         </div>
 
-        <div class="apple-card-light p-5 flex flex-col justify-between">
+        <!-- Case 4: Meet Couple Pack (Google Yellow/Amber) -->
+        <div class="apple-card-light border-t-2 border-t-[#FBBC05] p-5 flex flex-col justify-between">
           <div>
-            <h3 class="text-base font-bold text-apple-black mb-1.5">Meet Couple Pack</h3>
+            <div class="flex items-center justify-between mb-1.5">
+              <h3 class="text-base font-bold text-apple-black">Meet Couple Pack</h3>
+              <span class="w-2 h-2 rounded-full bg-[#FBBC05]"></span>
+            </div>
             <p class="text-xs text-apple-gray leading-relaxed">
               Low-latency shared media canvas and synchronized watch parties tailored for long-distance relationships.
             </p>
           </div>
-          <div class="mt-4 pt-3 border-t border-black/[0.05] text-[10px] font-mono text-apple-gray">
+          <div class="mt-4 pt-3 border-t border-black/[0.05] text-[10px] font-mono text-amber-700 font-semibold">
             Synchronous Co-Viewing
           </div>
         </div>
@@ -498,9 +555,9 @@
   </section>
 
   <!-- ========================================================= -->
-  <!-- SECTION: OTT INDIA DISRUPTION (SLIDE-FIT VIEWPORT WITH BG IMAGE SUPPORT) -->
+  <!-- SECTION: OTT INDIA DISRUPTION (RESPONSIVE VIEWPORT WITH BG IMAGE SUPPORT) -->
   <!-- ========================================================= -->
-  <section id="ott-strategy" class="min-h-screen flex flex-col justify-center px-6 py-16 max-w-6xl mx-auto w-full relative overflow-hidden bg-white border-t border-black/[0.06]">
+  <section id="ott-strategy" class="py-12 sm:py-16 min-h-0 lg:min-h-screen flex flex-col justify-center px-4 sm:px-6 max-w-6xl mx-auto w-full relative overflow-hidden bg-white border-t border-black/[0.06]">
     
     <!-- User Uploaded OTT Streaming Landscape Background -->
     <div id="ott-bg-container" class="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center">
@@ -617,9 +674,9 @@
   <!-- SECTION: ABOUT ASHOKKUMAR S (APPLE KEYNOTE EDITORIAL) -->
   <!-- ========================================================= -->
   <!-- ========================================================= -->
-  <!-- SECTION: ABOUT ASHOKKUMAR S (1-PAGE COMPACT KEYNOTE LAYOUT) -->
+  <!-- SECTION: ABOUT ASHOKKUMAR S (ADAPTIVE COMPACT KEYNOTE LAYOUT) -->
   <!-- ========================================================= -->
-  <section id="about" class="min-h-screen flex flex-col justify-between px-6 pt-10 pb-4 max-w-5xl mx-auto w-full relative">
+  <section id="about" class="py-10 lg:py-8 min-h-0 lg:min-h-screen flex flex-col justify-center lg:justify-between px-4 sm:px-6 max-w-5xl mx-auto w-full relative gap-5 lg:gap-0">
     
     <div>
       <!-- Section Header (Clean Apple Keynote Headline) -->
@@ -826,10 +883,23 @@
           }
         }
       });
+
+      // Update mobile segmented tab pill states
+      ['tuning', 'flux', 'onebank'].forEach(key => {
+        const btn = document.getElementById('mobile-tab-' + key);
+        if (btn) {
+          if (key === app) {
+            btn.className = 'flex-1 py-1.5 px-3 rounded-full text-[11px] font-semibold transition-all bg-white text-apple-black shadow-sm';
+          } else {
+            btn.className = 'flex-1 py-1.5 px-3 rounded-full text-[11px] font-semibold transition-all text-apple-gray hover:text-apple-black';
+          }
+        }
+      });
     }
 
+    // Scroll-driven crossfade on desktop viewports (width >= 1024)
     window.addEventListener('scroll', () => {
-      if (!stage) return;
+      if (!stage || window.innerWidth < 1024) return;
       const rect = stage.getBoundingClientRect();
       const stageHeight = stage.offsetHeight - window.innerHeight;
       if (stageHeight <= 0) return;
