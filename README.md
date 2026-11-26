@@ -26,7 +26,11 @@ Featuring 5 flagship product solutions with PRDs, market frameworks, data models
 
 - **Assistant Officer – Personal Banker** at **DBS Bank India Ltd** (Nov 2022 – Jul 2023): Handled 10–15 daily retail customer interactions, managed KYC & risk compliance, and originated savings, FD/RD, and loan products.
 - **B.E. Computer Science Engineering** from **Builder Engineering College** (2017 – 2021).
-- **IBM Excel Certified** with a **100% grade**.
+- **Certifications & Specializations:**
+  - **Project Management Institute (PMI®):** The AI-Native Product Manager's Toolkit · Becoming an AI-First Product Leader · Technology for Product Managers
+  - **International Institute of Business Analysis (IIBA®):** Becoming a Product Manager: A Complete Guide
+  - **LinkedIn Learning:** Transitioning to Product Management
+  - **IBM:** IBM Excel Certified (100% grade)
 
 ---
 
